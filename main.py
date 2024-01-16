@@ -1,5 +1,3 @@
-%load_ext autoreload
-%autoreload 2
 from config import username, password
 print(password)
 from modules.login_module import logIn, launch_to_homescreen, create_directory
