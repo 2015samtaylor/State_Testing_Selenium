@@ -13,7 +13,7 @@ import logging
 import os
 
 username = 'GDtestingcoordinator@greendot.org'
-password = ',$-e"5.ef)gH2ZG'
+password = 'Coordinator@2024!'
 
  
 def logIn(username, password, driver):

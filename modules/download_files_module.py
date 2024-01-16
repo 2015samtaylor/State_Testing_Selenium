@@ -168,7 +168,12 @@ def request_report(driver, test_type, actual_test):
         logging.info('Out of iframe')
     except:
         logging.info('Still in iframe')
-    driver.refresh()
+
+    try:
+        driver.refresh()
+    except TimeoutException:
+        logging.info('Website did not refresh properly')
+        driver.refresh
 
 
 
@@ -329,8 +334,8 @@ def download_loop_missing(dir_path, test_type, driver, max_attempts=5):
         files = whats_missing(dir_path)
 
         if files.loc[files['files'].isna()].empty:
-            logging.info(f'All files are downloaded for {dir_path}')
-            print(f'All files are downloaded for {dir_path}')
+            logging.info(f'All files are downloaded for {test_type}')
+            print(f'All files are downloaded for {test_type}')
             break
         else:
             logging.info(f"These schools are missing {files.loc[files['files'].isna()]['School_Name'].values}")
