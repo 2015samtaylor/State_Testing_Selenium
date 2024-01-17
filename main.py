@@ -112,6 +112,9 @@ time.sleep(10) #implemented to give time for files to download
 #Dir remains ELPAC for constant download directory
 download_loop_missing(f'elpac\\{formatted_month_day}', '2023 Summative ELPAC and Summative Alternate ELPAC Student Score Data File By Enrolled LEA', driver)
 
+#Close out driver window once done
+driver.close()
+
 #Takes 14 mins to run up to this point
 # -----------------------------------------Unzip the Files and Move them to the P-Drive in this location 'P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing'
 unzip_files_in_same_dir('elpac')
@@ -122,16 +125,15 @@ try:
     move_xlsx_files('sbac')
     logging.info('Moved SBAC XLSX files to p-drive')
 except:
-    logging.info('Unable to move SBAC XLSX files to the p-drive')
+    logging.info('Unable to move SBAC XLSX files to the p-drive, must be connected to the VPN')
 try:
     move_xlsx_files('elpac')
     logging.info('Moved ELPAC XLSX files to p-drive')
 except:
-    logging.info('Unable to move ELPAC XLSX files to the p-drive')
+    logging.info('Unable to move ELPAC XLSX files to the p-drive, must be connected to the VPN')
 
 
-#Close out driver window once done
-driver.close()
+
 
 #Checks these dirs, for all files being there
 # P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing\sbac_01_16
