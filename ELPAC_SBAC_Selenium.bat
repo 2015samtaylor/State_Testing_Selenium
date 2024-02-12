@@ -1,0 +1,2 @@
+cd C:\Users\samuel.taylor\Desktop\Python_Scripts\Manual_Triggers\ELPAC_SBAC_Results_Selenium
+python.exe ELPAC_SBAC_Results_Selenium.py
