@@ -42,3 +42,23 @@ This Python script automates the retrieval and processing of state testing data 
 - The script ensures that unique school names are considered when passing names into the requested reports.
 - Directories are created dynamically based on the current date to organize downloaded files.
 
+## Running Schedule
+
+- 2022-23 Data
+January 25
+February 29
+March 28
+April 25
+May 23
+June 27
+ 
+- 2023-24 Data
+May 9
+May 16
+May 23
+May 30
+June 6
+June 13
+June 20
+June 27
+
