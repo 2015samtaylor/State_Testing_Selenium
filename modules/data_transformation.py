@@ -1,5 +1,6 @@
 import os
 import pandas as pd
+from zipfile import BadZipFile
 
 
 def stack_files(directory_path):
@@ -11,9 +12,14 @@ def stack_files(directory_path):
 
     # Loop through each file and read it into a DataFrame
     for file in file_list:
-        # Adjust the read_excel parameters based on your file format (e.g., header, delimiter, encoding)
-        data = pd.read_excel(file, header=1)
-        dataframes.append(data)
+
+        try:
+            # Adjust the read_excel parameters based on your file format (e.g., header, delimiter, encoding)
+            data = pd.read_excel(file, header=1, engine='openpyxl')
+            dataframes.append(data)
+        except BadZipFile:
+            print(f'Issue iwth BadZipFile when reading excel file: {file}')
+
 
     # Use pd.concat to concatenate all DataFrames in the list
     combined_data = pd.concat(dataframes, ignore_index=True)

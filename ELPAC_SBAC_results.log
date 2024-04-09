@@ -25928,3 +25928,1784 @@ Stacktrace:
 25-Jan-24 09:38:21 - Request file clicked on
 25-Jan-24 09:38:21 - Out of iframe
 >>>>>>> 10353b4a12aaf35d151af9c33f60b155a669061b
+29-Feb-24 09:30:44 - 
+
+-------------ELPAC_SBAC_results new instance log
+29-Feb-24 09:30:44 - ====== WebDriver manager ======
+29-Feb-24 09:30:45 - Get LATEST chromedriver version for google-chrome
+29-Feb-24 09:30:45 - Get LATEST chromedriver version for google-chrome
+29-Feb-24 09:30:45 - Driver [C:\Users\samuel.taylor\.wdm\drivers\chromedriver\win64\122.0.6261.94\chromedriver-win32/chromedriver.exe] found in cache
+29-Feb-24 09:31:42 - Email Code submitted - 171061
+29-Feb-24 09:31:48 - LEA Reports clicked
+29-Feb-24 09:31:52 - Switched to iframe
+29-Feb-24 09:31:52 - CAASPP Student Score Data Extract Report Clicked
+29-Feb-24 09:31:52 - SY Selected
+29-Feb-24 09:31:52 - Organization selected
+29-Feb-24 09:31:53 - Enrolled selected
+29-Feb-24 09:32:00 - Request file clicked on
+29-Feb-24 09:32:00 - Out of iframe
+29-Feb-24 09:32:10 - Switched to LEA CAASPP Coordinator at Animo City of Champions Charter High
+29-Feb-24 09:32:10 - LEA Reports clicked
+29-Feb-24 09:32:14 - Switched to iframe
+29-Feb-24 09:32:14 - CAASPP Student Score Data Extract Report Clicked
+29-Feb-24 09:32:14 - SY Selected
+29-Feb-24 09:32:19 - Organization was not selected
+29-Feb-24 09:32:20 - Enrolled selected
+29-Feb-24 09:32:31 - Request file clicked on
+29-Feb-24 09:32:31 - Out of iframe
+29-Feb-24 09:32:44 - Switched to LEA CAASPP Coordinator at Animo Compton Charter
+29-Feb-24 09:32:44 - LEA Reports clicked
+29-Feb-24 09:32:48 - Switched to iframe
+29-Feb-24 09:32:48 - CAASPP Student Score Data Extract Report Clicked
+29-Feb-24 09:32:48 - SY Selected
+29-Feb-24 09:32:53 - Organization was not selected
+29-Feb-24 09:32:53 - Enrolled selected
+29-Feb-24 09:33:01 - Request file clicked on
+29-Feb-24 09:33:01 - Out of iframe
+29-Feb-24 09:33:15 - Switched to LEA CAASPP Coordinator at Animo Ellen Ochoa Charter Middle
+29-Feb-24 09:33:15 - LEA Reports clicked
+29-Feb-24 09:33:20 - Switched to iframe
+29-Feb-24 09:33:20 - CAASPP Student Score Data Extract Report Clicked
+29-Feb-24 09:33:20 - SY Selected
+29-Feb-24 09:33:20 - Organization selected
+29-Feb-24 09:33:20 - Enrolled selected
+29-Feb-24 09:33:32 - Request file clicked on
+29-Feb-24 09:33:32 - Out of iframe
+29-Feb-24 09:33:41 - Switched to LEA CAASPP Coordinator at Animo Florence-Firestone Charter Middle
+29-Feb-24 09:33:41 - LEA Reports clicked
+29-Feb-24 09:33:45 - Switched to iframe
+29-Feb-24 09:33:45 - CAASPP Student Score Data Extract Report Clicked
+29-Feb-24 09:33:46 - SY Selected
+29-Feb-24 09:33:46 - Organization selected
+29-Feb-24 09:33:46 - Enrolled selected
+29-Feb-24 09:33:57 - Request file clicked on
+29-Feb-24 09:33:57 - Out of iframe
+29-Feb-24 09:34:07 - Switched to LEA CAASPP Coordinator at Animo Inglewood Charter High
+29-Feb-24 09:34:07 - LEA Reports clicked
+29-Feb-24 09:34:12 - Switched to iframe
+29-Feb-24 09:34:12 - CAASPP Student Score Data Extract Report Clicked
+29-Feb-24 09:34:12 - SY Selected
+29-Feb-24 09:34:17 - Organization was not selected
+29-Feb-24 09:34:18 - Enrolled selected
+29-Feb-24 09:34:29 - Request file clicked on
+29-Feb-24 09:34:29 - Out of iframe
+29-Feb-24 09:34:38 - Switched to LEA CAASPP Coordinator at Animo Jackie Robinson High
+29-Feb-24 09:34:39 - LEA Reports clicked
+29-Feb-24 09:34:43 - Switched to iframe
+29-Feb-24 09:34:43 - CAASPP Student Score Data Extract Report Clicked
+29-Feb-24 09:34:43 - SY Selected
+29-Feb-24 09:34:43 - Organization selected
+29-Feb-24 09:34:43 - Enrolled selected
+29-Feb-24 09:34:51 - Request file clicked on
+29-Feb-24 09:34:51 - Out of iframe
+29-Feb-24 09:34:59 - Switched to LEA CAASPP Coordinator at Animo James B. Taylor Charter Middle
+29-Feb-24 09:34:59 - LEA Reports clicked
+29-Feb-24 09:35:03 - Switched to iframe
+29-Feb-24 09:35:03 - CAASPP Student Score Data Extract Report Clicked
+29-Feb-24 09:35:04 - SY Selected
+29-Feb-24 09:35:09 - Organization was not selected
+29-Feb-24 09:35:09 - Enrolled selected
+29-Feb-24 09:35:16 - Request file clicked on
+29-Feb-24 09:35:16 - Out of iframe
+29-Feb-24 09:35:24 - Switched to LEA CAASPP Coordinator at Animo Jefferson Charter Middle
+29-Feb-24 09:35:24 - LEA Reports clicked
+29-Feb-24 09:35:29 - Switched to iframe
+29-Feb-24 09:35:29 - CAASPP Student Score Data Extract Report Clicked
+29-Feb-24 09:35:29 - SY Selected
+29-Feb-24 09:35:29 - Organization selected
+29-Feb-24 09:35:29 - Enrolled selected
+29-Feb-24 09:35:36 - Request file clicked on
+29-Feb-24 09:35:36 - Out of iframe
+29-Feb-24 09:35:45 - Switched to LEA CAASPP Coordinator at Animo Leadership High
+29-Feb-24 09:35:45 - LEA Reports clicked
+29-Feb-24 09:35:50 - Switched to iframe
+29-Feb-24 09:35:50 - CAASPP Student Score Data Extract Report Clicked
+29-Feb-24 09:35:50 - SY Selected
+29-Feb-24 09:35:56 - Organization was not selected
+29-Feb-24 09:35:56 - Enrolled selected
+29-Feb-24 09:36:03 - Request file clicked on
+29-Feb-24 09:36:03 - Out of iframe
+29-Feb-24 09:36:12 - Switched to LEA CAASPP Coordinator at Animo Legacy Charter Middle
+29-Feb-24 09:36:12 - LEA Reports clicked
+29-Feb-24 09:36:17 - Switched to iframe
+29-Feb-24 09:36:17 - CAASPP Student Score Data Extract Report Clicked
+29-Feb-24 09:36:17 - SY Selected
+29-Feb-24 09:36:17 - Organization selected
+29-Feb-24 09:36:17 - Enrolled selected
+29-Feb-24 09:36:25 - Request file clicked on
+29-Feb-24 09:36:25 - Out of iframe
+29-Feb-24 09:36:33 - Switched to LEA CAASPP Coordinator at Animo Mae Jemison Charter Middle
+29-Feb-24 09:36:33 - LEA Reports clicked
+29-Feb-24 09:36:37 - Switched to iframe
+29-Feb-24 09:36:38 - CAASPP Student Score Data Extract Report Clicked
+29-Feb-24 09:36:38 - SY Selected
+29-Feb-24 09:36:43 - Organization was not selected
+29-Feb-24 09:36:43 - Enrolled selected
+29-Feb-24 09:36:50 - Request file clicked on
+29-Feb-24 09:36:50 - Out of iframe
+29-Feb-24 09:36:56 - Switched to LEA CAASPP Coordinator at Animo Pat Brown
+29-Feb-24 09:36:59 - LEA Reports clicked
+29-Feb-24 09:37:04 - Switched to iframe
+29-Feb-24 09:37:04 - CAASPP Student Score Data Extract Report Clicked
+29-Feb-24 09:37:04 - SY Selected
+29-Feb-24 09:37:09 - Organization was not selected
+29-Feb-24 09:37:09 - Enrolled selected
+29-Feb-24 09:37:21 - Request file clicked on
+29-Feb-24 09:37:21 - Out of iframe
+29-Feb-24 09:37:29 - Switched to LEA CAASPP Coordinator at Animo Ralph Bunche Charter High
+29-Feb-24 09:37:29 - LEA Reports clicked
+29-Feb-24 09:37:33 - Switched to iframe
+29-Feb-24 09:37:33 - CAASPP Student Score Data Extract Report Clicked
+29-Feb-24 09:37:34 - SY Selected
+29-Feb-24 09:37:34 - Organization selected
+29-Feb-24 09:37:34 - Enrolled selected
+29-Feb-24 09:37:45 - Request file clicked on
+29-Feb-24 09:37:45 - Out of iframe
+29-Feb-24 09:37:54 - Switched to LEA CAASPP Coordinator at Animo South Los Angeles Charter
+29-Feb-24 09:37:54 - LEA Reports clicked
+29-Feb-24 09:37:58 - Switched to iframe
+29-Feb-24 09:37:58 - CAASPP Student Score Data Extract Report Clicked
+29-Feb-24 09:37:59 - SY Selected
+29-Feb-24 09:38:04 - Organization was not selected
+29-Feb-24 09:38:04 - Enrolled selected
+29-Feb-24 09:38:16 - Request file clicked on
+29-Feb-24 09:38:16 - Out of iframe
+29-Feb-24 09:38:25 - Switched to LEA CAASPP Coordinator at Animo Venice Charter High
+29-Feb-24 09:38:25 - LEA Reports clicked
+29-Feb-24 09:38:29 - Switched to iframe
+29-Feb-24 09:38:29 - CAASPP Student Score Data Extract Report Clicked
+29-Feb-24 09:38:29 - SY Selected
+29-Feb-24 09:38:29 - Organization selected
+29-Feb-24 09:38:29 - Enrolled selected
+29-Feb-24 09:38:37 - Request file clicked on
+29-Feb-24 09:38:37 - Out of iframe
+29-Feb-24 09:38:44 - Switched to LEA CAASPP Coordinator at Animo Watts College Preparatory Academy
+29-Feb-24 09:38:45 - LEA Reports clicked
+29-Feb-24 09:38:49 - Switched to iframe
+29-Feb-24 09:38:49 - CAASPP Student Score Data Extract Report Clicked
+29-Feb-24 09:38:49 - SY Selected
+29-Feb-24 09:38:54 - Organization was not selected
+29-Feb-24 09:38:54 - Enrolled selected
+29-Feb-24 09:39:02 - Request file clicked on
+29-Feb-24 09:39:02 - Out of iframe
+29-Feb-24 09:39:10 - Switched to LEA CAASPP Coordinator at Oscar De La Hoya Animo Charter High
+29-Feb-24 09:39:10 - LEA Reports clicked
+29-Feb-24 09:39:15 - Switched to iframe
+29-Feb-24 09:39:15 - CAASPP Student Score Data Extract Report Clicked
+29-Feb-24 09:39:15 - SY Selected
+29-Feb-24 09:39:20 - Organization was not selected
+29-Feb-24 09:39:20 - Enrolled selected
+29-Feb-24 09:39:31 - Request file clicked on
+29-Feb-24 09:39:32 - Out of iframe
+29-Feb-24 09:39:36 - Requested reports section clicked into
+29-Feb-24 09:39:47 - Switched to iframe within downloads section
+29-Feb-24 09:39:47 - Exception raised when downloading files Message: no such element: Unable to locate element: {"method":"xpath","selector":".//input[contains(@class, "wcag_694 primarybtn left wcag_110")]"}
+  (Session info: chrome=122.0.6261.71)
+Stacktrace:
+	GetHandleVerifier [0x015D8C93+51395]
+	(No symbol) [0x01545EF1]
+	(No symbol) [0x013FE13A]
+	(No symbol) [0x014362BB]
+	(No symbol) [0x014363EB]
+	(No symbol) [0x0142E001]
+	(No symbol) [0x01453ED4]
+	(No symbol) [0x0142DF7E]
+	(No symbol) [0x01454124]
+	(No symbol) [0x0146A570]
+	(No symbol) [0x01453C26]
+	(No symbol) [0x0142C629]
+	(No symbol) [0x0142D40D]
+	GetHandleVerifier [0x01956453+3711107]
+	GetHandleVerifier [0x0199583A+3970154]
+	GetHandleVerifier [0x01990B28+3950424]
+	GetHandleVerifier [0x01689C99+776393]
+	(No symbol) [0x015516C4]
+	(No symbol) [0x0154C5A8]
+	(No symbol) [0x0154C759]
+	(No symbol) [0x0153DD80]
+	BaseThreadInitThunk [0x756005C9+25]
+	RtlGetAppContainerNamedObjectPath [0x77AE78BD+237]
+	RtlGetAppContainerNamedObjectPath [0x77AE788D+189]
+
+29-Feb-24 09:39:47 - Error occurred for Animo Watts College Preparatory Academy: cannot access local variable 'download_button' where it is not associated with a value
+29-Feb-24 09:39:47 - ActionChains scrolled to school Animo Ralph Bunche Charter High
+29-Feb-24 09:39:48 - Download occured for Animo Ralph Bunche Charter High
+29-Feb-24 09:39:48 - ActionChains scrolled to school Animo City of Champions Charter High
+29-Feb-24 09:39:48 - Download occured for Animo City of Champions Charter High
+29-Feb-24 09:39:49 - ActionChains scrolled to school Animo Leadership High
+29-Feb-24 09:39:49 - Download occured for Animo Leadership High
+29-Feb-24 09:39:50 - ActionChains scrolled to school Animo South Los Angeles Charter
+29-Feb-24 09:39:51 - Error occurred for Animo South Los Angeles Charter: Message: element click intercepted: Element <input id="actionbutton_4" type="button" class="wcag_694 primarybtn left wcag_110" value="Download" onclick="javascript:downloadreport('/export/Apps/tomsk12ca/data/CAASPP_AGGR_DATA/caasppenrdownloadablesyearone/2023/0/01024340000000/1709228285664/lea','01024340000000.zip')"> is not clickable at point (1152, 41). Other element would receive the click: <th>...</th>
+  (Session info: chrome=122.0.6261.71)
+Stacktrace:
+	GetHandleVerifier [0x015D8C93+51395]
+	(No symbol) [0x01545EF1]
+	(No symbol) [0x013FE13A]
+	(No symbol) [0x0143B8A2]
+	(No symbol) [0x0143A0D4]
+	(No symbol) [0x0143813B]
+	(No symbol) [0x0143731A]
+	(No symbol) [0x0142E54E]
+	(No symbol) [0x01453E8C]
+	(No symbol) [0x0142DF7E]
+	(No symbol) [0x01454124]
+	(No symbol) [0x0146A570]
+	(No symbol) [0x01453C26]
+	(No symbol) [0x0142C629]
+	(No symbol) [0x0142D40D]
+	GetHandleVerifier [0x01956453+3711107]
+	GetHandleVerifier [0x0199583A+3970154]
+	GetHandleVerifier [0x01990B28+3950424]
+	GetHandleVerifier [0x01689C99+776393]
+	(No symbol) [0x015516C4]
+	(No symbol) [0x0154C5A8]
+	(No symbol) [0x0154C759]
+	(No symbol) [0x0153DD80]
+	BaseThreadInitThunk [0x756005C9+25]
+	RtlGetAppContainerNamedObjectPath [0x77AE78BD+237]
+	RtlGetAppContainerNamedObjectPath [0x77AE788D+189]
+
+29-Feb-24 09:39:51 - ActionChains scrolled to school Animo Legacy Charter Middle
+29-Feb-24 09:39:51 - Download occured for Animo Legacy Charter Middle
+29-Feb-24 09:39:52 - ActionChains scrolled to school Animo Venice Charter High
+29-Feb-24 09:39:52 - Download occured for Animo Venice Charter High
+29-Feb-24 09:39:53 - ActionChains scrolled to school Animo Inglewood Charter High
+29-Feb-24 09:39:53 - Download occured for Animo Inglewood Charter High
+29-Feb-24 09:39:53 - ActionChains scrolled to school Animo Pat Brown
+29-Feb-24 09:39:54 - Download occured for Animo Pat Brown
+29-Feb-24 09:39:54 - ActionChains scrolled to school Animo Jefferson Charter Middle
+29-Feb-24 09:39:55 - Download occured for Animo Jefferson Charter Middle
+29-Feb-24 09:39:55 - ActionChains scrolled to school Animo Florence-Firestone Charter Middle
+29-Feb-24 09:39:56 - Download occured for Animo Florence-Firestone Charter Middle
+29-Feb-24 09:39:56 - Exception raised when downloading files Message: no such element: Unable to locate element: {"method":"xpath","selector":".//input[contains(@class, "wcag_694 primarybtn left wcag_110")]"}
+  (Session info: chrome=122.0.6261.71)
+Stacktrace:
+	GetHandleVerifier [0x015D8C93+51395]
+	(No symbol) [0x01545EF1]
+	(No symbol) [0x013FE13A]
+	(No symbol) [0x014362BB]
+	(No symbol) [0x014363EB]
+	(No symbol) [0x0142E001]
+	(No symbol) [0x01453ED4]
+	(No symbol) [0x0142DF7E]
+	(No symbol) [0x01454124]
+	(No symbol) [0x0146A570]
+	(No symbol) [0x01453C26]
+	(No symbol) [0x0142C629]
+	(No symbol) [0x0142D40D]
+	GetHandleVerifier [0x01956453+3711107]
+	GetHandleVerifier [0x0199583A+3970154]
+	GetHandleVerifier [0x01990B28+3950424]
+	GetHandleVerifier [0x01689C99+776393]
+	(No symbol) [0x015516C4]
+	(No symbol) [0x0154C5A8]
+	(No symbol) [0x0154C759]
+	(No symbol) [0x0153DD80]
+	BaseThreadInitThunk [0x756005C9+25]
+	RtlGetAppContainerNamedObjectPath [0x77AE78BD+237]
+	RtlGetAppContainerNamedObjectPath [0x77AE788D+189]
+
+29-Feb-24 09:39:56 - Error occurred for Oscar De La Hoya Animo Charter High: cannot access local variable 'download_button' where it is not associated with a value
+29-Feb-24 09:39:56 - ActionChains scrolled to school Animo Mae Jemison Charter Middle
+29-Feb-24 09:39:56 - Download occured for Animo Mae Jemison Charter Middle
+29-Feb-24 09:39:57 - ActionChains scrolled to school Animo James B. Taylor Charter Middle
+29-Feb-24 09:39:57 - Download occured for Animo James B. Taylor Charter Middle
+29-Feb-24 09:39:58 - ActionChains scrolled to school Animo Compton Charter
+29-Feb-24 09:39:58 - Download occured for Animo Compton Charter
+29-Feb-24 09:39:58 - ActionChains scrolled to school Alain Leroy Locke College Preparatory Academy
+29-Feb-24 09:39:59 - Download occured for Alain Leroy Locke College Preparatory Academy
+29-Feb-24 09:39:59 - ActionChains scrolled to school Animo Jackie Robinson High
+29-Feb-24 09:40:00 - Download occured for Animo Jackie Robinson High
+29-Feb-24 09:40:00 - ActionChains scrolled to school Animo Ellen Ochoa Charter Middle
+29-Feb-24 09:40:00 - Download occured for Animo Ellen Ochoa Charter Middle
+29-Feb-24 09:40:13 - These schools are missing ['Oscar De La Hoya Animo Charter High' 'Animo South Los Angeles Charter'
+ 'Animo Watts College Preparatory Academy']
+29-Feb-24 09:40:14 - Requested reports section clicked into
+29-Feb-24 09:40:27 - Switched to iframe within downloads section
+29-Feb-24 09:40:28 - ActionChains scrolled to school Oscar De La Hoya Animo Charter High
+29-Feb-24 09:40:28 - Download occured for Oscar De La Hoya Animo Charter High
+29-Feb-24 09:40:29 - ActionChains scrolled to school Animo South Los Angeles Charter
+29-Feb-24 09:40:29 - Download occured for Animo South Los Angeles Charter
+29-Feb-24 09:40:30 - ActionChains scrolled to school Animo Watts College Preparatory Academy
+29-Feb-24 09:40:30 - Download occured for Animo Watts College Preparatory Academy
+29-Feb-24 09:40:33 - All files are downloaded for 2023 CAASPP Student Score Data File By Enrolled LEA
+29-Feb-24 09:40:33 - Files moved successfully to c:\Users\samuel.taylor\Desktop\Python_Scripts\Manual_Triggers\ELPAC_SBAC_Results_Selenium\file_downloads\sbac\02_29
+29-Feb-24 09:40:37 - Switched to LEA ELPAC Coordinator at Alain Leroy Locke College Preparatory Academy
+29-Feb-24 09:40:37 - LEA Reports clicked
+29-Feb-24 09:40:41 - Switched to iframe
+29-Feb-24 09:40:41 - ELPAC Data File Clicked
+29-Feb-24 09:40:42 - SY Selected
+29-Feb-24 09:40:52 - Organization was not selected
+29-Feb-24 09:40:52 - Enrolled selected
+29-Feb-24 09:41:03 - Request file clicked on
+29-Feb-24 09:41:03 - Out of iframe
+29-Feb-24 09:41:12 - Switched to LEA ELPAC Coordinator at Animo City of Champions Charter High
+29-Feb-24 09:41:12 - LEA Reports clicked
+29-Feb-24 09:41:17 - Switched to iframe
+29-Feb-24 09:41:17 - ELPAC Data File Clicked
+29-Feb-24 09:41:17 - SY Selected
+29-Feb-24 09:41:27 - Organization was not selected
+29-Feb-24 09:41:27 - Enrolled selected
+29-Feb-24 09:41:34 - Request file clicked on
+29-Feb-24 09:41:35 - Out of iframe
+29-Feb-24 09:41:45 - Switched to LEA ELPAC Coordinator at Animo Compton Charter
+29-Feb-24 09:41:45 - LEA Reports clicked
+29-Feb-24 09:41:49 - Switched to iframe
+29-Feb-24 09:41:49 - ELPAC Data File Clicked
+29-Feb-24 09:41:49 - SY Selected
+29-Feb-24 09:41:59 - Organization was not selected
+29-Feb-24 09:41:59 - Enrolled selected
+29-Feb-24 09:42:11 - Request file clicked on
+29-Feb-24 09:42:11 - Out of iframe
+29-Feb-24 09:42:20 - Switched to LEA ELPAC Coordinator at Animo Ellen Ochoa Charter Middle
+29-Feb-24 09:42:20 - LEA Reports clicked
+29-Feb-24 09:42:24 - Switched to iframe
+29-Feb-24 09:42:24 - ELPAC Data File Clicked
+29-Feb-24 09:42:24 - SY Selected
+29-Feb-24 09:42:34 - Organization was not selected
+29-Feb-24 09:42:34 - Enrolled selected
+29-Feb-24 09:42:41 - Request file clicked on
+29-Feb-24 09:42:41 - Out of iframe
+29-Feb-24 09:42:50 - Switched to LEA ELPAC Coordinator at Animo Florence-Firestone Charter Middle
+29-Feb-24 09:42:51 - LEA Reports clicked
+29-Feb-24 09:42:55 - Switched to iframe
+29-Feb-24 09:42:55 - ELPAC Data File Clicked
+29-Feb-24 09:42:55 - SY Selected
+29-Feb-24 09:43:05 - Organization was not selected
+29-Feb-24 09:43:05 - Enrolled selected
+29-Feb-24 09:43:13 - Request file clicked on
+29-Feb-24 09:43:13 - Out of iframe
+29-Feb-24 09:43:21 - Switched to LEA ELPAC Coordinator at Animo Inglewood Charter High
+29-Feb-24 09:43:21 - LEA Reports clicked
+29-Feb-24 09:43:27 - Switched to iframe
+29-Feb-24 09:43:27 - ELPAC Data File Clicked
+29-Feb-24 09:43:27 - SY Selected
+29-Feb-24 09:43:37 - Organization was not selected
+29-Feb-24 09:43:37 - Enrolled selected
+29-Feb-24 09:43:48 - Request file clicked on
+29-Feb-24 09:43:48 - Out of iframe
+29-Feb-24 09:43:57 - Switched to LEA ELPAC Coordinator at Animo Jackie Robinson High
+29-Feb-24 09:43:57 - LEA Reports clicked
+29-Feb-24 09:44:02 - Switched to iframe
+29-Feb-24 09:44:02 - ELPAC Data File Clicked
+29-Feb-24 09:44:02 - SY Selected
+29-Feb-24 09:44:12 - Organization was not selected
+29-Feb-24 09:44:12 - Enrolled selected
+29-Feb-24 09:44:19 - Request file clicked on
+29-Feb-24 09:44:19 - Out of iframe
+29-Feb-24 09:44:28 - Switched to LEA ELPAC Coordinator at Animo James B. Taylor Charter Middle
+29-Feb-24 09:44:28 - LEA Reports clicked
+29-Feb-24 09:44:32 - Switched to iframe
+29-Feb-24 09:44:32 - ELPAC Data File Clicked
+29-Feb-24 09:44:33 - SY Selected
+29-Feb-24 09:44:43 - Organization was not selected
+29-Feb-24 09:44:43 - Enrolled selected
+29-Feb-24 09:44:50 - Request file clicked on
+29-Feb-24 09:44:50 - Out of iframe
+29-Feb-24 09:44:59 - Switched to LEA ELPAC Coordinator at Animo Jefferson Charter Middle
+29-Feb-24 09:45:00 - LEA Reports clicked
+29-Feb-24 09:45:04 - Switched to iframe
+29-Feb-24 09:45:04 - ELPAC Data File Clicked
+29-Feb-24 09:45:04 - SY Selected
+29-Feb-24 09:45:14 - Organization was not selected
+29-Feb-24 09:45:14 - Enrolled selected
+29-Feb-24 09:45:26 - Request file clicked on
+29-Feb-24 09:45:26 - Out of iframe
+29-Feb-24 09:45:36 - Switched to LEA ELPAC Coordinator at Animo Leadership High
+29-Feb-24 09:45:36 - LEA Reports clicked
+29-Feb-24 09:45:40 - Switched to iframe
+29-Feb-24 09:45:40 - ELPAC Data File Clicked
+29-Feb-24 09:45:40 - SY Selected
+29-Feb-24 09:45:50 - Organization was not selected
+29-Feb-24 09:45:50 - Enrolled selected
+29-Feb-24 09:46:01 - Request file clicked on
+29-Feb-24 09:46:02 - Out of iframe
+29-Feb-24 09:46:10 - Switched to LEA ELPAC Coordinator at Animo Legacy Charter Middle
+29-Feb-24 09:46:10 - LEA Reports clicked
+29-Feb-24 09:46:15 - Switched to iframe
+29-Feb-24 09:46:15 - ELPAC Data File Clicked
+29-Feb-24 09:46:15 - SY Selected
+29-Feb-24 09:46:25 - Organization was not selected
+29-Feb-24 09:46:25 - Enrolled selected
+29-Feb-24 09:46:33 - Request file clicked on
+29-Feb-24 09:46:33 - Out of iframe
+29-Feb-24 09:46:42 - Switched to LEA ELPAC Coordinator at Animo Mae Jemison Charter Middle
+29-Feb-24 09:46:42 - LEA Reports clicked
+29-Feb-24 09:46:46 - Switched to iframe
+29-Feb-24 09:46:46 - ELPAC Data File Clicked
+29-Feb-24 09:46:46 - SY Selected
+29-Feb-24 09:46:56 - Organization was not selected
+29-Feb-24 09:46:57 - Enrolled selected
+29-Feb-24 09:47:08 - Request file clicked on
+29-Feb-24 09:47:08 - Out of iframe
+29-Feb-24 09:47:17 - Switched to LEA ELPAC Coordinator at Animo Pat Brown
+29-Feb-24 09:47:17 - LEA Reports clicked
+29-Feb-24 09:47:21 - Switched to iframe
+29-Feb-24 09:47:21 - ELPAC Data File Clicked
+29-Feb-24 09:47:21 - SY Selected
+29-Feb-24 09:47:32 - Organization was not selected
+29-Feb-24 09:47:32 - Enrolled selected
+29-Feb-24 09:47:39 - Request file clicked on
+29-Feb-24 09:47:39 - Out of iframe
+29-Feb-24 09:47:48 - Switched to LEA ELPAC Coordinator at Animo Ralph Bunche Charter High
+29-Feb-24 09:47:48 - LEA Reports clicked
+29-Feb-24 09:47:53 - Switched to iframe
+29-Feb-24 09:47:53 - ELPAC Data File Clicked
+29-Feb-24 09:47:53 - SY Selected
+29-Feb-24 09:48:03 - Organization was not selected
+29-Feb-24 09:48:03 - Enrolled selected
+29-Feb-24 09:48:14 - Request file clicked on
+29-Feb-24 09:48:14 - Out of iframe
+29-Feb-24 09:48:23 - Switched to LEA ELPAC Coordinator at Animo South Los Angeles Charter
+29-Feb-24 09:48:23 - LEA Reports clicked
+29-Feb-24 09:48:27 - Switched to iframe
+29-Feb-24 09:48:27 - ELPAC Data File Clicked
+29-Feb-24 09:48:27 - SY Selected
+29-Feb-24 09:48:38 - Organization was not selected
+29-Feb-24 09:48:38 - Enrolled selected
+29-Feb-24 09:48:45 - Request file clicked on
+29-Feb-24 09:48:45 - Out of iframe
+29-Feb-24 09:48:53 - Switched to LEA ELPAC Coordinator at Animo Venice Charter High
+29-Feb-24 09:48:54 - LEA Reports clicked
+29-Feb-24 09:48:58 - Switched to iframe
+29-Feb-24 09:48:58 - ELPAC Data File Clicked
+29-Feb-24 09:48:58 - SY Selected
+29-Feb-24 09:49:08 - Organization was not selected
+29-Feb-24 09:49:08 - Enrolled selected
+29-Feb-24 09:49:19 - Request file clicked on
+29-Feb-24 09:49:19 - Out of iframe
+29-Feb-24 09:49:28 - Switched to LEA ELPAC Coordinator at Animo Watts College Preparatory Academy
+29-Feb-24 09:49:28 - LEA Reports clicked
+29-Feb-24 09:49:32 - Switched to iframe
+29-Feb-24 09:49:32 - ELPAC Data File Clicked
+29-Feb-24 09:49:33 - SY Selected
+29-Feb-24 09:49:43 - Organization was not selected
+29-Feb-24 09:49:43 - Enrolled selected
+29-Feb-24 09:49:50 - Request file clicked on
+29-Feb-24 09:49:50 - Out of iframe
+29-Feb-24 09:49:59 - Switched to LEA ELPAC Coordinator at Oscar De La Hoya Animo Charter High
+29-Feb-24 09:49:59 - LEA Reports clicked
+29-Feb-24 09:50:03 - Switched to iframe
+29-Feb-24 09:50:03 - ELPAC Data File Clicked
+29-Feb-24 09:50:03 - SY Selected
+29-Feb-24 09:50:13 - Organization was not selected
+29-Feb-24 09:50:13 - Enrolled selected
+29-Feb-24 09:50:25 - Request file clicked on
+29-Feb-24 09:50:25 - Out of iframe
+29-Feb-24 09:50:30 - Requested reports section clicked into
+29-Feb-24 09:50:40 - Switched to iframe within downloads section
+29-Feb-24 09:50:41 - ActionChains scrolled to school Animo Watts College Preparatory Academy
+29-Feb-24 09:50:41 - Download occured for Animo Watts College Preparatory Academy
+29-Feb-24 09:50:42 - ActionChains scrolled to school Animo Ralph Bunche Charter High
+29-Feb-24 09:50:42 - Download occured for Animo Ralph Bunche Charter High
+29-Feb-24 09:50:42 - ActionChains scrolled to school Animo City of Champions Charter High
+29-Feb-24 09:50:43 - Download occured for Animo City of Champions Charter High
+29-Feb-24 09:50:43 - ActionChains scrolled to school Animo Leadership High
+29-Feb-24 09:50:44 - Download occured for Animo Leadership High
+29-Feb-24 09:50:44 - ActionChains scrolled to school Animo South Los Angeles Charter
+29-Feb-24 09:50:45 - Error occurred for Animo South Los Angeles Charter: Message: element click intercepted: Element <input id="actionbutton_4" type="button" class="wcag_694 primarybtn left wcag_110" value="Download" onclick="javascript:downloadreport('/export/Apps/tomsk12ca/data/ELPAC_AGGR_DATA/elpacsaenrdownloadablesyearone/2023/0/01024340000000/1709228919350/lea','01024340000000.zip')"> is not clickable at point (1152, 41). Other element would receive the click: <th>...</th>
+  (Session info: chrome=122.0.6261.71)
+Stacktrace:
+	GetHandleVerifier [0x015D8C93+51395]
+	(No symbol) [0x01545EF1]
+	(No symbol) [0x013FE13A]
+	(No symbol) [0x0143B8A2]
+	(No symbol) [0x0143A0D4]
+	(No symbol) [0x0143813B]
+	(No symbol) [0x0143731A]
+	(No symbol) [0x0142E54E]
+	(No symbol) [0x01453E8C]
+	(No symbol) [0x0142DF7E]
+	(No symbol) [0x01454124]
+	(No symbol) [0x0146A570]
+	(No symbol) [0x01453C26]
+	(No symbol) [0x0142C629]
+	(No symbol) [0x0142D40D]
+	GetHandleVerifier [0x01956453+3711107]
+	GetHandleVerifier [0x0199583A+3970154]
+	GetHandleVerifier [0x01990B28+3950424]
+	GetHandleVerifier [0x01689C99+776393]
+	(No symbol) [0x015516C4]
+	(No symbol) [0x0154C5A8]
+	(No symbol) [0x0154C759]
+	(No symbol) [0x0153DD80]
+	BaseThreadInitThunk [0x756005C9+25]
+	RtlGetAppContainerNamedObjectPath [0x77AE78BD+237]
+	RtlGetAppContainerNamedObjectPath [0x77AE788D+189]
+
+29-Feb-24 09:50:46 - ActionChains scrolled to school Animo Legacy Charter Middle
+29-Feb-24 09:50:46 - Download occured for Animo Legacy Charter Middle
+29-Feb-24 09:50:46 - ActionChains scrolled to school Animo Venice Charter High
+29-Feb-24 09:50:47 - Download occured for Animo Venice Charter High
+29-Feb-24 09:50:47 - ActionChains scrolled to school Animo Inglewood Charter High
+29-Feb-24 09:50:48 - Download occured for Animo Inglewood Charter High
+29-Feb-24 09:50:48 - ActionChains scrolled to school Animo Pat Brown
+29-Feb-24 09:50:49 - Download occured for Animo Pat Brown
+29-Feb-24 09:50:49 - ActionChains scrolled to school Animo Jefferson Charter Middle
+29-Feb-24 09:50:49 - Download occured for Animo Jefferson Charter Middle
+29-Feb-24 09:50:50 - ActionChains scrolled to school Animo Florence-Firestone Charter Middle
+29-Feb-24 09:50:50 - Download occured for Animo Florence-Firestone Charter Middle
+29-Feb-24 09:50:50 - Exception raised when downloading files Message: no such element: Unable to locate element: {"method":"xpath","selector":".//input[contains(@class, "wcag_694 primarybtn left wcag_110")]"}
+  (Session info: chrome=122.0.6261.71)
+Stacktrace:
+	GetHandleVerifier [0x015D8C93+51395]
+	(No symbol) [0x01545EF1]
+	(No symbol) [0x013FE13A]
+	(No symbol) [0x014362BB]
+	(No symbol) [0x014363EB]
+	(No symbol) [0x0142E001]
+	(No symbol) [0x01453ED4]
+	(No symbol) [0x0142DF7E]
+	(No symbol) [0x01454124]
+	(No symbol) [0x0146A570]
+	(No symbol) [0x01453C26]
+	(No symbol) [0x0142C629]
+	(No symbol) [0x0142D40D]
+	GetHandleVerifier [0x01956453+3711107]
+	GetHandleVerifier [0x0199583A+3970154]
+	GetHandleVerifier [0x01990B28+3950424]
+	GetHandleVerifier [0x01689C99+776393]
+	(No symbol) [0x015516C4]
+	(No symbol) [0x0154C5A8]
+	(No symbol) [0x0154C759]
+	(No symbol) [0x0153DD80]
+	BaseThreadInitThunk [0x756005C9+25]
+	RtlGetAppContainerNamedObjectPath [0x77AE78BD+237]
+	RtlGetAppContainerNamedObjectPath [0x77AE788D+189]
+
+29-Feb-24 09:50:50 - Error occurred for Oscar De La Hoya Animo Charter High: cannot access local variable 'download_button' where it is not associated with a value
+29-Feb-24 09:50:51 - ActionChains scrolled to school Animo Mae Jemison Charter Middle
+29-Feb-24 09:50:51 - Download occured for Animo Mae Jemison Charter Middle
+29-Feb-24 09:50:51 - ActionChains scrolled to school Animo James B. Taylor Charter Middle
+29-Feb-24 09:50:52 - Download occured for Animo James B. Taylor Charter Middle
+29-Feb-24 09:50:52 - ActionChains scrolled to school Animo Compton Charter
+29-Feb-24 09:50:53 - Download occured for Animo Compton Charter
+29-Feb-24 09:50:53 - ActionChains scrolled to school Alain Leroy Locke College Preparatory Academy
+29-Feb-24 09:50:54 - Download occured for Alain Leroy Locke College Preparatory Academy
+29-Feb-24 09:50:54 - ActionChains scrolled to school Animo Jackie Robinson High
+29-Feb-24 09:50:55 - Download occured for Animo Jackie Robinson High
+29-Feb-24 09:50:55 - ActionChains scrolled to school Animo Ellen Ochoa Charter Middle
+29-Feb-24 09:50:55 - Download occured for Animo Ellen Ochoa Charter Middle
+29-Feb-24 09:51:09 - These schools are missing ['Oscar De La Hoya Animo Charter High' 'Animo South Los Angeles Charter']
+29-Feb-24 09:51:09 - Requested reports section clicked into
+29-Feb-24 09:51:20 - Switched to iframe within downloads section
+29-Feb-24 09:51:21 - ActionChains scrolled to school Oscar De La Hoya Animo Charter High
+29-Feb-24 09:51:21 - Download occured for Oscar De La Hoya Animo Charter High
+29-Feb-24 09:51:22 - ActionChains scrolled to school Animo South Los Angeles Charter
+29-Feb-24 09:51:22 - Download occured for Animo South Los Angeles Charter
+29-Feb-24 09:51:25 - All files are downloaded for 2023 Summative ELPAC and Summative Alternate ELPAC Student Score Data File By Enrolled LEA
+29-Feb-24 09:51:27 - Moved SBAC XLSX files to p-drive
+29-Feb-24 09:51:27 - Moved ELPAC XLSX files to p-drive
+29-Feb-24 09:51:27 - Success, all schools are here for sbac
+29-Feb-24 09:51:27 - Success, merging worked for all schools sbac
+29-Feb-24 09:51:27 - Success, all schools are here for elpac
+29-Feb-24 09:51:27 - Success, merging worked for all schools elpac
+09-Apr-24 09:27:48 - 
+
+-------------ELPAC_SBAC_results new instance log
+09-Apr-24 09:27:48 - ====== WebDriver manager ======
+09-Apr-24 09:27:49 - Get LATEST chromedriver version for google-chrome
+09-Apr-24 09:27:49 - Get LATEST chromedriver version for google-chrome
+09-Apr-24 09:27:50 - Driver [C:\Users\samuel.taylor\.wdm\drivers\chromedriver\win64\123.0.6312.105\chromedriver-win32/chromedriver.exe] found in cache
+09-Apr-24 09:28:37 - Email Code submitted - 405482
+09-Apr-24 09:30:02 - 
+
+-------------ELPAC_SBAC_results new instance log
+09-Apr-24 09:30:02 - ====== WebDriver manager ======
+09-Apr-24 09:30:03 - Get LATEST chromedriver version for google-chrome
+09-Apr-24 09:30:03 - Get LATEST chromedriver version for google-chrome
+09-Apr-24 09:30:03 - Driver [C:\Users\samuel.taylor\.wdm\drivers\chromedriver\win64\123.0.6312.105\chromedriver-win32/chromedriver.exe] found in cache
+09-Apr-24 09:30:26 - Email Code submitted - 687409
+09-Apr-24 09:30:48 - LEA Reports clicked
+09-Apr-24 09:30:53 - Switched to iframe
+09-Apr-24 09:30:53 - CAASPP Student Score Data Extract Report Clicked
+09-Apr-24 09:30:54 - SY Selected
+09-Apr-24 09:30:59 - Organization was not selected
+09-Apr-24 09:30:59 - Enrolled selected
+09-Apr-24 09:31:07 - Request file clicked on
+09-Apr-24 09:31:08 - Out of iframe
+09-Apr-24 09:31:18 - Switched to LEA CAASPP Coordinator at Animo City of Champions Charter High
+09-Apr-24 09:31:18 - LEA Reports clicked
+09-Apr-24 09:31:24 - Switched to iframe
+09-Apr-24 09:31:24 - CAASPP Student Score Data Extract Report Clicked
+09-Apr-24 09:31:24 - SY Selected
+09-Apr-24 09:31:24 - Organization selected
+09-Apr-24 09:31:24 - Enrolled selected
+09-Apr-24 09:31:38 - Request file clicked on
+09-Apr-24 09:31:38 - Out of iframe
+09-Apr-24 09:31:45 - Switched to LEA CAASPP Coordinator at Animo Compton Charter
+09-Apr-24 09:31:50 - LEA Reports clicked
+09-Apr-24 09:31:55 - Switched to iframe
+09-Apr-24 09:31:55 - CAASPP Student Score Data Extract Report Clicked
+09-Apr-24 09:31:55 - SY Selected
+09-Apr-24 09:31:55 - Organization selected
+09-Apr-24 09:31:55 - Enrolled selected
+09-Apr-24 09:32:09 - Request file clicked on
+09-Apr-24 09:32:09 - Out of iframe
+09-Apr-24 09:32:20 - Switched to LEA CAASPP Coordinator at Animo Ellen Ochoa Charter Middle
+09-Apr-24 09:32:20 - LEA Reports clicked
+09-Apr-24 09:32:26 - Switched to iframe
+09-Apr-24 09:32:26 - CAASPP Student Score Data Extract Report Clicked
+09-Apr-24 09:32:26 - SY Selected
+09-Apr-24 09:32:26 - Organization selected
+09-Apr-24 09:32:26 - Enrolled selected
+09-Apr-24 09:32:39 - Request file clicked on
+09-Apr-24 09:32:39 - Out of iframe
+09-Apr-24 09:32:52 - Switched to LEA CAASPP Coordinator at Animo Florence-Firestone Charter Middle
+09-Apr-24 09:32:53 - LEA Reports clicked
+09-Apr-24 09:32:58 - Switched to iframe
+09-Apr-24 09:32:58 - CAASPP Student Score Data Extract Report Clicked
+09-Apr-24 09:32:59 - SY Selected
+09-Apr-24 09:32:59 - Organization selected
+09-Apr-24 09:32:59 - Enrolled selected
+09-Apr-24 09:33:12 - Request file clicked on
+09-Apr-24 09:33:12 - Out of iframe
+09-Apr-24 09:33:20 - Switched to LEA CAASPP Coordinator at Animo Inglewood Charter High
+09-Apr-24 09:33:24 - LEA Reports clicked
+09-Apr-24 09:33:30 - Switched to iframe
+09-Apr-24 09:33:30 - CAASPP Student Score Data Extract Report Clicked
+09-Apr-24 09:33:30 - SY Selected
+09-Apr-24 09:33:35 - Organization was not selected
+09-Apr-24 09:33:35 - Enrolled selected
+09-Apr-24 09:33:49 - Request file clicked on
+09-Apr-24 09:33:49 - Out of iframe
+09-Apr-24 09:34:00 - Switched to LEA CAASPP Coordinator at Animo Jackie Robinson High
+09-Apr-24 09:34:01 - LEA Reports clicked
+09-Apr-24 09:34:07 - Switched to iframe
+09-Apr-24 09:34:07 - CAASPP Student Score Data Extract Report Clicked
+09-Apr-24 09:34:07 - SY Selected
+09-Apr-24 09:34:07 - Organization selected
+09-Apr-24 09:34:07 - Enrolled selected
+09-Apr-24 09:34:20 - Request file clicked on
+09-Apr-24 09:34:20 - Out of iframe
+09-Apr-24 09:34:33 - Switched to LEA CAASPP Coordinator at Animo James B. Taylor Charter Middle
+09-Apr-24 09:34:33 - LEA Reports clicked
+09-Apr-24 09:34:39 - Switched to iframe
+09-Apr-24 09:34:39 - CAASPP Student Score Data Extract Report Clicked
+09-Apr-24 09:34:39 - SY Selected
+09-Apr-24 09:34:44 - Organization was not selected
+09-Apr-24 09:34:44 - Enrolled selected
+09-Apr-24 09:34:58 - Request file clicked on
+09-Apr-24 09:34:58 - Out of iframe
+09-Apr-24 09:35:09 - Switched to LEA CAASPP Coordinator at Animo Jefferson Charter Middle
+09-Apr-24 09:35:09 - LEA Reports clicked
+09-Apr-24 09:35:15 - Switched to iframe
+09-Apr-24 09:35:15 - CAASPP Student Score Data Extract Report Clicked
+09-Apr-24 09:35:15 - SY Selected
+09-Apr-24 09:35:20 - Organization was not selected
+09-Apr-24 09:35:20 - Enrolled selected
+09-Apr-24 09:35:29 - Request file clicked on
+09-Apr-24 09:35:29 - Out of iframe
+09-Apr-24 09:35:40 - Switched to LEA CAASPP Coordinator at Animo Leadership High
+09-Apr-24 09:35:40 - LEA Reports clicked
+09-Apr-24 09:35:46 - Switched to iframe
+09-Apr-24 09:35:46 - CAASPP Student Score Data Extract Report Clicked
+09-Apr-24 09:35:47 - SY Selected
+09-Apr-24 09:35:47 - Organization selected
+09-Apr-24 09:35:47 - Enrolled selected
+09-Apr-24 09:35:56 - Request file clicked on
+09-Apr-24 09:35:56 - Out of iframe
+09-Apr-24 09:36:09 - Switched to LEA CAASPP Coordinator at Animo Legacy Charter Middle
+09-Apr-24 09:36:09 - LEA Reports clicked
+09-Apr-24 09:36:15 - Switched to iframe
+09-Apr-24 09:36:15 - CAASPP Student Score Data Extract Report Clicked
+09-Apr-24 09:36:15 - SY Selected
+09-Apr-24 09:36:15 - Organization selected
+09-Apr-24 09:36:15 - Enrolled selected
+09-Apr-24 09:36:24 - Request file clicked on
+09-Apr-24 09:36:24 - Out of iframe
+09-Apr-24 09:36:35 - Switched to LEA CAASPP Coordinator at Animo Mae Jemison Charter Middle
+09-Apr-24 09:36:35 - LEA Reports clicked
+09-Apr-24 09:36:41 - Switched to iframe
+09-Apr-24 09:36:41 - CAASPP Student Score Data Extract Report Clicked
+09-Apr-24 09:36:41 - SY Selected
+09-Apr-24 09:36:41 - Organization selected
+09-Apr-24 09:36:42 - Enrolled selected
+09-Apr-24 09:36:55 - Request file clicked on
+09-Apr-24 09:36:55 - Out of iframe
+09-Apr-24 09:37:06 - Switched to LEA CAASPP Coordinator at Animo Pat Brown
+09-Apr-24 09:37:06 - LEA Reports clicked
+09-Apr-24 09:37:11 - Switched to iframe
+09-Apr-24 09:37:11 - CAASPP Student Score Data Extract Report Clicked
+09-Apr-24 09:37:12 - SY Selected
+09-Apr-24 09:37:12 - Organization selected
+09-Apr-24 09:37:12 - Enrolled selected
+09-Apr-24 09:37:21 - Request file clicked on
+09-Apr-24 09:37:21 - Out of iframe
+09-Apr-24 09:37:32 - Switched to LEA CAASPP Coordinator at Animo Ralph Bunche Charter High
+09-Apr-24 09:37:33 - LEA Reports clicked
+09-Apr-24 09:37:38 - Switched to iframe
+09-Apr-24 09:37:38 - CAASPP Student Score Data Extract Report Clicked
+09-Apr-24 09:37:38 - SY Selected
+09-Apr-24 09:37:39 - Organization selected
+09-Apr-24 09:37:39 - Enrolled selected
+09-Apr-24 09:37:48 - Request file clicked on
+09-Apr-24 09:37:48 - Out of iframe
+09-Apr-24 09:37:58 - Switched to LEA CAASPP Coordinator at Animo South Los Angeles Charter
+09-Apr-24 09:37:58 - LEA Reports clicked
+09-Apr-24 09:38:04 - Switched to iframe
+09-Apr-24 09:38:04 - CAASPP Student Score Data Extract Report Clicked
+09-Apr-24 09:38:04 - SY Selected
+09-Apr-24 09:38:04 - Organization selected
+09-Apr-24 09:38:04 - Enrolled selected
+09-Apr-24 09:38:17 - Request file clicked on
+09-Apr-24 09:38:17 - Out of iframe
+09-Apr-24 09:38:28 - Switched to LEA CAASPP Coordinator at Animo Venice Charter High
+09-Apr-24 09:38:28 - LEA Reports clicked
+09-Apr-24 09:38:34 - Switched to iframe
+09-Apr-24 09:38:34 - CAASPP Student Score Data Extract Report Clicked
+09-Apr-24 09:38:34 - SY Selected
+09-Apr-24 09:38:34 - Organization selected
+09-Apr-24 09:38:34 - Enrolled selected
+09-Apr-24 09:38:47 - Request file clicked on
+09-Apr-24 09:38:47 - Out of iframe
+09-Apr-24 09:38:59 - Switched to LEA CAASPP Coordinator at Animo Watts College Preparatory Academy
+09-Apr-24 09:38:59 - LEA Reports clicked
+09-Apr-24 09:39:04 - Switched to iframe
+09-Apr-24 09:39:04 - CAASPP Student Score Data Extract Report Clicked
+09-Apr-24 09:39:04 - SY Selected
+09-Apr-24 09:39:09 - Organization was not selected
+09-Apr-24 09:39:09 - Enrolled selected
+09-Apr-24 09:39:23 - Request file clicked on
+09-Apr-24 09:39:23 - Out of iframe
+09-Apr-24 09:39:35 - Switched to LEA CAASPP Coordinator at Oscar De La Hoya Animo Charter High
+09-Apr-24 09:39:35 - LEA Reports clicked
+09-Apr-24 09:39:40 - Switched to iframe
+09-Apr-24 09:39:40 - CAASPP Student Score Data Extract Report Clicked
+09-Apr-24 09:39:40 - SY Selected
+09-Apr-24 09:39:41 - Organization selected
+09-Apr-24 09:39:41 - Enrolled selected
+09-Apr-24 09:39:54 - Request file clicked on
+09-Apr-24 09:39:54 - Out of iframe
+09-Apr-24 09:40:00 - Requested reports section clicked into
+09-Apr-24 09:40:12 - Switched to iframe within downloads section
+09-Apr-24 09:40:12 - ActionChains scrolled to school Animo Florence-Firestone Charter Middle
+09-Apr-24 09:40:13 - Download occured for Animo Florence-Firestone Charter Middle
+09-Apr-24 09:40:13 - ActionChains scrolled to school Alain Leroy Locke College Preparatory Academy
+09-Apr-24 09:40:14 - Download occured for Alain Leroy Locke College Preparatory Academy
+09-Apr-24 09:40:14 - ActionChains scrolled to school Animo City of Champions Charter High
+09-Apr-24 09:40:15 - Download occured for Animo City of Champions Charter High
+09-Apr-24 13:22:00 - 
+
+-------------ELPAC_SBAC_results new instance log
+09-Apr-24 13:22:00 - ====== WebDriver manager ======
+09-Apr-24 13:22:02 - Get LATEST chromedriver version for google-chrome
+09-Apr-24 13:22:02 - Get LATEST chromedriver version for google-chrome
+09-Apr-24 13:22:02 - Driver [C:\Users\samuel.taylor\.wdm\drivers\chromedriver\win64\123.0.6312.105\chromedriver-win32/chromedriver.exe] found in cache
+09-Apr-24 13:22:43 - Email Code submitted - 431140
+09-Apr-24 13:22:54 - LEA Reports clicked
+09-Apr-24 13:22:57 - Switched to iframe
+09-Apr-24 13:22:57 - CAASPP Student Score Data Extract Report Clicked
+09-Apr-24 13:22:57 - SY Selected
+09-Apr-24 13:22:57 - Organization selected
+09-Apr-24 13:22:57 - Enrolled selected
+09-Apr-24 13:23:03 - Request file clicked on
+09-Apr-24 13:23:03 - Out of iframe
+09-Apr-24 13:23:10 - Switched to LEA CAASPP Coordinator at Animo City of Champions Charter High
+09-Apr-24 13:23:10 - LEA Reports clicked
+09-Apr-24 13:23:13 - Switched to iframe
+09-Apr-24 13:23:13 - CAASPP Student Score Data Extract Report Clicked
+09-Apr-24 13:23:13 - SY Selected
+09-Apr-24 13:23:13 - Organization selected
+09-Apr-24 13:23:13 - Enrolled selected
+09-Apr-24 13:23:19 - Request file clicked on
+09-Apr-24 13:23:19 - Out of iframe
+09-Apr-24 13:23:26 - Switched to LEA CAASPP Coordinator at Animo Compton Charter
+09-Apr-24 13:23:26 - LEA Reports clicked
+09-Apr-24 13:23:29 - Switched to iframe
+09-Apr-24 13:23:30 - CAASPP Student Score Data Extract Report Clicked
+09-Apr-24 13:23:30 - SY Selected
+09-Apr-24 13:23:30 - Organization selected
+09-Apr-24 13:23:30 - Enrolled selected
+09-Apr-24 13:23:41 - Request file clicked on
+09-Apr-24 13:23:41 - Out of iframe
+09-Apr-24 13:23:47 - Switched to LEA CAASPP Coordinator at Animo Ellen Ochoa Charter Middle
+09-Apr-24 13:23:47 - LEA Reports clicked
+09-Apr-24 13:23:50 - Switched to iframe
+09-Apr-24 13:23:50 - CAASPP Student Score Data Extract Report Clicked
+09-Apr-24 13:23:50 - SY Selected
+09-Apr-24 13:23:51 - Organization selected
+09-Apr-24 13:23:51 - Enrolled selected
+09-Apr-24 13:24:01 - Request file clicked on
+09-Apr-24 13:24:01 - Out of iframe
+09-Apr-24 13:24:07 - Switched to LEA CAASPP Coordinator at Animo Florence-Firestone Charter Middle
+09-Apr-24 13:24:08 - LEA Reports clicked
+09-Apr-24 13:24:12 - Switched to iframe
+09-Apr-24 13:24:12 - CAASPP Student Score Data Extract Report Clicked
+09-Apr-24 13:24:12 - SY Selected
+09-Apr-24 13:24:12 - Organization selected
+09-Apr-24 13:24:12 - Enrolled selected
+09-Apr-24 13:24:23 - Request file clicked on
+09-Apr-24 13:24:23 - Out of iframe
+09-Apr-24 13:24:29 - Switched to LEA CAASPP Coordinator at Animo Inglewood Charter High
+09-Apr-24 13:24:29 - LEA Reports clicked
+09-Apr-24 13:24:32 - Switched to iframe
+09-Apr-24 13:24:32 - CAASPP Student Score Data Extract Report Clicked
+09-Apr-24 13:24:33 - SY Selected
+09-Apr-24 13:24:33 - Organization selected
+09-Apr-24 13:24:33 - Enrolled selected
+09-Apr-24 13:24:43 - Request file clicked on
+09-Apr-24 13:24:43 - Out of iframe
+09-Apr-24 13:24:50 - Switched to LEA CAASPP Coordinator at Animo Jackie Robinson High
+09-Apr-24 13:24:50 - LEA Reports clicked
+09-Apr-24 13:24:53 - Switched to iframe
+09-Apr-24 13:24:53 - CAASPP Student Score Data Extract Report Clicked
+09-Apr-24 13:24:54 - SY Selected
+09-Apr-24 13:24:54 - Organization selected
+09-Apr-24 13:24:54 - Enrolled selected
+09-Apr-24 13:25:04 - Request file clicked on
+09-Apr-24 13:25:04 - Out of iframe
+09-Apr-24 13:25:11 - Switched to LEA CAASPP Coordinator at Animo James B. Taylor Charter Middle
+09-Apr-24 13:25:11 - LEA Reports clicked
+09-Apr-24 13:25:15 - Switched to iframe
+09-Apr-24 13:25:15 - CAASPP Student Score Data Extract Report Clicked
+09-Apr-24 13:25:15 - SY Selected
+09-Apr-24 13:25:15 - Organization selected
+09-Apr-24 13:25:15 - Enrolled selected
+09-Apr-24 13:25:26 - Request file clicked on
+09-Apr-24 13:25:26 - Out of iframe
+09-Apr-24 13:25:34 - Switched to LEA CAASPP Coordinator at Animo Jefferson Charter Middle
+09-Apr-24 13:25:34 - LEA Reports clicked
+09-Apr-24 13:25:37 - Switched to iframe
+09-Apr-24 13:25:37 - CAASPP Student Score Data Extract Report Clicked
+09-Apr-24 13:25:37 - SY Selected
+09-Apr-24 13:25:37 - Organization selected
+09-Apr-24 13:25:37 - Enrolled selected
+09-Apr-24 13:25:48 - Request file clicked on
+09-Apr-24 13:25:48 - Out of iframe
+09-Apr-24 13:25:54 - Switched to LEA CAASPP Coordinator at Animo Leadership High
+09-Apr-24 13:25:54 - LEA Reports clicked
+09-Apr-24 13:25:57 - Switched to iframe
+09-Apr-24 13:25:57 - CAASPP Student Score Data Extract Report Clicked
+09-Apr-24 13:25:57 - SY Selected
+09-Apr-24 13:25:58 - Organization selected
+09-Apr-24 13:25:58 - Enrolled selected
+09-Apr-24 13:26:03 - Request file clicked on
+09-Apr-24 13:26:03 - Out of iframe
+09-Apr-24 13:26:09 - Switched to LEA CAASPP Coordinator at Animo Legacy Charter Middle
+09-Apr-24 13:26:10 - LEA Reports clicked
+09-Apr-24 13:26:13 - Switched to iframe
+09-Apr-24 13:26:13 - CAASPP Student Score Data Extract Report Clicked
+09-Apr-24 13:26:13 - SY Selected
+09-Apr-24 13:26:13 - Organization selected
+09-Apr-24 13:26:13 - Enrolled selected
+09-Apr-24 13:26:23 - Request file clicked on
+09-Apr-24 13:26:23 - Out of iframe
+09-Apr-24 13:26:30 - Switched to LEA CAASPP Coordinator at Animo Mae Jemison Charter Middle
+09-Apr-24 13:26:30 - LEA Reports clicked
+09-Apr-24 13:26:33 - Switched to iframe
+09-Apr-24 13:26:33 - CAASPP Student Score Data Extract Report Clicked
+09-Apr-24 13:26:33 - SY Selected
+09-Apr-24 13:26:33 - Organization selected
+09-Apr-24 13:26:33 - Enrolled selected
+09-Apr-24 13:26:39 - Request file clicked on
+09-Apr-24 13:26:39 - Out of iframe
+09-Apr-24 13:26:46 - Switched to LEA CAASPP Coordinator at Animo Pat Brown
+09-Apr-24 13:26:46 - LEA Reports clicked
+09-Apr-24 13:26:50 - Switched to iframe
+09-Apr-24 13:26:50 - CAASPP Student Score Data Extract Report Clicked
+09-Apr-24 13:26:50 - SY Selected
+09-Apr-24 13:26:55 - Organization was not selected
+09-Apr-24 13:26:55 - Enrolled selected
+09-Apr-24 13:27:06 - Request file clicked on
+09-Apr-24 13:27:06 - Out of iframe
+09-Apr-24 13:27:13 - Switched to LEA CAASPP Coordinator at Animo Ralph Bunche Charter High
+09-Apr-24 13:27:13 - LEA Reports clicked
+09-Apr-24 13:27:16 - Switched to iframe
+09-Apr-24 13:27:16 - CAASPP Student Score Data Extract Report Clicked
+09-Apr-24 13:27:16 - SY Selected
+09-Apr-24 13:27:17 - Organization selected
+09-Apr-24 13:27:17 - Enrolled selected
+09-Apr-24 13:27:22 - Request file clicked on
+09-Apr-24 13:27:22 - Out of iframe
+09-Apr-24 13:27:30 - Switched to LEA CAASPP Coordinator at Animo South Los Angeles Charter
+09-Apr-24 13:27:30 - LEA Reports clicked
+09-Apr-24 13:27:33 - Switched to iframe
+09-Apr-24 13:27:33 - CAASPP Student Score Data Extract Report Clicked
+09-Apr-24 13:27:34 - SY Selected
+09-Apr-24 13:27:34 - Organization selected
+09-Apr-24 13:27:34 - Enrolled selected
+09-Apr-24 13:27:44 - Request file clicked on
+09-Apr-24 13:27:44 - Out of iframe
+09-Apr-24 13:27:51 - Switched to LEA CAASPP Coordinator at Animo Venice Charter High
+09-Apr-24 13:27:51 - LEA Reports clicked
+09-Apr-24 13:27:54 - Switched to iframe
+09-Apr-24 13:27:54 - CAASPP Student Score Data Extract Report Clicked
+09-Apr-24 13:27:54 - SY Selected
+09-Apr-24 13:27:54 - Organization selected
+09-Apr-24 13:27:54 - Enrolled selected
+09-Apr-24 13:28:00 - Request file clicked on
+09-Apr-24 13:28:00 - Out of iframe
+09-Apr-24 13:28:06 - Switched to LEA CAASPP Coordinator at Animo Watts College Preparatory Academy
+09-Apr-24 13:28:07 - LEA Reports clicked
+09-Apr-24 13:28:09 - Switched to iframe
+09-Apr-24 13:28:09 - CAASPP Student Score Data Extract Report Clicked
+09-Apr-24 13:28:09 - SY Selected
+09-Apr-24 13:28:10 - Organization selected
+09-Apr-24 13:28:10 - Enrolled selected
+09-Apr-24 13:28:19 - Request file clicked on
+09-Apr-24 13:28:20 - Out of iframe
+09-Apr-24 13:28:24 - Switched to LEA CAASPP Coordinator at Oscar De La Hoya Animo Charter High
+09-Apr-24 13:28:26 - LEA Reports clicked
+09-Apr-24 13:28:29 - Switched to iframe
+09-Apr-24 13:28:29 - CAASPP Student Score Data Extract Report Clicked
+09-Apr-24 13:28:29 - SY Selected
+09-Apr-24 13:28:29 - Organization selected
+09-Apr-24 13:28:30 - Enrolled selected
+09-Apr-24 13:28:40 - Request file clicked on
+09-Apr-24 13:28:40 - Out of iframe
+09-Apr-24 13:28:43 - Requested reports section clicked into
+09-Apr-24 13:28:48 - Switched to iframe within downloads section
+09-Apr-24 13:28:49 - ActionChains scrolled to school Animo Florence-Firestone Charter Middle
+09-Apr-24 13:28:49 - Download occured for Animo Florence-Firestone Charter Middle
+09-Apr-24 13:28:50 - ActionChains scrolled to school Alain Leroy Locke College Preparatory Academy
+09-Apr-24 13:28:50 - Download occured for Alain Leroy Locke College Preparatory Academy
+09-Apr-24 13:28:50 - ActionChains scrolled to school Animo City of Champions Charter High
+09-Apr-24 13:28:51 - Download occured for Animo City of Champions Charter High
+09-Apr-24 13:28:51 - ActionChains scrolled to school Animo Leadership High
+09-Apr-24 13:28:52 - Download occured for Animo Leadership High
+09-Apr-24 13:28:52 - ActionChains scrolled to school Animo Pat Brown
+09-Apr-24 13:28:52 - Download occured for Animo Pat Brown
+09-Apr-24 13:28:52 - Exception raised when downloading files Message: no such element: Unable to locate element: {"method":"xpath","selector":".//input[contains(@class, "wcag_694 primarybtn left wcag_110")]"}
+  (Session info: chrome=123.0.6312.106)
+Stacktrace:
+	GetHandleVerifier [0x00DF4CE3+225091]
+	(No symbol) [0x00D24E31]
+	(No symbol) [0x00BC9A7A]
+	(No symbol) [0x00C0175B]
+	(No symbol) [0x00C0188B]
+	(No symbol) [0x00BF9391]
+	(No symbol) [0x00C1F5A4]
+	(No symbol) [0x00BF930E]
+	(No symbol) [0x00C1F7F4]
+	(No symbol) [0x00C35CB0]
+	(No symbol) [0x00C1F2F6]
+	(No symbol) [0x00BF79B9]
+	(No symbol) [0x00BF879D]
+	sqlite3_dbdata_init [0x01269A83+4064547]
+	sqlite3_dbdata_init [0x0127108A+4094762]
+	sqlite3_dbdata_init [0x0126B988+4072488]
+	sqlite3_dbdata_init [0x00F6C9E9+930953]
+	(No symbol) [0x00D30804]
+	(No symbol) [0x00D2AD28]
+	(No symbol) [0x00D2AE51]
+	(No symbol) [0x00D1CAC0]
+	BaseThreadInitThunk [0x756005C9+25]
+	RtlGetAppContainerNamedObjectPath [0x77AE78BD+237]
+	RtlGetAppContainerNamedObjectPath [0x77AE788D+189]
+
+09-Apr-24 13:28:52 - Error occurred for Animo Legacy Charter Middle: cannot access local variable 'download_button' where it is not associated with a value
+09-Apr-24 13:28:53 - ActionChains scrolled to school Animo Ellen Ochoa Charter Middle
+09-Apr-24 13:28:53 - Download occured for Animo Ellen Ochoa Charter Middle
+09-Apr-24 13:28:53 - ActionChains scrolled to school Animo Inglewood Charter High
+09-Apr-24 13:28:54 - Download occured for Animo Inglewood Charter High
+09-Apr-24 13:28:54 - ActionChains scrolled to school Animo Mae Jemison Charter Middle
+09-Apr-24 13:28:55 - Download occured for Animo Mae Jemison Charter Middle
+09-Apr-24 13:28:55 - Exception raised when downloading files Message: no such element: Unable to locate element: {"method":"xpath","selector":".//input[contains(@class, "wcag_694 primarybtn left wcag_110")]"}
+  (Session info: chrome=123.0.6312.106)
+Stacktrace:
+	GetHandleVerifier [0x00DF4CE3+225091]
+	(No symbol) [0x00D24E31]
+	(No symbol) [0x00BC9A7A]
+	(No symbol) [0x00C0175B]
+	(No symbol) [0x00C0188B]
+	(No symbol) [0x00BF9391]
+	(No symbol) [0x00C1F5A4]
+	(No symbol) [0x00BF930E]
+	(No symbol) [0x00C1F7F4]
+	(No symbol) [0x00C35CB0]
+	(No symbol) [0x00C1F2F6]
+	(No symbol) [0x00BF79B9]
+	(No symbol) [0x00BF879D]
+	sqlite3_dbdata_init [0x01269A83+4064547]
+	sqlite3_dbdata_init [0x0127108A+4094762]
+	sqlite3_dbdata_init [0x0126B988+4072488]
+	sqlite3_dbdata_init [0x00F6C9E9+930953]
+	(No symbol) [0x00D30804]
+	(No symbol) [0x00D2AD28]
+	(No symbol) [0x00D2AE51]
+	(No symbol) [0x00D1CAC0]
+	BaseThreadInitThunk [0x756005C9+25]
+	RtlGetAppContainerNamedObjectPath [0x77AE78BD+237]
+	RtlGetAppContainerNamedObjectPath [0x77AE788D+189]
+
+09-Apr-24 13:28:55 - Error occurred for Animo Ralph Bunche Charter High: cannot access local variable 'download_button' where it is not associated with a value
+09-Apr-24 13:28:55 - Exception raised when downloading files Message: no such element: Unable to locate element: {"method":"xpath","selector":".//input[contains(@class, "wcag_694 primarybtn left wcag_110")]"}
+  (Session info: chrome=123.0.6312.106)
+Stacktrace:
+	GetHandleVerifier [0x00DF4CE3+225091]
+	(No symbol) [0x00D24E31]
+	(No symbol) [0x00BC9A7A]
+	(No symbol) [0x00C0175B]
+	(No symbol) [0x00C0188B]
+	(No symbol) [0x00BF9391]
+	(No symbol) [0x00C1F5A4]
+	(No symbol) [0x00BF930E]
+	(No symbol) [0x00C1F7F4]
+	(No symbol) [0x00C35CB0]
+	(No symbol) [0x00C1F2F6]
+	(No symbol) [0x00BF79B9]
+	(No symbol) [0x00BF879D]
+	sqlite3_dbdata_init [0x01269A83+4064547]
+	sqlite3_dbdata_init [0x0127108A+4094762]
+	sqlite3_dbdata_init [0x0126B988+4072488]
+	sqlite3_dbdata_init [0x00F6C9E9+930953]
+	(No symbol) [0x00D30804]
+	(No symbol) [0x00D2AD28]
+	(No symbol) [0x00D2AE51]
+	(No symbol) [0x00D1CAC0]
+	BaseThreadInitThunk [0x756005C9+25]
+	RtlGetAppContainerNamedObjectPath [0x77AE78BD+237]
+	RtlGetAppContainerNamedObjectPath [0x77AE788D+189]
+
+09-Apr-24 13:28:55 - Error occurred for Animo Venice Charter High: cannot access local variable 'download_button' where it is not associated with a value
+09-Apr-24 13:28:55 - Exception raised when downloading files Message: no such element: Unable to locate element: {"method":"xpath","selector":".//input[contains(@class, "wcag_694 primarybtn left wcag_110")]"}
+  (Session info: chrome=123.0.6312.106)
+Stacktrace:
+	GetHandleVerifier [0x00DF4CE3+225091]
+	(No symbol) [0x00D24E31]
+	(No symbol) [0x00BC9A7A]
+	(No symbol) [0x00C0175B]
+	(No symbol) [0x00C0188B]
+	(No symbol) [0x00BF9391]
+	(No symbol) [0x00C1F5A4]
+	(No symbol) [0x00BF930E]
+	(No symbol) [0x00C1F7F4]
+	(No symbol) [0x00C35CB0]
+	(No symbol) [0x00C1F2F6]
+	(No symbol) [0x00BF79B9]
+	(No symbol) [0x00BF879D]
+	sqlite3_dbdata_init [0x01269A83+4064547]
+	sqlite3_dbdata_init [0x0127108A+4094762]
+	sqlite3_dbdata_init [0x0126B988+4072488]
+	sqlite3_dbdata_init [0x00F6C9E9+930953]
+	(No symbol) [0x00D30804]
+	(No symbol) [0x00D2AD28]
+	(No symbol) [0x00D2AE51]
+	(No symbol) [0x00D1CAC0]
+	BaseThreadInitThunk [0x756005C9+25]
+	RtlGetAppContainerNamedObjectPath [0x77AE78BD+237]
+	RtlGetAppContainerNamedObjectPath [0x77AE788D+189]
+
+09-Apr-24 13:28:55 - Error occurred for Animo South Los Angeles Charter: cannot access local variable 'download_button' where it is not associated with a value
+09-Apr-24 13:28:55 - Exception raised when downloading files Message: no such element: Unable to locate element: {"method":"xpath","selector":".//input[contains(@class, "wcag_694 primarybtn left wcag_110")]"}
+  (Session info: chrome=123.0.6312.106)
+Stacktrace:
+	GetHandleVerifier [0x00DF4CE3+225091]
+	(No symbol) [0x00D24E31]
+	(No symbol) [0x00BC9A7A]
+	(No symbol) [0x00C0175B]
+	(No symbol) [0x00C0188B]
+	(No symbol) [0x00BF9391]
+	(No symbol) [0x00C1F5A4]
+	(No symbol) [0x00BF930E]
+	(No symbol) [0x00C1F7F4]
+	(No symbol) [0x00C35CB0]
+	(No symbol) [0x00C1F2F6]
+	(No symbol) [0x00BF79B9]
+	(No symbol) [0x00BF879D]
+	sqlite3_dbdata_init [0x01269A83+4064547]
+	sqlite3_dbdata_init [0x0127108A+4094762]
+	sqlite3_dbdata_init [0x0126B988+4072488]
+	sqlite3_dbdata_init [0x00F6C9E9+930953]
+	(No symbol) [0x00D30804]
+	(No symbol) [0x00D2AD28]
+	(No symbol) [0x00D2AE51]
+	(No symbol) [0x00D1CAC0]
+	BaseThreadInitThunk [0x756005C9+25]
+	RtlGetAppContainerNamedObjectPath [0x77AE78BD+237]
+	RtlGetAppContainerNamedObjectPath [0x77AE788D+189]
+
+09-Apr-24 13:28:55 - Error occurred for Animo Watts College Preparatory Academy: cannot access local variable 'download_button' where it is not associated with a value
+09-Apr-24 13:28:55 - ActionChains scrolled to school Animo Jackie Robinson High
+09-Apr-24 13:28:56 - Download occured for Animo Jackie Robinson High
+09-Apr-24 13:28:56 - Exception raised when downloading files Message: no such element: Unable to locate element: {"method":"xpath","selector":".//input[contains(@class, "wcag_694 primarybtn left wcag_110")]"}
+  (Session info: chrome=123.0.6312.106)
+Stacktrace:
+	GetHandleVerifier [0x00DF4CE3+225091]
+	(No symbol) [0x00D24E31]
+	(No symbol) [0x00BC9A7A]
+	(No symbol) [0x00C0175B]
+	(No symbol) [0x00C0188B]
+	(No symbol) [0x00BF9391]
+	(No symbol) [0x00C1F5A4]
+	(No symbol) [0x00BF930E]
+	(No symbol) [0x00C1F7F4]
+	(No symbol) [0x00C35CB0]
+	(No symbol) [0x00C1F2F6]
+	(No symbol) [0x00BF79B9]
+	(No symbol) [0x00BF879D]
+	sqlite3_dbdata_init [0x01269A83+4064547]
+	sqlite3_dbdata_init [0x0127108A+4094762]
+	sqlite3_dbdata_init [0x0126B988+4072488]
+	sqlite3_dbdata_init [0x00F6C9E9+930953]
+	(No symbol) [0x00D30804]
+	(No symbol) [0x00D2AD28]
+	(No symbol) [0x00D2AE51]
+	(No symbol) [0x00D1CAC0]
+	BaseThreadInitThunk [0x756005C9+25]
+	RtlGetAppContainerNamedObjectPath [0x77AE78BD+237]
+	RtlGetAppContainerNamedObjectPath [0x77AE788D+189]
+
+09-Apr-24 13:28:56 - Error occurred for Oscar De La Hoya Animo Charter High: cannot access local variable 'download_button' where it is not associated with a value
+09-Apr-24 13:28:56 - ActionChains scrolled to school Animo Compton Charter
+09-Apr-24 13:28:56 - Download occured for Animo Compton Charter
+09-Apr-24 13:28:57 - ActionChains scrolled to school Animo James B. Taylor Charter Middle
+09-Apr-24 13:28:58 - Error occurred for Animo James B. Taylor Charter Middle: Message: element click intercepted: Element <input id="actionbutton_11" type="button" class="wcag_694 primarybtn left wcag_110" value="Download" onclick="javascript:downloadreport('/export/Apps/tomsk12ca/data/CAASPP_AGGR_DATA/caasppenrdownloadablesyearone/2023/0/01240080000000/1712694317130/lea','01240080000000.zip')"> is not clickable at point (1152, 23). Other element would receive the click: <th>...</th>
+  (Session info: chrome=123.0.6312.106)
+Stacktrace:
+	GetHandleVerifier [0x00DF4CE3+225091]
+	(No symbol) [0x00D24E31]
+	(No symbol) [0x00BC9A7A]
+	(No symbol) [0x00C06D42]
+	(No symbol) [0x00C05574]
+	(No symbol) [0x00C035DB]
+	(No symbol) [0x00C027BA]
+	(No symbol) [0x00BF98DE]
+	(No symbol) [0x00C1F55C]
+	(No symbol) [0x00BF930E]
+	(No symbol) [0x00C1F7F4]
+	(No symbol) [0x00C35CB0]
+	(No symbol) [0x00C1F2F6]
+	(No symbol) [0x00BF79B9]
+	(No symbol) [0x00BF879D]
+	sqlite3_dbdata_init [0x01269A83+4064547]
+	sqlite3_dbdata_init [0x0127108A+4094762]
+	sqlite3_dbdata_init [0x0126B988+4072488]
+	sqlite3_dbdata_init [0x00F6C9E9+930953]
+	(No symbol) [0x00D30804]
+	(No symbol) [0x00D2AD28]
+	(No symbol) [0x00D2AE51]
+	(No symbol) [0x00D1CAC0]
+	BaseThreadInitThunk [0x756005C9+25]
+	RtlGetAppContainerNamedObjectPath [0x77AE78BD+237]
+	RtlGetAppContainerNamedObjectPath [0x77AE788D+189]
+
+09-Apr-24 13:28:58 - ActionChains scrolled to school Animo Jefferson Charter Middle
+09-Apr-24 13:28:59 - Download occured for Animo Jefferson Charter Middle
+09-Apr-24 13:29:12 - These schools are missing ['Oscar De La Hoya Animo Charter High' 'Animo South Los Angeles Charter'
+ 'Animo Venice Charter High' 'Animo Ralph Bunche Charter High'
+ 'Animo Legacy Charter Middle' 'Animo Watts College Preparatory Academy'
+ 'Animo James B. Taylor Charter Middle']
+09-Apr-24 13:29:12 - Requested reports section clicked into
+09-Apr-24 13:29:23 - Switched to iframe within downloads section
+09-Apr-24 13:29:23 - Exception raised when downloading files Message: no such element: Unable to locate element: {"method":"xpath","selector":".//input[contains(@class, "wcag_694 primarybtn left wcag_110")]"}
+  (Session info: chrome=123.0.6312.106)
+Stacktrace:
+	GetHandleVerifier [0x00DF4CE3+225091]
+	(No symbol) [0x00D24E31]
+	(No symbol) [0x00BC9A7A]
+	(No symbol) [0x00C0175B]
+	(No symbol) [0x00C0188B]
+	(No symbol) [0x00BF9391]
+	(No symbol) [0x00C1F5A4]
+	(No symbol) [0x00BF930E]
+	(No symbol) [0x00C1F7F4]
+	(No symbol) [0x00C35CB0]
+	(No symbol) [0x00C1F2F6]
+	(No symbol) [0x00BF79B9]
+	(No symbol) [0x00BF879D]
+	sqlite3_dbdata_init [0x01269A83+4064547]
+	sqlite3_dbdata_init [0x0127108A+4094762]
+	sqlite3_dbdata_init [0x0126B988+4072488]
+	sqlite3_dbdata_init [0x00F6C9E9+930953]
+	(No symbol) [0x00D30804]
+	(No symbol) [0x00D2AD28]
+	(No symbol) [0x00D2AE51]
+	(No symbol) [0x00D1CAC0]
+	BaseThreadInitThunk [0x756005C9+25]
+	RtlGetAppContainerNamedObjectPath [0x77AE78BD+237]
+	RtlGetAppContainerNamedObjectPath [0x77AE788D+189]
+
+09-Apr-24 13:29:23 - Error occurred for Oscar De La Hoya Animo Charter High: cannot access local variable 'download_button' where it is not associated with a value
+09-Apr-24 13:29:23 - Exception raised when downloading files Message: no such element: Unable to locate element: {"method":"xpath","selector":".//input[contains(@class, "wcag_694 primarybtn left wcag_110")]"}
+  (Session info: chrome=123.0.6312.106)
+Stacktrace:
+	GetHandleVerifier [0x00DF4CE3+225091]
+	(No symbol) [0x00D24E31]
+	(No symbol) [0x00BC9A7A]
+	(No symbol) [0x00C0175B]
+	(No symbol) [0x00C0188B]
+	(No symbol) [0x00BF9391]
+	(No symbol) [0x00C1F5A4]
+	(No symbol) [0x00BF930E]
+	(No symbol) [0x00C1F7F4]
+	(No symbol) [0x00C35CB0]
+	(No symbol) [0x00C1F2F6]
+	(No symbol) [0x00BF79B9]
+	(No symbol) [0x00BF879D]
+	sqlite3_dbdata_init [0x01269A83+4064547]
+	sqlite3_dbdata_init [0x0127108A+4094762]
+	sqlite3_dbdata_init [0x0126B988+4072488]
+	sqlite3_dbdata_init [0x00F6C9E9+930953]
+	(No symbol) [0x00D30804]
+	(No symbol) [0x00D2AD28]
+	(No symbol) [0x00D2AE51]
+	(No symbol) [0x00D1CAC0]
+	BaseThreadInitThunk [0x756005C9+25]
+	RtlGetAppContainerNamedObjectPath [0x77AE78BD+237]
+	RtlGetAppContainerNamedObjectPath [0x77AE788D+189]
+
+09-Apr-24 13:29:23 - Error occurred for Animo South Los Angeles Charter: cannot access local variable 'download_button' where it is not associated with a value
+09-Apr-24 13:29:24 - Exception raised when downloading files Message: no such element: Unable to locate element: {"method":"xpath","selector":".//input[contains(@class, "wcag_694 primarybtn left wcag_110")]"}
+  (Session info: chrome=123.0.6312.106)
+Stacktrace:
+	GetHandleVerifier [0x00DF4CE3+225091]
+	(No symbol) [0x00D24E31]
+	(No symbol) [0x00BC9A7A]
+	(No symbol) [0x00C0175B]
+	(No symbol) [0x00C0188B]
+	(No symbol) [0x00BF9391]
+	(No symbol) [0x00C1F5A4]
+	(No symbol) [0x00BF930E]
+	(No symbol) [0x00C1F7F4]
+	(No symbol) [0x00C35CB0]
+	(No symbol) [0x00C1F2F6]
+	(No symbol) [0x00BF79B9]
+	(No symbol) [0x00BF879D]
+	sqlite3_dbdata_init [0x01269A83+4064547]
+	sqlite3_dbdata_init [0x0127108A+4094762]
+	sqlite3_dbdata_init [0x0126B988+4072488]
+	sqlite3_dbdata_init [0x00F6C9E9+930953]
+	(No symbol) [0x00D30804]
+	(No symbol) [0x00D2AD28]
+	(No symbol) [0x00D2AE51]
+	(No symbol) [0x00D1CAC0]
+	BaseThreadInitThunk [0x756005C9+25]
+	RtlGetAppContainerNamedObjectPath [0x77AE78BD+237]
+	RtlGetAppContainerNamedObjectPath [0x77AE788D+189]
+
+09-Apr-24 13:29:24 - Error occurred for Animo Venice Charter High: cannot access local variable 'download_button' where it is not associated with a value
+09-Apr-24 13:29:24 - ActionChains scrolled to school Animo Ralph Bunche Charter High
+09-Apr-24 13:29:24 - Download occured for Animo Ralph Bunche Charter High
+09-Apr-24 13:29:24 - Exception raised when downloading files Message: no such element: Unable to locate element: {"method":"xpath","selector":".//input[contains(@class, "wcag_694 primarybtn left wcag_110")]"}
+  (Session info: chrome=123.0.6312.106)
+Stacktrace:
+	GetHandleVerifier [0x00DF4CE3+225091]
+	(No symbol) [0x00D24E31]
+	(No symbol) [0x00BC9A7A]
+	(No symbol) [0x00C0175B]
+	(No symbol) [0x00C0188B]
+	(No symbol) [0x00BF9391]
+	(No symbol) [0x00C1F5A4]
+	(No symbol) [0x00BF930E]
+	(No symbol) [0x00C1F7F4]
+	(No symbol) [0x00C35CB0]
+	(No symbol) [0x00C1F2F6]
+	(No symbol) [0x00BF79B9]
+	(No symbol) [0x00BF879D]
+	sqlite3_dbdata_init [0x01269A83+4064547]
+	sqlite3_dbdata_init [0x0127108A+4094762]
+	sqlite3_dbdata_init [0x0126B988+4072488]
+	sqlite3_dbdata_init [0x00F6C9E9+930953]
+	(No symbol) [0x00D30804]
+	(No symbol) [0x00D2AD28]
+	(No symbol) [0x00D2AE51]
+	(No symbol) [0x00D1CAC0]
+	BaseThreadInitThunk [0x756005C9+25]
+	RtlGetAppContainerNamedObjectPath [0x77AE78BD+237]
+	RtlGetAppContainerNamedObjectPath [0x77AE788D+189]
+
+09-Apr-24 13:29:24 - Error occurred for Animo Legacy Charter Middle: cannot access local variable 'download_button' where it is not associated with a value
+09-Apr-24 13:29:24 - Exception raised when downloading files Message: no such element: Unable to locate element: {"method":"xpath","selector":".//input[contains(@class, "wcag_694 primarybtn left wcag_110")]"}
+  (Session info: chrome=123.0.6312.106)
+Stacktrace:
+	GetHandleVerifier [0x00DF4CE3+225091]
+	(No symbol) [0x00D24E31]
+	(No symbol) [0x00BC9A7A]
+	(No symbol) [0x00C0175B]
+	(No symbol) [0x00C0188B]
+	(No symbol) [0x00BF9391]
+	(No symbol) [0x00C1F5A4]
+	(No symbol) [0x00BF930E]
+	(No symbol) [0x00C1F7F4]
+	(No symbol) [0x00C35CB0]
+	(No symbol) [0x00C1F2F6]
+	(No symbol) [0x00BF79B9]
+	(No symbol) [0x00BF879D]
+	sqlite3_dbdata_init [0x01269A83+4064547]
+	sqlite3_dbdata_init [0x0127108A+4094762]
+	sqlite3_dbdata_init [0x0126B988+4072488]
+	sqlite3_dbdata_init [0x00F6C9E9+930953]
+	(No symbol) [0x00D30804]
+	(No symbol) [0x00D2AD28]
+	(No symbol) [0x00D2AE51]
+	(No symbol) [0x00D1CAC0]
+	BaseThreadInitThunk [0x756005C9+25]
+	RtlGetAppContainerNamedObjectPath [0x77AE78BD+237]
+	RtlGetAppContainerNamedObjectPath [0x77AE788D+189]
+
+09-Apr-24 13:29:24 - Error occurred for Animo Watts College Preparatory Academy: cannot access local variable 'download_button' where it is not associated with a value
+09-Apr-24 13:29:25 - ActionChains scrolled to school Animo James B. Taylor Charter Middle
+09-Apr-24 13:29:25 - Download occured for Animo James B. Taylor Charter Middle
+09-Apr-24 13:29:28 - These schools are missing ['Oscar De La Hoya Animo Charter High' 'Animo South Los Angeles Charter'
+ 'Animo Venice Charter High' 'Animo Legacy Charter Middle'
+ 'Animo Watts College Preparatory Academy']
+09-Apr-24 13:29:28 - Requested reports section clicked into
+09-Apr-24 13:29:37 - Switched to iframe within downloads section
+09-Apr-24 13:29:37 - Exception raised when downloading files Message: no such element: Unable to locate element: {"method":"xpath","selector":".//input[contains(@class, "wcag_694 primarybtn left wcag_110")]"}
+  (Session info: chrome=123.0.6312.106)
+Stacktrace:
+	GetHandleVerifier [0x00DF4CE3+225091]
+	(No symbol) [0x00D24E31]
+	(No symbol) [0x00BC9A7A]
+	(No symbol) [0x00C0175B]
+	(No symbol) [0x00C0188B]
+	(No symbol) [0x00BF9391]
+	(No symbol) [0x00C1F5A4]
+	(No symbol) [0x00BF930E]
+	(No symbol) [0x00C1F7F4]
+	(No symbol) [0x00C35CB0]
+	(No symbol) [0x00C1F2F6]
+	(No symbol) [0x00BF79B9]
+	(No symbol) [0x00BF879D]
+	sqlite3_dbdata_init [0x01269A83+4064547]
+	sqlite3_dbdata_init [0x0127108A+4094762]
+	sqlite3_dbdata_init [0x0126B988+4072488]
+	sqlite3_dbdata_init [0x00F6C9E9+930953]
+	(No symbol) [0x00D30804]
+	(No symbol) [0x00D2AD28]
+	(No symbol) [0x00D2AE51]
+	(No symbol) [0x00D1CAC0]
+	BaseThreadInitThunk [0x756005C9+25]
+	RtlGetAppContainerNamedObjectPath [0x77AE78BD+237]
+	RtlGetAppContainerNamedObjectPath [0x77AE788D+189]
+
+09-Apr-24 13:29:37 - Error occurred for Oscar De La Hoya Animo Charter High: cannot access local variable 'download_button' where it is not associated with a value
+09-Apr-24 13:29:38 - ActionChains scrolled to school Animo South Los Angeles Charter
+09-Apr-24 13:29:38 - Download occured for Animo South Los Angeles Charter
+09-Apr-24 13:29:39 - ActionChains scrolled to school Animo Venice Charter High
+09-Apr-24 13:29:39 - Download occured for Animo Venice Charter High
+09-Apr-24 13:29:39 - Exception raised when downloading files Message: no such element: Unable to locate element: {"method":"xpath","selector":".//input[contains(@class, "wcag_694 primarybtn left wcag_110")]"}
+  (Session info: chrome=123.0.6312.106)
+Stacktrace:
+	GetHandleVerifier [0x00DF4CE3+225091]
+	(No symbol) [0x00D24E31]
+	(No symbol) [0x00BC9A7A]
+	(No symbol) [0x00C0175B]
+	(No symbol) [0x00C0188B]
+	(No symbol) [0x00BF9391]
+	(No symbol) [0x00C1F5A4]
+	(No symbol) [0x00BF930E]
+	(No symbol) [0x00C1F7F4]
+	(No symbol) [0x00C35CB0]
+	(No symbol) [0x00C1F2F6]
+	(No symbol) [0x00BF79B9]
+	(No symbol) [0x00BF879D]
+	sqlite3_dbdata_init [0x01269A83+4064547]
+	sqlite3_dbdata_init [0x0127108A+4094762]
+	sqlite3_dbdata_init [0x0126B988+4072488]
+	sqlite3_dbdata_init [0x00F6C9E9+930953]
+	(No symbol) [0x00D30804]
+	(No symbol) [0x00D2AD28]
+	(No symbol) [0x00D2AE51]
+	(No symbol) [0x00D1CAC0]
+	BaseThreadInitThunk [0x756005C9+25]
+	RtlGetAppContainerNamedObjectPath [0x77AE78BD+237]
+	RtlGetAppContainerNamedObjectPath [0x77AE788D+189]
+
+09-Apr-24 13:29:39 - Error occurred for Animo Legacy Charter Middle: cannot access local variable 'download_button' where it is not associated with a value
+09-Apr-24 13:29:39 - Exception raised when downloading files Message: no such element: Unable to locate element: {"method":"xpath","selector":".//input[contains(@class, "wcag_694 primarybtn left wcag_110")]"}
+  (Session info: chrome=123.0.6312.106)
+Stacktrace:
+	GetHandleVerifier [0x00DF4CE3+225091]
+	(No symbol) [0x00D24E31]
+	(No symbol) [0x00BC9A7A]
+	(No symbol) [0x00C0175B]
+	(No symbol) [0x00C0188B]
+	(No symbol) [0x00BF9391]
+	(No symbol) [0x00C1F5A4]
+	(No symbol) [0x00BF930E]
+	(No symbol) [0x00C1F7F4]
+	(No symbol) [0x00C35CB0]
+	(No symbol) [0x00C1F2F6]
+	(No symbol) [0x00BF79B9]
+	(No symbol) [0x00BF879D]
+	sqlite3_dbdata_init [0x01269A83+4064547]
+	sqlite3_dbdata_init [0x0127108A+4094762]
+	sqlite3_dbdata_init [0x0126B988+4072488]
+	sqlite3_dbdata_init [0x00F6C9E9+930953]
+	(No symbol) [0x00D30804]
+	(No symbol) [0x00D2AD28]
+	(No symbol) [0x00D2AE51]
+	(No symbol) [0x00D1CAC0]
+	BaseThreadInitThunk [0x756005C9+25]
+	RtlGetAppContainerNamedObjectPath [0x77AE78BD+237]
+	RtlGetAppContainerNamedObjectPath [0x77AE788D+189]
+
+09-Apr-24 13:29:39 - Error occurred for Animo Watts College Preparatory Academy: cannot access local variable 'download_button' where it is not associated with a value
+09-Apr-24 13:29:42 - These schools are missing ['Oscar De La Hoya Animo Charter High' 'Animo Legacy Charter Middle'
+ 'Animo Watts College Preparatory Academy']
+09-Apr-24 13:29:42 - Requested reports section clicked into
+09-Apr-24 13:29:52 - Switched to iframe within downloads section
+09-Apr-24 13:29:52 - Exception raised when downloading files Message: no such element: Unable to locate element: {"method":"xpath","selector":".//input[contains(@class, "wcag_694 primarybtn left wcag_110")]"}
+  (Session info: chrome=123.0.6312.106)
+Stacktrace:
+	GetHandleVerifier [0x00DF4CE3+225091]
+	(No symbol) [0x00D24E31]
+	(No symbol) [0x00BC9A7A]
+	(No symbol) [0x00C0175B]
+	(No symbol) [0x00C0188B]
+	(No symbol) [0x00BF9391]
+	(No symbol) [0x00C1F5A4]
+	(No symbol) [0x00BF930E]
+	(No symbol) [0x00C1F7F4]
+	(No symbol) [0x00C35CB0]
+	(No symbol) [0x00C1F2F6]
+	(No symbol) [0x00BF79B9]
+	(No symbol) [0x00BF879D]
+	sqlite3_dbdata_init [0x01269A83+4064547]
+	sqlite3_dbdata_init [0x0127108A+4094762]
+	sqlite3_dbdata_init [0x0126B988+4072488]
+	sqlite3_dbdata_init [0x00F6C9E9+930953]
+	(No symbol) [0x00D30804]
+	(No symbol) [0x00D2AD28]
+	(No symbol) [0x00D2AE51]
+	(No symbol) [0x00D1CAC0]
+	BaseThreadInitThunk [0x756005C9+25]
+	RtlGetAppContainerNamedObjectPath [0x77AE78BD+237]
+	RtlGetAppContainerNamedObjectPath [0x77AE788D+189]
+
+09-Apr-24 13:29:52 - Error occurred for Oscar De La Hoya Animo Charter High: cannot access local variable 'download_button' where it is not associated with a value
+09-Apr-24 13:29:52 - ActionChains scrolled to school Animo Legacy Charter Middle
+09-Apr-24 13:29:53 - Download occured for Animo Legacy Charter Middle
+09-Apr-24 13:29:53 - Exception raised when downloading files Message: no such element: Unable to locate element: {"method":"xpath","selector":".//input[contains(@class, "wcag_694 primarybtn left wcag_110")]"}
+  (Session info: chrome=123.0.6312.106)
+Stacktrace:
+	GetHandleVerifier [0x00DF4CE3+225091]
+	(No symbol) [0x00D24E31]
+	(No symbol) [0x00BC9A7A]
+	(No symbol) [0x00C0175B]
+	(No symbol) [0x00C0188B]
+	(No symbol) [0x00BF9391]
+	(No symbol) [0x00C1F5A4]
+	(No symbol) [0x00BF930E]
+	(No symbol) [0x00C1F7F4]
+	(No symbol) [0x00C35CB0]
+	(No symbol) [0x00C1F2F6]
+	(No symbol) [0x00BF79B9]
+	(No symbol) [0x00BF879D]
+	sqlite3_dbdata_init [0x01269A83+4064547]
+	sqlite3_dbdata_init [0x0127108A+4094762]
+	sqlite3_dbdata_init [0x0126B988+4072488]
+	sqlite3_dbdata_init [0x00F6C9E9+930953]
+	(No symbol) [0x00D30804]
+	(No symbol) [0x00D2AD28]
+	(No symbol) [0x00D2AE51]
+	(No symbol) [0x00D1CAC0]
+	BaseThreadInitThunk [0x756005C9+25]
+	RtlGetAppContainerNamedObjectPath [0x77AE78BD+237]
+	RtlGetAppContainerNamedObjectPath [0x77AE788D+189]
+
+09-Apr-24 13:29:53 - Error occurred for Animo Watts College Preparatory Academy: cannot access local variable 'download_button' where it is not associated with a value
+09-Apr-24 13:29:56 - These schools are missing ['Oscar De La Hoya Animo Charter High'
+ 'Animo Watts College Preparatory Academy']
+09-Apr-24 13:29:56 - Requested reports section clicked into
+09-Apr-24 13:30:01 - Switched to iframe within downloads section
+09-Apr-24 13:30:01 - ActionChains scrolled to school Oscar De La Hoya Animo Charter High
+09-Apr-24 13:30:02 - Download occured for Oscar De La Hoya Animo Charter High
+09-Apr-24 13:30:02 - ActionChains scrolled to school Animo Watts College Preparatory Academy
+09-Apr-24 13:30:03 - Download occured for Animo Watts College Preparatory Academy
+09-Apr-24 13:30:06 - All files are downloaded for 2023 CAASPP Student Score Data File By Enrolled LEA
+09-Apr-24 13:30:06 - Files moved successfully to c:\Users\samuel.taylor\Desktop\Python_Scripts\Manual_Triggers\ELPAC_SBAC_Results_Selenium\file_downloads\sbac\04_09
+09-Apr-24 13:30:09 - Switched to LEA ELPAC Coordinator at Alain Leroy Locke College Preparatory Academy
+09-Apr-24 13:30:09 - LEA Reports clicked
+09-Apr-24 13:30:13 - Switched to iframe
+09-Apr-24 13:30:13 - ELPAC Data File Clicked
+09-Apr-24 13:30:13 - SY Selected
+09-Apr-24 13:30:23 - Organization was not selected
+09-Apr-24 13:30:23 - Enrolled selected
+09-Apr-24 13:30:33 - Request file clicked on
+09-Apr-24 13:30:33 - Out of iframe
+09-Apr-24 13:30:42 - Switched to LEA ELPAC Coordinator at Animo City of Champions Charter High
+09-Apr-24 13:30:42 - LEA Reports clicked
+09-Apr-24 13:30:45 - Switched to iframe
+09-Apr-24 13:30:45 - ELPAC Data File Clicked
+09-Apr-24 13:30:45 - SY Selected
+09-Apr-24 13:30:55 - Organization was not selected
+09-Apr-24 13:30:55 - Enrolled selected
+09-Apr-24 13:31:05 - Request file clicked on
+09-Apr-24 13:31:05 - Out of iframe
+09-Apr-24 13:31:12 - Switched to LEA ELPAC Coordinator at Animo Compton Charter
+09-Apr-24 13:31:12 - LEA Reports clicked
+09-Apr-24 13:31:15 - Switched to iframe
+09-Apr-24 13:31:15 - ELPAC Data File Clicked
+09-Apr-24 13:31:15 - SY Selected
+09-Apr-24 13:31:25 - Organization was not selected
+09-Apr-24 13:31:26 - Enrolled selected
+09-Apr-24 13:31:36 - Request file clicked on
+09-Apr-24 13:31:37 - Out of iframe
+09-Apr-24 13:31:45 - Switched to LEA ELPAC Coordinator at Animo Ellen Ochoa Charter Middle
+09-Apr-24 13:31:45 - LEA Reports clicked
+09-Apr-24 13:31:48 - Switched to iframe
+09-Apr-24 13:31:49 - ELPAC Data File Clicked
+09-Apr-24 13:31:49 - SY Selected
+09-Apr-24 13:31:59 - Organization was not selected
+09-Apr-24 13:31:59 - Enrolled selected
+09-Apr-24 13:32:09 - Request file clicked on
+09-Apr-24 13:32:09 - Out of iframe
+09-Apr-24 13:32:17 - Switched to LEA ELPAC Coordinator at Animo Florence-Firestone Charter Middle
+09-Apr-24 13:32:17 - LEA Reports clicked
+09-Apr-24 13:32:21 - Switched to iframe
+09-Apr-24 13:32:21 - ELPAC Data File Clicked
+09-Apr-24 13:32:21 - SY Selected
+09-Apr-24 13:32:31 - Organization was not selected
+09-Apr-24 13:32:31 - Enrolled selected
+09-Apr-24 13:32:38 - Request file clicked on
+09-Apr-24 13:32:38 - Out of iframe
+09-Apr-24 13:32:45 - Switched to LEA ELPAC Coordinator at Animo Inglewood Charter High
+09-Apr-24 13:32:45 - LEA Reports clicked
+09-Apr-24 13:32:48 - Switched to iframe
+09-Apr-24 13:32:48 - ELPAC Data File Clicked
+09-Apr-24 13:32:48 - SY Selected
+09-Apr-24 13:32:58 - Organization was not selected
+09-Apr-24 13:32:58 - Enrolled selected
+09-Apr-24 13:33:08 - Request file clicked on
+09-Apr-24 13:33:09 - Out of iframe
+09-Apr-24 13:33:15 - Switched to LEA ELPAC Coordinator at Animo Jackie Robinson High
+09-Apr-24 13:33:15 - LEA Reports clicked
+09-Apr-24 13:33:18 - Switched to iframe
+09-Apr-24 13:33:19 - ELPAC Data File Clicked
+09-Apr-24 13:33:19 - SY Selected
+09-Apr-24 13:33:29 - Organization was not selected
+09-Apr-24 13:33:29 - Enrolled selected
+09-Apr-24 13:33:34 - Request file clicked on
+09-Apr-24 13:33:35 - Out of iframe
+09-Apr-24 13:33:42 - Switched to LEA ELPAC Coordinator at Animo James B. Taylor Charter Middle
+09-Apr-24 13:33:42 - LEA Reports clicked
+09-Apr-24 13:33:45 - Switched to iframe
+09-Apr-24 13:33:45 - ELPAC Data File Clicked
+09-Apr-24 13:33:45 - SY Selected
+09-Apr-24 13:33:55 - Organization was not selected
+09-Apr-24 13:33:55 - Enrolled selected
+09-Apr-24 13:34:01 - Request file clicked on
+09-Apr-24 13:34:01 - Out of iframe
+09-Apr-24 13:34:09 - Switched to LEA ELPAC Coordinator at Animo Jefferson Charter Middle
+09-Apr-24 13:34:09 - LEA Reports clicked
+09-Apr-24 13:34:13 - Switched to iframe
+09-Apr-24 13:34:13 - ELPAC Data File Clicked
+09-Apr-24 13:34:13 - SY Selected
+09-Apr-24 13:34:23 - Organization was not selected
+09-Apr-24 13:34:23 - Enrolled selected
+09-Apr-24 13:34:33 - Request file clicked on
+09-Apr-24 13:34:33 - Out of iframe
+09-Apr-24 13:34:39 - Switched to LEA ELPAC Coordinator at Animo Leadership High
+09-Apr-24 13:34:39 - LEA Reports clicked
+09-Apr-24 13:34:43 - Switched to iframe
+09-Apr-24 13:34:43 - ELPAC Data File Clicked
+09-Apr-24 13:34:43 - SY Selected
+09-Apr-24 13:34:53 - Organization was not selected
+09-Apr-24 13:34:53 - Enrolled selected
+09-Apr-24 13:34:59 - Request file clicked on
+09-Apr-24 13:34:59 - Out of iframe
+09-Apr-24 13:35:05 - Switched to LEA ELPAC Coordinator at Animo Legacy Charter Middle
+09-Apr-24 13:35:06 - LEA Reports clicked
+09-Apr-24 13:35:09 - Switched to iframe
+09-Apr-24 13:35:09 - ELPAC Data File Clicked
+09-Apr-24 13:35:09 - SY Selected
+09-Apr-24 13:35:19 - Organization was not selected
+09-Apr-24 13:35:19 - Enrolled selected
+09-Apr-24 13:35:29 - Request file clicked on
+09-Apr-24 13:35:29 - Out of iframe
+09-Apr-24 13:35:36 - Switched to LEA ELPAC Coordinator at Animo Mae Jemison Charter Middle
+09-Apr-24 13:35:36 - LEA Reports clicked
+09-Apr-24 13:35:39 - Switched to iframe
+09-Apr-24 13:35:39 - ELPAC Data File Clicked
+09-Apr-24 13:35:39 - SY Selected
+09-Apr-24 13:35:49 - Organization was not selected
+09-Apr-24 13:35:49 - Enrolled selected
+09-Apr-24 13:35:55 - Request file clicked on
+09-Apr-24 13:35:55 - Out of iframe
+09-Apr-24 13:36:01 - Switched to LEA ELPAC Coordinator at Animo Pat Brown
+09-Apr-24 13:36:01 - LEA Reports clicked
+09-Apr-24 13:36:04 - Switched to iframe
+09-Apr-24 13:36:04 - ELPAC Data File Clicked
+09-Apr-24 13:36:04 - SY Selected
+09-Apr-24 13:36:14 - Organization was not selected
+09-Apr-24 13:36:14 - Enrolled selected
+09-Apr-24 13:36:26 - Request file clicked on
+09-Apr-24 13:36:26 - Out of iframe
+09-Apr-24 13:36:30 - Switched to LEA ELPAC Coordinator at Animo Ralph Bunche Charter High
+09-Apr-24 13:36:33 - LEA Reports clicked
+09-Apr-24 13:36:36 - Switched to iframe
+09-Apr-24 13:36:36 - ELPAC Data File Clicked
+09-Apr-24 13:36:36 - SY Selected
+09-Apr-24 13:36:47 - Organization was not selected
+09-Apr-24 13:36:47 - Enrolled selected
+09-Apr-24 13:36:53 - Request file clicked on
+09-Apr-24 13:36:53 - Out of iframe
+09-Apr-24 13:37:00 - Switched to LEA ELPAC Coordinator at Animo South Los Angeles Charter
+09-Apr-24 13:37:00 - LEA Reports clicked
+09-Apr-24 13:37:03 - Switched to iframe
+09-Apr-24 13:37:03 - ELPAC Data File Clicked
+09-Apr-24 13:37:03 - SY Selected
+09-Apr-24 13:37:13 - Organization was not selected
+09-Apr-24 13:37:13 - Enrolled selected
+09-Apr-24 13:37:19 - Request file clicked on
+09-Apr-24 13:37:19 - Out of iframe
+09-Apr-24 13:37:27 - Switched to LEA ELPAC Coordinator at Animo Venice Charter High
+09-Apr-24 13:37:28 - LEA Reports clicked
+09-Apr-24 13:37:31 - Switched to iframe
+09-Apr-24 13:37:31 - ELPAC Data File Clicked
+09-Apr-24 13:37:31 - SY Selected
+09-Apr-24 13:37:41 - Organization was not selected
+09-Apr-24 13:37:41 - Enrolled selected
+09-Apr-24 13:37:46 - Request file clicked on
+09-Apr-24 13:37:46 - Out of iframe
+09-Apr-24 13:37:54 - Switched to LEA ELPAC Coordinator at Animo Watts College Preparatory Academy
+09-Apr-24 13:37:54 - LEA Reports clicked
+09-Apr-24 13:37:57 - Switched to iframe
+09-Apr-24 13:37:57 - ELPAC Data File Clicked
+09-Apr-24 13:37:57 - SY Selected
+09-Apr-24 13:38:07 - Organization was not selected
+09-Apr-24 13:38:07 - Enrolled selected
+09-Apr-24 13:38:17 - Request file clicked on
+09-Apr-24 13:38:17 - Out of iframe
+09-Apr-24 13:38:25 - Switched to LEA ELPAC Coordinator at Oscar De La Hoya Animo Charter High
+09-Apr-24 13:38:25 - LEA Reports clicked
+09-Apr-24 13:38:28 - Switched to iframe
+09-Apr-24 13:38:28 - ELPAC Data File Clicked
+09-Apr-24 13:38:28 - SY Selected
+09-Apr-24 13:38:38 - Organization was not selected
+09-Apr-24 13:38:38 - Enrolled selected
+09-Apr-24 13:38:44 - Request file clicked on
+09-Apr-24 13:38:44 - Out of iframe
+09-Apr-24 13:38:48 - Requested reports section clicked into
+09-Apr-24 13:38:53 - Switched to iframe within downloads section
+09-Apr-24 13:38:53 - ActionChains scrolled to school Animo Florence-Firestone Charter Middle
+09-Apr-24 13:38:54 - Download occured for Animo Florence-Firestone Charter Middle
+09-Apr-24 13:38:54 - ActionChains scrolled to school Alain Leroy Locke College Preparatory Academy
+09-Apr-24 13:38:55 - Download occured for Alain Leroy Locke College Preparatory Academy
+09-Apr-24 13:38:55 - ActionChains scrolled to school Animo City of Champions Charter High
+09-Apr-24 13:38:56 - Download occured for Animo City of Champions Charter High
+09-Apr-24 13:38:56 - ActionChains scrolled to school Animo Leadership High
+09-Apr-24 13:38:56 - Download occured for Animo Leadership High
+09-Apr-24 13:38:57 - ActionChains scrolled to school Animo Pat Brown
+09-Apr-24 13:38:57 - Download occured for Animo Pat Brown
+09-Apr-24 13:38:58 - ActionChains scrolled to school Animo Legacy Charter Middle
+09-Apr-24 13:38:58 - Download occured for Animo Legacy Charter Middle
+09-Apr-24 13:38:59 - ActionChains scrolled to school Animo Ellen Ochoa Charter Middle
+09-Apr-24 13:38:59 - Download occured for Animo Ellen Ochoa Charter Middle
+09-Apr-24 13:38:59 - ActionChains scrolled to school Animo Inglewood Charter High
+09-Apr-24 13:39:00 - Download occured for Animo Inglewood Charter High
+09-Apr-24 13:39:00 - ActionChains scrolled to school Animo Mae Jemison Charter Middle
+09-Apr-24 13:39:01 - Download occured for Animo Mae Jemison Charter Middle
+09-Apr-24 13:39:01 - ActionChains scrolled to school Animo Ralph Bunche Charter High
+09-Apr-24 13:39:02 - Download occured for Animo Ralph Bunche Charter High
+09-Apr-24 13:39:02 - ActionChains scrolled to school Animo Venice Charter High
+09-Apr-24 13:39:03 - Download occured for Animo Venice Charter High
+09-Apr-24 13:39:03 - ActionChains scrolled to school Animo South Los Angeles Charter
+09-Apr-24 13:39:04 - Download occured for Animo South Los Angeles Charter
+09-Apr-24 13:39:04 - Exception raised when downloading files Message: no such element: Unable to locate element: {"method":"xpath","selector":".//input[contains(@class, "wcag_694 primarybtn left wcag_110")]"}
+  (Session info: chrome=123.0.6312.106)
+Stacktrace:
+	GetHandleVerifier [0x00DF4CE3+225091]
+	(No symbol) [0x00D24E31]
+	(No symbol) [0x00BC9A7A]
+	(No symbol) [0x00C0175B]
+	(No symbol) [0x00C0188B]
+	(No symbol) [0x00BF9391]
+	(No symbol) [0x00C1F5A4]
+	(No symbol) [0x00BF930E]
+	(No symbol) [0x00C1F7F4]
+	(No symbol) [0x00C35CB0]
+	(No symbol) [0x00C1F2F6]
+	(No symbol) [0x00BF79B9]
+	(No symbol) [0x00BF879D]
+	sqlite3_dbdata_init [0x01269A83+4064547]
+	sqlite3_dbdata_init [0x0127108A+4094762]
+	sqlite3_dbdata_init [0x0126B988+4072488]
+	sqlite3_dbdata_init [0x00F6C9E9+930953]
+	(No symbol) [0x00D30804]
+	(No symbol) [0x00D2AD28]
+	(No symbol) [0x00D2AE51]
+	(No symbol) [0x00D1CAC0]
+	BaseThreadInitThunk [0x756005C9+25]
+	RtlGetAppContainerNamedObjectPath [0x77AE78BD+237]
+	RtlGetAppContainerNamedObjectPath [0x77AE788D+189]
+
+09-Apr-24 13:39:04 - Error occurred for Animo Watts College Preparatory Academy: cannot access local variable 'download_button' where it is not associated with a value
+09-Apr-24 13:39:04 - ActionChains scrolled to school Animo Jackie Robinson High
+09-Apr-24 13:39:05 - Download occured for Animo Jackie Robinson High
+09-Apr-24 13:39:05 - Exception raised when downloading files Message: no such element: Unable to locate element: {"method":"xpath","selector":".//input[contains(@class, "wcag_694 primarybtn left wcag_110")]"}
+  (Session info: chrome=123.0.6312.106)
+Stacktrace:
+	GetHandleVerifier [0x00DF4CE3+225091]
+	(No symbol) [0x00D24E31]
+	(No symbol) [0x00BC9A7A]
+	(No symbol) [0x00C0175B]
+	(No symbol) [0x00C0188B]
+	(No symbol) [0x00BF9391]
+	(No symbol) [0x00C1F5A4]
+	(No symbol) [0x00BF930E]
+	(No symbol) [0x00C1F7F4]
+	(No symbol) [0x00C35CB0]
+	(No symbol) [0x00C1F2F6]
+	(No symbol) [0x00BF79B9]
+	(No symbol) [0x00BF879D]
+	sqlite3_dbdata_init [0x01269A83+4064547]
+	sqlite3_dbdata_init [0x0127108A+4094762]
+	sqlite3_dbdata_init [0x0126B988+4072488]
+	sqlite3_dbdata_init [0x00F6C9E9+930953]
+	(No symbol) [0x00D30804]
+	(No symbol) [0x00D2AD28]
+	(No symbol) [0x00D2AE51]
+	(No symbol) [0x00D1CAC0]
+	BaseThreadInitThunk [0x756005C9+25]
+	RtlGetAppContainerNamedObjectPath [0x77AE78BD+237]
+	RtlGetAppContainerNamedObjectPath [0x77AE788D+189]
+
+09-Apr-24 13:39:05 - Error occurred for Oscar De La Hoya Animo Charter High: cannot access local variable 'download_button' where it is not associated with a value
+09-Apr-24 13:39:05 - ActionChains scrolled to school Animo Compton Charter
+09-Apr-24 13:39:06 - Download occured for Animo Compton Charter
+09-Apr-24 13:39:06 - ActionChains scrolled to school Animo James B. Taylor Charter Middle
+09-Apr-24 13:39:07 - Error occurred for Animo James B. Taylor Charter Middle: Message: element click intercepted: Element <input id="actionbutton_11" type="button" class="wcag_694 primarybtn left wcag_110" value="Download" onclick="javascript:downloadreport('/export/Apps/tomsk12ca/data/ELPAC_AGGR_DATA/elpacsaenrdownloadablesyearone/2023/0/01240080000000/1712694836744/lea','01240080000000.zip')"> is not clickable at point (1152, 23). Other element would receive the click: <th>...</th>
+  (Session info: chrome=123.0.6312.106)
+Stacktrace:
+	GetHandleVerifier [0x00DF4CE3+225091]
+	(No symbol) [0x00D24E31]
+	(No symbol) [0x00BC9A7A]
+	(No symbol) [0x00C06D42]
+	(No symbol) [0x00C05574]
+	(No symbol) [0x00C035DB]
+	(No symbol) [0x00C027BA]
+	(No symbol) [0x00BF98DE]
+	(No symbol) [0x00C1F55C]
+	(No symbol) [0x00BF930E]
+	(No symbol) [0x00C1F7F4]
+	(No symbol) [0x00C35CB0]
+	(No symbol) [0x00C1F2F6]
+	(No symbol) [0x00BF79B9]
+	(No symbol) [0x00BF879D]
+	sqlite3_dbdata_init [0x01269A83+4064547]
+	sqlite3_dbdata_init [0x0127108A+4094762]
+	sqlite3_dbdata_init [0x0126B988+4072488]
+	sqlite3_dbdata_init [0x00F6C9E9+930953]
+	(No symbol) [0x00D30804]
+	(No symbol) [0x00D2AD28]
+	(No symbol) [0x00D2AE51]
+	(No symbol) [0x00D1CAC0]
+	BaseThreadInitThunk [0x756005C9+25]
+	RtlGetAppContainerNamedObjectPath [0x77AE78BD+237]
+	RtlGetAppContainerNamedObjectPath [0x77AE788D+189]
+
+09-Apr-24 13:39:08 - ActionChains scrolled to school Animo Jefferson Charter Middle
+09-Apr-24 13:39:08 - Download occured for Animo Jefferson Charter Middle
+09-Apr-24 13:39:21 - These schools are missing ['Oscar De La Hoya Animo Charter High'
+ 'Animo Watts College Preparatory Academy'
+ 'Animo James B. Taylor Charter Middle']
+09-Apr-24 13:39:21 - Requested reports section clicked into
+09-Apr-24 13:39:32 - Switched to iframe within downloads section
+09-Apr-24 13:39:33 - ActionChains scrolled to school Oscar De La Hoya Animo Charter High
+09-Apr-24 13:39:33 - Download occured for Oscar De La Hoya Animo Charter High
+09-Apr-24 13:39:33 - ActionChains scrolled to school Animo Watts College Preparatory Academy
+09-Apr-24 13:39:34 - Download occured for Animo Watts College Preparatory Academy
+09-Apr-24 13:39:34 - ActionChains scrolled to school Animo James B. Taylor Charter Middle
+09-Apr-24 13:39:35 - Download occured for Animo James B. Taylor Charter Middle
+09-Apr-24 13:39:38 - All files are downloaded for 2023 Summative ELPAC and Summative Alternate ELPAC Student Score Data File By Enrolled LEA
+09-Apr-24 13:39:41 - Moved SBAC XLSX files to p-drive
+09-Apr-24 13:39:41 - Moved ELPAC XLSX files to p-drive
+09-Apr-24 13:39:41 - Success, all schools are here for sbac
+09-Apr-24 13:39:41 - Success, merging worked for all schools sbac
+09-Apr-24 13:39:41 - Success, all schools are here for elpac
+09-Apr-24 13:39:41 - Success, merging worked for all schools elpac

@@ -3,6 +3,9 @@ print(password)
 from modules.login_module import logIn, launch_to_homescreen, create_directory
 from modules.download_files_module import request_report_process, download_loop_missing, download_process,  move_files_over, unzip_xlsx_file, unzip_files_in_same_dir, move_xlsx_files
 from modules.unit_testing import TestFileProcessing
+from modules.data_transformation import *
+from modules.post_download_change import *
+
 
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
@@ -19,6 +22,7 @@ import time
 from datetime import datetime
 today_date = datetime.now()
 formatted_month_day = today_date.strftime("%m_%d")
+pd.set_option('display.max_columns', None)
 
 logging.basicConfig(filename='ELPAC_SBAC_results.log', level=logging.INFO,
                    format='%(asctime)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S',force=True)
@@ -144,3 +148,90 @@ test_instance.test_file_processing('elpac')
 
 #Takes roughly 25 mins
 #Must be connected to the p-drive
+
+# ---------------------------------STACKING & SENDING FILES----------------------------------
+
+directory_path = r'P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing'
+
+directory_path_sbac = os.path.join(directory_path, f'sbac_{formatted_month_day}')
+sbac = stack_files(directory_path_sbac)
+sbac['CALPADSSchoolCode'] = sbac['CALPADSSchoolCode'].astype(str).str[7:]
+
+
+directory_path_elpac = os.path.join(directory_path, f'elpac_{formatted_month_day}')
+elpac = stack_files(directory_path_elpac)
+elpac['CALPADSSchoolCode'] = elpac['CALPADSSchoolCode'].astype(str).str[7:]
+
+sbac = filter_on_full_cds_code(sbac, 'CALPADSSchoolCode')
+elpac = filter_on_full_cds_code(elpac, 'CALPADSSchoolCode')
+
+
+# -------------------------------------------get_elpac_import------------------
+
+def get_elpac_import():
+
+       e_original = get_elpac_cols(elpac, 'ELPAC')
+       e_scale_score = get_SS_frame(e_original)
+       e_pl_score = get_pl_frame(e_original)
+
+       #The merge is occurs on testname, and SSID together. THis keeps rows unique
+       e = pd.merge(e_pl_score, e_scale_score, left_on=['SSID', 'testname'], right_on = ['SSID', 'testname'], suffixes= ['', '_SS'], how='left')
+       cols = list(e_pl_score.columns)
+       cols.append('ScaleScore')
+
+       #re-arrange order
+       col_order = ['Abbreviation', 'SchoolID', 'MasterSchoolID', 'StudentNumber',
+              'StudentID', 'SSID', 'TestGrade', 'ELStatus', 'TestDate', 'DisplayDate',
+              'TestType', 'TestPeriod', 'TestScoreType',  'testname',
+              'ScaleScore', 'PLScore']
+
+       e = e[col_order]
+
+       pl_decode = {4.0: 'WelDev', 
+        3.0: 'WelDev', 
+        2.0: 'Som-ModDev',
+        1.0: 'MinDev', 
+        '': 'No Score', 
+        'NS': 'No Score'}
+
+       e['ProficiencyLevelCode'] = e['PLScore'].map(pl_decode)
+
+       return(e)
+
+elpac = get_elpac_import()
+directory_path_elpac = os.path.join(directory_path, f'ELPAC_STACKED_{formatted_month_day}.csv')
+elpac.to_csv(directory_path_elpac, index=False)
+
+
+#Differing decoding method. Refer to message with Abi
+# ss_decode = {4.0: 'WelDev', 
+#                 3.0: 'ModDev', 
+#                 2.0: 'SomDev',
+#                 1.0: 'MinDev', 
+#                 '': 'No Score', 
+#                 'NS': 'No Score'}
+
+# -------------------------------Get SBAC import-------------------------
+
+#Missing PLScore Column and ProficiencyLevelCode Mapping
+sbac_final = get_sbac_cols(sbac, 'SBAC')
+directory_path_sbac = os.path.join(directory_path, f'SBAC_STACKED_{formatted_month_day}.csv')
+sbac_final.to_csv(directory_path_sbac, index=False)
+
+# PL Score 1	STNM
+# PL Score 2	STNL
+# PL Score 3	STMT
+# PL Score 4	STEX
+
+# ------------------------------Get CAST import-------------------------
+
+cast = get_cast_cols(sbac, 'CAST')
+directory_path_cast = os.path.join(directory_path, f'CAST_STACKED_{formatted_month_day}.csv')
+cast.to_csv(directory_path_cast, index=False)
+
+# PL Score 1	BLST
+# PL Score 2	ANST
+# PL Score 3	ABST
+
+
+#Do these get send
