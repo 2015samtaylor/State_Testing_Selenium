@@ -84,7 +84,7 @@ def request_report(driver, test_type, actual_test):
         )
         try:
             dropdown_2.click()
-            logging.info('Administration Year Selected')
+            logging.info('Dropdown Administration Year Selected')
         except:
             logging.info('Unable to select administration year')
    
@@ -104,7 +104,7 @@ def request_report(driver, test_type, actual_test):
         )
         try:
             dropdown_2.click()
-            logging.info('Administration Year Selected')
+            logging.info('Dropdown Administration Year Selected')
         except:
             logging.info('Unable to select administration year')
 
@@ -115,19 +115,24 @@ def request_report(driver, test_type, actual_test):
 
     try:
         #select SY from second drop down
+        SY = '2024'
         schoolyear = WebDriverWait(driver, 30).until(
-            EC.element_to_be_clickable((By.XPATH, '//option[@value="2023"]'))
+            EC.element_to_be_clickable((By.XPATH, f'//option[@value="{SY}"]'))
         )
         try:
             schoolyear.click()
-            logging.info('SY Selected')
+            logging.info(f'SY {SY} Selected')
         except:
-            logging.info('SY not selected')
+            logging.info(f'SY {SY} not selected')
 
         dropdown = WebDriverWait(driver, 10).until(
         EC.element_to_be_clickable((By.ID, 'caasppldrleaidInput'))
         )
-        dropdown.click()
+        try:
+            dropdown.click()
+            logging.info('Dropdown clicked')
+        except:
+            logging.info('Dropdown not clicked')
         
         # Locate and click on the hidden input element, does not need to be done on the first try
         organization = WebDriverWait(driver, 5).until(
