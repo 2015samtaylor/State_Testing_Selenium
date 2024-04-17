@@ -43,7 +43,7 @@ def change_login_role(school_coord_text, driver):
     option_element.click()
 
 
-    
+# 'CAASPP_Student_Score_Data_Extract_Report'
 def request_report(driver, test_type, actual_test):
 
     # Wait for the button to be clickable based on text
@@ -69,7 +69,7 @@ def request_report(driver, test_type, actual_test):
         logging.info('Unable to swtich to iframe')
 
     if test_type == 'SBAC':
-
+        # 'CAASPP_Student_Score_Data_Extract_Report'
         caaspp_student_score_data_file = WebDriverWait(driver, 30).until(
             EC.element_to_be_clickable((By.XPATH, f'//option[@value="{actual_test}"]'))
         )
@@ -82,7 +82,11 @@ def request_report(driver, test_type, actual_test):
         dropdown_2 = WebDriverWait(driver, 30).until(
         EC.element_to_be_clickable((By.XPATH, '//*[@id="caasppschoolYear"]'))
         )
-        dropdown_2.click()
+        try:
+            dropdown_2.click()
+            logging.info('Administration Year Selected')
+        except:
+            logging.info('Unable to select administration year')
    
     elif test_type == 'ELPAC':
         
@@ -98,7 +102,12 @@ def request_report(driver, test_type, actual_test):
         dropdown_2 = WebDriverWait(driver, 30).until(
         EC.element_to_be_clickable((By.XPATH, '//*[@id="schoolYear"]'))
         )
-        dropdown_2.click()
+        try:
+            dropdown_2.click()
+            logging.info('Administration Year Selected')
+        except:
+            logging.info('Unable to select administration year')
+
 
     else:
         print('Wrong test type')
@@ -306,6 +315,7 @@ def download_process(what_schools, test_type, driver):
             pass
 
         download_files(school_name, test_type, driver)
+
 
 def request_report_process(driver, test_type, actual_test, schools_list):
     for idx, school_coord in enumerate(schools_list):
