@@ -44,7 +44,7 @@ def change_login_role(school_coord_text, driver):
 
 
 # 'CAASPP_Student_Score_Data_Extract_Report'
-def request_report(driver, test_type, actual_test):
+def request_report(driver, test_type, actual_test, SY):
 
     # Wait for the button to be clickable based on text
     LEA_Reports = WebDriverWait(driver, 30).until(
@@ -115,7 +115,6 @@ def request_report(driver, test_type, actual_test):
 
     try:
         #select SY from second drop down
-        SY = '2024'
         schoolyear = WebDriverWait(driver, 30).until(
             EC.element_to_be_clickable((By.XPATH, f'//option[@value="{SY}"]'))
         )
@@ -322,7 +321,7 @@ def download_process(what_schools, test_type, driver):
         download_files(school_name, test_type, driver)
 
 
-def request_report_process(driver, test_type, actual_test, schools_list):
+def request_report_process(driver, test_type, actual_test, schools_list, SY):
     for idx, school_coord in enumerate(schools_list):
         
         if idx == 0 and test_type == 'SBAC':
@@ -339,7 +338,7 @@ def request_report_process(driver, test_type, actual_test, schools_list):
         reports.click()
         
         # Call the function to request a report
-        request_report(driver, test_type, actual_test)
+        request_report(driver, test_type, actual_test, SY)
 
 
 def download_loop_missing(dir_path, test_type, driver, max_attempts=5):

@@ -92,18 +92,18 @@ school_report_names = list(set(school_report_names))
 # ---------------------------------------SBAC Files Request and Download
 
 # Call the function, school report names variable is called for just school name
-# request_report_process(driver, 'SBAC', 'CAASPP_Student_Score_Data_Extract_Report', caaspp_coordinators)
-# download_process(school_report_names, '2024 CAASPP Student Score Data File By Enrolled LEA', driver) 
+request_report_process(driver, 'SBAC', 'CAASPP_Student_Score_Data_Extract_Report', caaspp_coordinators)
+download_process(school_report_names, '2024 CAASPP Student Score Data File By Enrolled LEA', driver) 
 
-# #This is here three times to see if anything got skipped the first time. Initial dir is set at ELPAC only to move the files over to SBAC dir
-# #Will run 5 times
+#This is here three times to see if anything got skipped the first time. Initial dir is set at ELPAC only to move the files over to SBAC dir
+#Will run 5 times
 
-# time.sleep(10) #implemented to give time for files to download
-# download_loop_missing(f'elpac\\{formatted_month_day}', '2024 CAASPP Student Score Data File By Enrolled LEA', driver)
+time.sleep(10) #implemented to give time for files to download
+download_loop_missing(f'elpac\\{formatted_month_day}', '2024 CAASPP Student Score Data File By Enrolled LEA', driver)
 
-# #This moves the files from ELPAC  timestamp dir to SBAC timestamp dir. 
-# #This is because the download dir cannot be changed in Selenium
-# move_files_over()
+#This moves the files from ELPAC  timestamp dir to SBAC timestamp dir. 
+#This is because the download dir cannot be changed in Selenium
+move_files_over()
 
 # # --------------------------------------------ELPAC Files Request and Download
 

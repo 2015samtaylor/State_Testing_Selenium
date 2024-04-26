@@ -12,9 +12,6 @@ from selenium.common.exceptions import TimeoutException, NoSuchElementException,
 import logging
 import os
 
-username = 'GDtestingcoordinator@greendot.org'
-password = 'Coordinator@2024!'
-
  
 def logIn(username, password, driver):
     driver.get('https://ca.tide.cambiumast.com/Common/DashBoard')

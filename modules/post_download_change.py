@@ -196,4 +196,33 @@ def get_cast_cols(df, testname):
 
   
 
+def get_elpac_import(elpac):
+
+       e_original = get_elpac_cols(elpac, 'ELPAC')
+       e_scale_score = get_SS_frame(e_original)
+       e_pl_score = get_pl_frame(e_original)
+
+       #The merge is occurs on testname, and SSID together. THis keeps rows unique
+       e = pd.merge(e_pl_score, e_scale_score, left_on=['SSID', 'testname'], right_on = ['SSID', 'testname'], suffixes= ['', '_SS'], how='left')
+       cols = list(e_pl_score.columns)
+       cols.append('ScaleScore')
+
+       #re-arrange order
+       col_order = ['Abbreviation', 'SchoolID', 'MasterSchoolID', 'StudentNumber',
+              'StudentID', 'SSID', 'TestGrade', 'ELStatus', 'TestDate', 'DisplayDate',
+              'TestType', 'TestPeriod', 'TestScoreType',  'testname',
+              'ScaleScore', 'PLScore']
+
+       e = e[col_order]
+
+       pl_decode = {4.0: 'WelDev', 
+        3.0: 'WelDev', 
+        2.0: 'Som-ModDev',
+        1.0: 'MinDev', 
+        '': 'No Score', 
+        'NS': 'No Score'}
+
+       e['ProficiencyLevelCode'] = e['PLScore'].map(pl_decode)
+
+       return(e)
 
