@@ -27969,3 +27969,252 @@ Stacktrace:
 16-Apr-24 19:58:54 - Get LATEST chromedriver version for google-chrome
 16-Apr-24 19:58:54 - Driver [C:\Users\samuel.taylor\.wdm\drivers\chromedriver\win64\123.0.6312.122\chromedriver-win32/chromedriver.exe] found in cache
 16-Apr-24 19:59:23 - Email Code submitted - 794444
+16-Apr-24 20:48:46 - 
+
+-------------ELPAC_SBAC_results new instance log
+16-Apr-24 20:48:46 - ====== WebDriver manager ======
+16-Apr-24 20:48:48 - Get LATEST chromedriver version for google-chrome
+16-Apr-24 20:48:48 - Get LATEST chromedriver version for google-chrome
+16-Apr-24 20:48:48 - Driver [C:\Users\samuel.taylor\.wdm\drivers\chromedriver\win64\123.0.6312.122\chromedriver-win32/chromedriver.exe] found in cache
+16-Apr-24 20:49:31 - Email Code submitted - 172341
+16-Apr-24 20:51:06 - LEA Reports clicked
+16-Apr-24 20:51:13 - Switched to iframe
+16-Apr-24 20:51:24 - CAASPP Student Score Data Extract Report Clicked
+16-Apr-24 20:51:45 - Dropdown Administration Year Selected
+16-Apr-24 20:51:54 - SY 2024 Selected
+16-Apr-24 20:53:23 - Dropdown clicked
+16-Apr-24 20:53:36 - Organization selected
+16-Apr-24 20:54:01 - Enrolled selected
+16-Apr-24 20:54:59 - Request file clicked on
+16-Apr-24 20:55:06 - Out of iframe
+16-Apr-24 20:55:45 - 
+
+-------------ELPAC_SBAC_results new instance log
+16-Apr-24 20:55:45 - ====== WebDriver manager ======
+16-Apr-24 20:55:47 - Get LATEST chromedriver version for google-chrome
+16-Apr-24 20:55:47 - Get LATEST chromedriver version for google-chrome
+16-Apr-24 20:55:47 - Driver [C:\Users\samuel.taylor\.wdm\drivers\chromedriver\win64\123.0.6312.122\chromedriver-win32/chromedriver.exe] found in cache
+16-Apr-24 20:57:22 - Email Code submitted - 673094
+16-Apr-24 20:58:14 - Switched to LEA ELPAC Coordinator at Alain Leroy Locke College Preparatory Academy
+16-Apr-24 20:58:34 - LEA Reports clicked
+16-Apr-24 20:58:42 - Switched to iframe
+16-Apr-24 20:58:53 - ELPAC Data File Clicked
+16-Apr-24 20:59:05 - Dropdown Administration Year Selected
+16-Apr-24 20:59:16 - SY 2024 Selected
+16-Apr-24 21:00:37 - Organization was not selected
+16-Apr-24 21:00:53 - Enrolled selected
+16-Apr-24 21:02:08 - Request file clicked on
+16-Apr-24 21:02:08 - Out of iframe
+16-Apr-24 21:02:47 - Switched to LEA ELPAC Coordinator at Animo City of Champions Charter High
+16-Apr-24 21:04:19 - LEA Reports clicked
+16-Apr-24 21:04:29 - Switched to iframe
+16-Apr-24 21:04:37 - ELPAC Data File Clicked
+16-Apr-24 21:04:40 - Dropdown Administration Year Selected
+16-Apr-24 21:04:46 - SY 2024 Selected
+16-Apr-24 21:05:09 - Organization was not selected
+16-Apr-24 21:05:27 - Enrolled selected
+24-Apr-24 13:04:05 - 
+
+-------------ELPAC_SBAC_results new instance log
+24-Apr-24 13:04:05 - ====== WebDriver manager ======
+24-Apr-24 13:04:07 - Get LATEST chromedriver version for google-chrome
+24-Apr-24 13:04:07 - Get LATEST chromedriver version for google-chrome
+24-Apr-24 13:04:07 - Driver [C:\Users\samuel.taylor\.wdm\drivers\chromedriver\win64\124.0.6367.78\chromedriver-win32/chromedriver.exe] found in cache
+24-Apr-24 13:04:39 - Email Code submitted - 503023
+24-Apr-24 13:04:44 - LEA Reports clicked
+24-Apr-24 13:04:48 - Switched to iframe
+24-Apr-24 13:04:48 - CAASPP Student Score Data Extract Report Clicked
+24-Apr-24 13:04:48 - Dropdown Administration Year Selected
+24-Apr-24 13:04:48 - SY 2024 Selected
+24-Apr-24 13:04:48 - Org Dropdown clicked
+24-Apr-24 13:04:48 - Organization selected
+24-Apr-24 13:04:48 - Enrolled selected
+24-Apr-24 13:04:52 - Request file clicked on
+24-Apr-24 13:04:52 - Out of iframe
+24-Apr-24 13:04:59 - Switched to LEA CAASPP Coordinator at Animo City of Champions Charter High
+24-Apr-24 13:04:59 - LEA Reports clicked
+24-Apr-24 13:05:03 - Switched to iframe
+24-Apr-24 13:05:03 - CAASPP Student Score Data Extract Report Clicked
+24-Apr-24 13:05:03 - Dropdown Administration Year Selected
+24-Apr-24 13:05:03 - SY 2024 Selected
+24-Apr-24 13:05:03 - Org Dropdown clicked
+24-Apr-24 13:05:03 - Organization selected
+24-Apr-24 13:05:03 - Enrolled selected
+24-Apr-24 13:05:07 - Request file clicked on
+24-Apr-24 13:05:07 - Out of iframe
+24-Apr-24 13:05:14 - Switched to LEA CAASPP Coordinator at Animo Compton Charter
+24-Apr-24 13:05:14 - LEA Reports clicked
+24-Apr-24 13:05:17 - Switched to iframe
+24-Apr-24 13:05:17 - CAASPP Student Score Data Extract Report Clicked
+24-Apr-24 13:05:18 - Dropdown Administration Year Selected
+24-Apr-24 13:05:18 - SY 2024 Selected
+24-Apr-24 13:05:18 - Org Dropdown clicked
+24-Apr-24 13:05:23 - Organization was not selected
+24-Apr-24 13:05:23 - Enrolled selected
+24-Apr-24 13:05:27 - Request file clicked on
+24-Apr-24 13:05:27 - Out of iframe
+24-Apr-24 13:05:31 - Switched to LEA CAASPP Coordinator at Animo Ellen Ochoa Charter Middle
+24-Apr-24 13:05:34 - LEA Reports clicked
+24-Apr-24 13:05:37 - Switched to iframe
+24-Apr-24 13:05:37 - CAASPP Student Score Data Extract Report Clicked
+24-Apr-24 13:05:37 - Dropdown Administration Year Selected
+24-Apr-24 13:05:37 - SY 2024 Selected
+24-Apr-24 13:05:37 - Org Dropdown clicked
+24-Apr-24 13:05:43 - Organization was not selected
+24-Apr-24 13:05:43 - Enrolled selected
+24-Apr-24 13:05:47 - Request file clicked on
+24-Apr-24 13:05:47 - Out of iframe
+24-Apr-24 13:05:53 - Switched to LEA CAASPP Coordinator at Animo Florence-Firestone Charter Middle
+24-Apr-24 13:05:53 - LEA Reports clicked
+24-Apr-24 13:05:56 - Switched to iframe
+24-Apr-24 13:05:57 - CAASPP Student Score Data Extract Report Clicked
+24-Apr-24 13:05:57 - Dropdown Administration Year Selected
+24-Apr-24 13:05:57 - SY 2024 Selected
+24-Apr-24 13:05:57 - Org Dropdown clicked
+24-Apr-24 13:06:02 - Organization was not selected
+24-Apr-24 13:06:02 - Enrolled selected
+24-Apr-24 13:06:06 - Request file clicked on
+24-Apr-24 13:06:06 - Out of iframe
+24-Apr-24 13:06:13 - Switched to LEA CAASPP Coordinator at Animo Inglewood Charter High
+24-Apr-24 13:06:13 - LEA Reports clicked
+24-Apr-24 13:06:17 - Switched to iframe
+24-Apr-24 13:06:17 - CAASPP Student Score Data Extract Report Clicked
+24-Apr-24 13:06:17 - Dropdown Administration Year Selected
+24-Apr-24 13:06:17 - SY 2024 Selected
+24-Apr-24 13:06:17 - Org Dropdown clicked
+24-Apr-24 13:06:22 - Organization was not selected
+24-Apr-24 13:06:22 - Enrolled selected
+24-Apr-24 13:06:26 - Request file clicked on
+24-Apr-24 13:06:26 - Out of iframe
+24-Apr-24 13:06:33 - Switched to LEA CAASPP Coordinator at Animo Jackie Robinson High
+24-Apr-24 13:06:33 - LEA Reports clicked
+24-Apr-24 13:06:37 - Switched to iframe
+24-Apr-24 13:06:37 - CAASPP Student Score Data Extract Report Clicked
+24-Apr-24 13:06:37 - Dropdown Administration Year Selected
+24-Apr-24 13:06:37 - SY 2024 Selected
+24-Apr-24 13:06:37 - Org Dropdown clicked
+24-Apr-24 13:06:43 - Organization was not selected
+24-Apr-24 13:06:43 - Enrolled selected
+24-Apr-24 13:06:46 - Request file clicked on
+24-Apr-24 13:06:46 - Out of iframe
+24-Apr-24 13:06:53 - Switched to LEA CAASPP Coordinator at Animo James B. Taylor Charter Middle
+24-Apr-24 13:06:53 - LEA Reports clicked
+24-Apr-24 13:06:56 - Switched to iframe
+24-Apr-24 13:06:56 - CAASPP Student Score Data Extract Report Clicked
+24-Apr-24 13:06:56 - Dropdown Administration Year Selected
+24-Apr-24 13:06:56 - SY 2024 Selected
+24-Apr-24 13:06:56 - Org Dropdown clicked
+24-Apr-24 13:06:56 - Organization selected
+24-Apr-24 13:06:56 - Enrolled selected
+24-Apr-24 13:07:00 - Request file clicked on
+24-Apr-24 13:07:00 - Out of iframe
+24-Apr-24 13:07:07 - Switched to LEA CAASPP Coordinator at Animo Jefferson Charter Middle
+24-Apr-24 13:07:07 - LEA Reports clicked
+24-Apr-24 13:07:10 - Switched to iframe
+24-Apr-24 13:07:10 - CAASPP Student Score Data Extract Report Clicked
+24-Apr-24 13:07:10 - Dropdown Administration Year Selected
+24-Apr-24 13:07:10 - SY 2024 Selected
+24-Apr-24 13:07:10 - Org Dropdown clicked
+24-Apr-24 13:07:10 - Organization selected
+24-Apr-24 13:07:11 - Enrolled selected
+24-Apr-24 13:07:14 - Request file clicked on
+24-Apr-24 13:07:14 - Out of iframe
+24-Apr-24 13:07:22 - Switched to LEA CAASPP Coordinator at Animo Leadership High
+24-Apr-24 13:07:22 - LEA Reports clicked
+24-Apr-24 13:07:25 - Switched to iframe
+24-Apr-24 13:07:25 - CAASPP Student Score Data Extract Report Clicked
+24-Apr-24 13:07:25 - Dropdown Administration Year Selected
+24-Apr-24 13:07:25 - SY 2024 Selected
+24-Apr-24 13:07:25 - Org Dropdown clicked
+24-Apr-24 13:07:25 - Organization selected
+24-Apr-24 13:07:25 - Enrolled selected
+24-Apr-24 13:07:29 - Request file unable to be clicked
+24-Apr-24 13:07:29 - Out of iframe
+24-Apr-24 13:07:37 - Switched to LEA CAASPP Coordinator at Animo Legacy Charter Middle
+24-Apr-24 13:07:37 - LEA Reports clicked
+24-Apr-24 13:07:40 - Switched to iframe
+24-Apr-24 13:07:40 - CAASPP Student Score Data Extract Report Clicked
+24-Apr-24 13:07:40 - Dropdown Administration Year Selected
+24-Apr-24 13:07:40 - SY 2024 Selected
+24-Apr-24 13:07:40 - Org Dropdown clicked
+24-Apr-24 13:07:45 - Organization was not selected
+24-Apr-24 13:07:45 - Enrolled selected
+24-Apr-24 13:07:49 - Request file clicked on
+24-Apr-24 13:07:49 - Out of iframe
+24-Apr-24 13:07:53 - Switched to LEA CAASPP Coordinator at Animo Mae Jemison Charter Middle
+24-Apr-24 13:07:53 - LEA Reports clicked
+24-Apr-24 13:07:56 - Switched to iframe
+24-Apr-24 13:07:56 - CAASPP Student Score Data Extract Report Clicked
+24-Apr-24 13:07:56 - Dropdown Administration Year Selected
+24-Apr-24 13:07:56 - SY 2024 Selected
+24-Apr-24 13:07:56 - Org Dropdown clicked
+24-Apr-24 13:08:02 - Organization was not selected
+24-Apr-24 13:08:02 - Enrolled selected
+24-Apr-24 13:08:08 - Request file clicked on
+24-Apr-24 13:08:09 - Out of iframe
+24-Apr-24 13:08:16 - Switched to LEA CAASPP Coordinator at Animo Pat Brown
+24-Apr-24 13:08:16 - LEA Reports clicked
+24-Apr-24 13:08:19 - Switched to iframe
+24-Apr-24 13:08:19 - CAASPP Student Score Data Extract Report Clicked
+24-Apr-24 13:08:19 - Dropdown Administration Year Selected
+24-Apr-24 13:08:19 - SY 2024 Selected
+24-Apr-24 13:08:19 - Org Dropdown clicked
+24-Apr-24 13:08:19 - Organization selected
+24-Apr-24 13:08:20 - Enrolled selected
+24-Apr-24 13:08:23 - Request file clicked on
+24-Apr-24 13:08:23 - Out of iframe
+24-Apr-24 13:08:31 - Switched to LEA CAASPP Coordinator at Animo Ralph Bunche Charter High
+24-Apr-24 13:08:31 - LEA Reports clicked
+24-Apr-24 13:08:35 - Switched to iframe
+24-Apr-24 13:08:35 - CAASPP Student Score Data Extract Report Clicked
+24-Apr-24 13:08:35 - Dropdown Administration Year Selected
+24-Apr-24 13:08:35 - SY 2024 Selected
+24-Apr-24 13:08:35 - Org Dropdown clicked
+24-Apr-24 13:08:35 - Organization selected
+24-Apr-24 13:08:35 - Enrolled selected
+24-Apr-24 13:08:39 - Request file clicked on
+24-Apr-24 13:08:39 - Out of iframe
+24-Apr-24 13:08:46 - Switched to LEA CAASPP Coordinator at Animo South Los Angeles Charter
+24-Apr-24 13:08:46 - LEA Reports clicked
+24-Apr-24 13:08:49 - Switched to iframe
+24-Apr-24 13:08:49 - CAASPP Student Score Data Extract Report Clicked
+24-Apr-24 13:08:49 - Dropdown Administration Year Selected
+24-Apr-24 13:08:49 - SY 2024 Selected
+24-Apr-24 13:08:49 - Org Dropdown clicked
+24-Apr-24 13:08:49 - Organization selected
+24-Apr-24 13:08:49 - Enrolled selected
+24-Apr-24 13:08:53 - Request file clicked on
+24-Apr-24 13:08:53 - Out of iframe
+24-Apr-24 13:08:59 - Switched to LEA CAASPP Coordinator at Animo Venice Charter High
+24-Apr-24 13:08:59 - LEA Reports clicked
+24-Apr-24 13:09:03 - Switched to iframe
+24-Apr-24 13:09:03 - CAASPP Student Score Data Extract Report Clicked
+24-Apr-24 13:09:03 - Dropdown Administration Year Selected
+24-Apr-24 13:09:03 - SY 2024 Selected
+24-Apr-24 13:09:03 - Org Dropdown clicked
+24-Apr-24 13:09:08 - Organization was not selected
+24-Apr-24 13:09:08 - Enrolled selected
+24-Apr-24 13:09:12 - Request file clicked on
+24-Apr-24 13:09:12 - Out of iframe
+24-Apr-24 13:09:19 - Switched to LEA CAASPP Coordinator at Animo Watts College Preparatory Academy
+24-Apr-24 13:09:19 - LEA Reports clicked
+24-Apr-24 13:09:22 - Switched to iframe
+24-Apr-24 13:09:22 - CAASPP Student Score Data Extract Report Clicked
+24-Apr-24 13:09:23 - Dropdown Administration Year Selected
+24-Apr-24 13:09:23 - SY 2024 Selected
+24-Apr-24 13:09:23 - Org Dropdown clicked
+24-Apr-24 13:09:28 - Organization was not selected
+24-Apr-24 13:09:28 - Enrolled selected
+24-Apr-24 13:09:32 - Request file clicked on
+24-Apr-24 13:09:32 - Out of iframe
+24-Apr-24 13:09:38 - Switched to LEA CAASPP Coordinator at Oscar De La Hoya Animo Charter High
+24-Apr-24 13:09:38 - LEA Reports clicked
+24-Apr-24 13:09:42 - Switched to iframe
+24-Apr-24 13:09:42 - CAASPP Student Score Data Extract Report Clicked
+24-Apr-24 13:09:42 - Dropdown Administration Year Selected
+24-Apr-24 13:09:42 - SY 2024 Selected
+24-Apr-24 13:09:42 - Org Dropdown clicked
+24-Apr-24 13:09:48 - Organization was not selected
+24-Apr-24 13:09:48 - Enrolled selected
+24-Apr-24 13:09:52 - Request file clicked on
+24-Apr-24 13:09:52 - Out of iframe

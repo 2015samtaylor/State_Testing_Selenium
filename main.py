@@ -92,146 +92,148 @@ school_report_names = list(set(school_report_names))
 # ---------------------------------------SBAC Files Request and Download
 
 # Call the function, school report names variable is called for just school name
-request_report_process(driver, 'SBAC', 'CAASPP_Student_Score_Data_Extract_Report', caaspp_coordinators)
-download_process(school_report_names, '2023 CAASPP Student Score Data File By Enrolled LEA', driver) 
+# request_report_process(driver, 'SBAC', 'CAASPP_Student_Score_Data_Extract_Report', caaspp_coordinators)
+# download_process(school_report_names, '2024 CAASPP Student Score Data File By Enrolled LEA', driver) 
 
-#This is here three times to see if anything got skipped the first time. Initial dir is set at ELPAC only to move the files over to SBAC dir
-#Will run 5 times
+# #This is here three times to see if anything got skipped the first time. Initial dir is set at ELPAC only to move the files over to SBAC dir
+# #Will run 5 times
 
-time.sleep(10) #implemented to give time for files to download
-download_loop_missing(f'elpac\\{formatted_month_day}', '2023 CAASPP Student Score Data File By Enrolled LEA', driver)
+# time.sleep(10) #implemented to give time for files to download
+# download_loop_missing(f'elpac\\{formatted_month_day}', '2024 CAASPP Student Score Data File By Enrolled LEA', driver)
 
-#This moves the files from ELPAC  timestamp dir to SBAC timestamp dir. 
-#This is because the download dir cannot be changed in Selenium
-move_files_over()
+# #This moves the files from ELPAC  timestamp dir to SBAC timestamp dir. 
+# #This is because the download dir cannot be changed in Selenium
+# move_files_over()
 
-# --------------------------------------------ELPAC Files Request and Download
+# # --------------------------------------------ELPAC Files Request and Download
 
-driver.switch_to.default_content()
+# driver.switch_to.default_content()
 request_report_process(driver, 'ELPAC', 'Student_Results_Report_Student_Score_Data_Extract', elpac_coordinators)
-download_process(school_report_names, '2023 Summative ELPAC and Summative Alternate ELPAC Student Score Data File By Enrolled LEA', driver) 
+# download_process(school_report_names, '2024 Summative ELPAC and Summative Alternate ELPAC Student Score Data File By Enrolled LEA', driver) 
 
-time.sleep(10) #implemented to give time for files to download
-#This is here three times to see if anything got skipped the first time. 
-#Dir remains ELPAC for constant download directory
-download_loop_missing(f'elpac\\{formatted_month_day}', '2023 Summative ELPAC and Summative Alternate ELPAC Student Score Data File By Enrolled LEA', driver)
+# time.sleep(10) #implemented to give time for files to download
+# #This is here three times to see if anything got skipped the first time. 
+# #Dir remains ELPAC for constant download directory
+# download_loop_missing(f'elpac\\{formatted_month_day}', '2024 Summative ELPAC and Summative Alternate ELPAC Student Score Data File By Enrolled LEA', driver)
 
-#Close out driver window once done
-driver.close()
+# #Close out driver window once done
+# driver.close()
 
-#Takes 14 mins to run up to this point
-# -----------------------------------------Unzip the Files and Move them to the P-Drive in this location 'P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing'
-unzip_files_in_same_dir('elpac')
-unzip_files_in_same_dir('sbac')
+# #Takes 14 mins to run up to this point
+# # -----------------------------------------Unzip the Files and Move them to the P-Drive in this location 'P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing'
+# unzip_files_in_same_dir('elpac')
+# unzip_files_in_same_dir('sbac')
 
-#Keeps raw zip files in the same dir. Only moves over xlsx files
-try:
-    move_xlsx_files('sbac')
-    logging.info('Moved SBAC XLSX files to p-drive')
-except:
-    logging.info('Unable to move SBAC XLSX files to the p-drive, must be connected to the VPN')
-try:
-    move_xlsx_files('elpac')
-    logging.info('Moved ELPAC XLSX files to p-drive')
-except:
-    logging.info('Unable to move ELPAC XLSX files to the p-drive, must be connected to the VPN')
-
-
+# #Keeps raw zip files in the same dir. Only moves over xlsx files
+# try:
+#     move_xlsx_files('sbac')
+#     logging.info('Moved SBAC XLSX files to p-drive')
+# except:
+#     logging.info('Unable to move SBAC XLSX files to the p-drive, must be connected to the VPN')
+# try:
+#     move_xlsx_files('elpac')
+#     logging.info('Moved ELPAC XLSX files to p-drive')
+# except:
+#     logging.info('Unable to move ELPAC XLSX files to the p-drive, must be connected to the VPN')
 
 
-#Checks these dirs, for all files being there
-# P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing\sbac_01_16
-# P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing\elpac_01_16
-test_instance = TestFileProcessing()
-test_instance.test_file_processing('sbac')
-test_instance.test_file_processing('elpac')
-
-#Takes roughly 25 mins
-#Must be connected to the p-drive
-
-# ---------------------------------STACKING & SENDING FILES----------------------------------
-
-directory_path = r'P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing'
-
-directory_path_sbac = os.path.join(directory_path, f'sbac_{formatted_month_day}')
-sbac = stack_files(directory_path_sbac)
-sbac['CALPADSSchoolCode'] = sbac['CALPADSSchoolCode'].astype(str).str[7:]
 
 
-directory_path_elpac = os.path.join(directory_path, f'elpac_{formatted_month_day}')
-elpac = stack_files(directory_path_elpac)
-elpac['CALPADSSchoolCode'] = elpac['CALPADSSchoolCode'].astype(str).str[7:]
+# #Checks these dirs, for all files being there
+# # P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing\sbac_01_16
+# # P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing\elpac_01_16
+# test_instance = TestFileProcessing()
+# test_instance.test_file_processing('sbac')
+# test_instance.test_file_processing('elpac')
 
-sbac = filter_on_full_cds_code(sbac, 'CALPADSSchoolCode')
-elpac = filter_on_full_cds_code(elpac, 'CALPADSSchoolCode')
+# #Takes roughly 25 mins
+# #Must be connected to the p-drive
 
+# # ---------------------------------STACKING & SENDING FILES----------------------------------
 
-# -------------------------------------------get_elpac_import------------------
-
-def get_elpac_import():
-
-       e_original = get_elpac_cols(elpac, 'ELPAC')
-       e_scale_score = get_SS_frame(e_original)
-       e_pl_score = get_pl_frame(e_original)
-
-       #The merge is occurs on testname, and SSID together. THis keeps rows unique
-       e = pd.merge(e_pl_score, e_scale_score, left_on=['SSID', 'testname'], right_on = ['SSID', 'testname'], suffixes= ['', '_SS'], how='left')
-       cols = list(e_pl_score.columns)
-       cols.append('ScaleScore')
-
-       #re-arrange order
-       col_order = ['Abbreviation', 'SchoolID', 'MasterSchoolID', 'StudentNumber',
-              'StudentID', 'SSID', 'TestGrade', 'ELStatus', 'TestDate', 'DisplayDate',
-              'TestType', 'TestPeriod', 'TestScoreType',  'testname',
-              'ScaleScore', 'PLScore']
-
-       e = e[col_order]
-
-       pl_decode = {4.0: 'WelDev', 
-        3.0: 'WelDev', 
-        2.0: 'Som-ModDev',
-        1.0: 'MinDev', 
-        '': 'No Score', 
-        'NS': 'No Score'}
-
-       e['ProficiencyLevelCode'] = e['PLScore'].map(pl_decode)
-
-       return(e)
-
-elpac = get_elpac_import()
-directory_path_elpac = os.path.join(directory_path, f'ELPAC_STACKED_{formatted_month_day}.csv')
-elpac.to_csv(directory_path_elpac, index=False)
+# directory_path = r'P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing'
+# formatted_month_day_year = today_date.strftime("%m_%d_%y")
 
 
-#Differing decoding method. Refer to message with Abi
-# ss_decode = {4.0: 'WelDev', 
-#                 3.0: 'ModDev', 
-#                 2.0: 'SomDev',
-#                 1.0: 'MinDev', 
-#                 '': 'No Score', 
-#                 'NS': 'No Score'}
-
-# -------------------------------Get SBAC import-------------------------
-
-#Missing PLScore Column and ProficiencyLevelCode Mapping
-sbac_final = get_sbac_cols(sbac, 'SBAC')
-directory_path_sbac = os.path.join(directory_path, f'SBAC_STACKED_{formatted_month_day}.csv')
-sbac_final.to_csv(directory_path_sbac, index=False)
-
-# PL Score 1	STNM
-# PL Score 2	STNL
-# PL Score 3	STMT
-# PL Score 4	STEX
-
-# ------------------------------Get CAST import-------------------------
-
-cast = get_cast_cols(sbac, 'CAST')
-directory_path_cast = os.path.join(directory_path, f'CAST_STACKED_{formatted_month_day}.csv')
-cast.to_csv(directory_path_cast, index=False)
-
-# PL Score 1	BLST
-# PL Score 2	ANST
-# PL Score 3	ABST
+# directory_path_sbac = os.path.join(directory_path, f'sbac_{formatted_month_day_year}')
+# sbac = stack_files(directory_path_sbac)
+# sbac['CALPADSSchoolCode'] = sbac['CALPADSSchoolCode'].astype(str).str[7:]
 
 
-#Do these get send
+# directory_path_elpac = os.path.join(directory_path, f'elpac_{formatted_month_day_year}')
+# elpac = stack_files(directory_path_elpac)
+# elpac['CALPADSSchoolCode'] = elpac['CALPADSSchoolCode'].astype(str).str[7:]
+
+# sbac = filter_on_full_cds_code(sbac, 'CALPADSSchoolCode')
+# elpac = filter_on_full_cds_code(elpac, 'CALPADSSchoolCode')
+
+
+# # -------------------------------------------get_elpac_import------------------
+
+# def get_elpac_import():
+
+#        e_original = get_elpac_cols(elpac, 'ELPAC')
+#        e_scale_score = get_SS_frame(e_original)
+#        e_pl_score = get_pl_frame(e_original)
+
+#        #The merge is occurs on testname, and SSID together. THis keeps rows unique
+#        e = pd.merge(e_pl_score, e_scale_score, left_on=['SSID', 'testname'], right_on = ['SSID', 'testname'], suffixes= ['', '_SS'], how='left')
+#        cols = list(e_pl_score.columns)
+#        cols.append('ScaleScore')
+
+#        #re-arrange order
+#        col_order = ['Abbreviation', 'SchoolID', 'MasterSchoolID', 'StudentNumber',
+#               'StudentID', 'SSID', 'TestGrade', 'ELStatus', 'TestDate', 'DisplayDate',
+#               'TestType', 'TestPeriod', 'TestScoreType',  'testname',
+#               'ScaleScore', 'PLScore']
+
+#        e = e[col_order]
+
+#        pl_decode = {4.0: 'WelDev', 
+#         3.0: 'WelDev', 
+#         2.0: 'Som-ModDev',
+#         1.0: 'MinDev', 
+#         '': 'No Score', 
+#         'NS': 'No Score'}
+
+#        e['ProficiencyLevelCode'] = e['PLScore'].map(pl_decode)
+
+#        return(e)
+
+# elpac = get_elpac_import()
+# directory_path_elpac = os.path.join(directory_path, f'ELPAC_STACKED_{formatted_month_day_year}.csv')
+# elpac.to_csv(directory_path_elpac, index=False)
+
+
+# #Differing decoding method. Refer to message with Abi
+# # ss_decode = {4.0: 'WelDev', 
+# #                 3.0: 'ModDev', 
+# #                 2.0: 'SomDev',
+# #                 1.0: 'MinDev', 
+# #                 '': 'No Score', 
+# #                 'NS': 'No Score'}
+
+# # -------------------------------Get SBAC import-------------------------
+
+# #Missing PLScore Column and ProficiencyLevelCode Mapping
+# sbac_final = get_sbac_cols(sbac, 'SBAC')
+# directory_path_sbac = os.path.join(directory_path, f'SBAC_STACKED_{formatted_month_day_year}.csv')
+# sbac_final.to_csv(directory_path_sbac, index=False)
+
+# # PL Score 1	STNM
+# # PL Score 2	STNL
+# # PL Score 3	STMT
+# # PL Score 4	STEX
+
+# # ------------------------------Get CAST import-------------------------
+
+# cast = get_cast_cols(sbac, 'CAST')
+# directory_path_cast = os.path.join(directory_path, f'CAST_STACKED_{formatted_month_day_year}.csv')
+# cast.to_csv(directory_path_cast, index=False)
+
+# # PL Score 1	BLST
+# # PL Score 2	ANST
+# # PL Score 3	ABST
+
+
+# #Confirm these are 2024 files

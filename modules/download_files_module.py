@@ -130,9 +130,9 @@ def request_report(driver, test_type, actual_test):
         )
         try:
             dropdown.click()
-            logging.info('Dropdown clicked')
+            logging.info('Org Dropdown clicked')
         except:
-            logging.info('Dropdown not clicked')
+            logging.info('Org Dropdown not clicked')
         
         # Locate and click on the hidden input element, does not need to be done on the first try
         organization = WebDriverWait(driver, 5).until(
