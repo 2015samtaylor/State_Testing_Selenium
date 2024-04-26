@@ -28833,3 +28833,491 @@ Stacktrace:
 26-Apr-24 10:38:02 - Success, merging worked for all schools sbac
 26-Apr-24 10:38:02 - Success, all schools are here for elpac
 26-Apr-24 10:38:02 - Success, merging worked for all schools elpac
+26-Apr-24 11:40:02 - 
+
+-------------ELPAC_SBAC_results new instance log
+26-Apr-24 11:40:02 - ====== WebDriver manager ======
+26-Apr-24 11:40:04 - Get LATEST chromedriver version for google-chrome
+26-Apr-24 11:40:04 - Get LATEST chromedriver version for google-chrome
+26-Apr-24 11:40:04 - Driver [C:\Users\samuel.taylor\.wdm\drivers\chromedriver\win64\124.0.6367.91\chromedriver-win32/chromedriver.exe] found in cache
+26-Apr-24 11:40:46 - Email Code submitted - 759391
+26-Apr-24 11:40:53 - LEA Reports clicked
+26-Apr-24 11:40:58 - Switched to iframe
+26-Apr-24 11:40:58 - CAASPP Student Score Data Extract Report Clicked
+26-Apr-24 11:40:58 - Dropdown Administration Year Selected
+26-Apr-24 11:40:58 - SY 2023 Selected
+26-Apr-24 11:40:58 - Org Dropdown clicked
+26-Apr-24 11:40:58 - Organization selected
+26-Apr-24 11:40:58 - Enrolled selected
+26-Apr-24 11:41:11 - Request file clicked on
+26-Apr-24 11:41:11 - Out of iframe
+26-Apr-24 11:41:23 - Switched to LEA CAASPP Coordinator at Animo City of Champions Charter High
+26-Apr-24 11:41:23 - LEA Reports clicked
+26-Apr-24 11:41:27 - Switched to iframe
+26-Apr-24 11:41:27 - CAASPP Student Score Data Extract Report Clicked
+26-Apr-24 11:41:28 - Dropdown Administration Year Selected
+26-Apr-24 11:41:28 - SY 2023 Selected
+26-Apr-24 11:41:28 - Org Dropdown clicked
+26-Apr-24 11:41:28 - Organization selected
+26-Apr-24 11:41:28 - Enrolled selected
+26-Apr-24 11:41:40 - Request file clicked on
+26-Apr-24 11:41:40 - Out of iframe
+26-Apr-24 11:41:51 - Switched to LEA CAASPP Coordinator at Animo Compton Charter
+26-Apr-24 11:41:51 - LEA Reports clicked
+26-Apr-24 11:41:56 - Switched to iframe
+26-Apr-24 11:41:56 - CAASPP Student Score Data Extract Report Clicked
+26-Apr-24 11:41:56 - Dropdown Administration Year Selected
+26-Apr-24 11:41:56 - SY 2023 Selected
+26-Apr-24 11:41:56 - Org Dropdown clicked
+26-Apr-24 11:41:56 - Organization selected
+26-Apr-24 11:41:56 - Enrolled selected
+26-Apr-24 11:42:09 - Request file clicked on
+26-Apr-24 11:42:09 - Out of iframe
+26-Apr-24 11:42:15 - Switched to LEA CAASPP Coordinator at Animo Ellen Ochoa Charter Middle
+26-Apr-24 11:42:19 - LEA Reports clicked
+26-Apr-24 11:42:23 - Switched to iframe
+26-Apr-24 11:42:23 - CAASPP Student Score Data Extract Report Clicked
+26-Apr-24 11:42:24 - Dropdown Administration Year Selected
+26-Apr-24 11:42:24 - SY 2023 Selected
+26-Apr-24 11:42:24 - Org Dropdown clicked
+26-Apr-24 11:42:24 - Organization selected
+26-Apr-24 11:42:24 - Enrolled selected
+26-Apr-24 11:42:36 - Request file clicked on
+26-Apr-24 11:42:36 - Out of iframe
+26-Apr-24 11:42:46 - Switched to LEA CAASPP Coordinator at Animo Florence-Firestone Charter Middle
+26-Apr-24 11:42:46 - LEA Reports clicked
+26-Apr-24 11:42:51 - Switched to iframe
+26-Apr-24 11:42:51 - CAASPP Student Score Data Extract Report Clicked
+26-Apr-24 11:42:51 - Dropdown Administration Year Selected
+26-Apr-24 11:42:51 - SY 2023 Selected
+26-Apr-24 11:42:51 - Org Dropdown clicked
+26-Apr-24 11:42:51 - Organization selected
+26-Apr-24 11:42:51 - Enrolled selected
+26-Apr-24 11:43:04 - Request file clicked on
+26-Apr-24 11:43:04 - Out of iframe
+26-Apr-24 11:43:14 - Switched to LEA CAASPP Coordinator at Animo Inglewood Charter High
+26-Apr-24 11:43:14 - LEA Reports clicked
+26-Apr-24 11:43:20 - Switched to iframe
+26-Apr-24 11:43:20 - CAASPP Student Score Data Extract Report Clicked
+26-Apr-24 11:43:20 - Dropdown Administration Year Selected
+26-Apr-24 11:43:20 - SY 2023 Selected
+26-Apr-24 11:43:20 - Org Dropdown clicked
+26-Apr-24 11:43:25 - Organization was not selected
+26-Apr-24 11:43:25 - Enrolled selected
+26-Apr-24 11:43:38 - Request file clicked on
+26-Apr-24 11:43:38 - Out of iframe
+26-Apr-24 11:43:47 - Switched to LEA CAASPP Coordinator at Animo Jackie Robinson High
+26-Apr-24 11:43:47 - LEA Reports clicked
+26-Apr-24 11:43:52 - Switched to iframe
+26-Apr-24 11:43:52 - CAASPP Student Score Data Extract Report Clicked
+26-Apr-24 11:43:52 - Dropdown Administration Year Selected
+26-Apr-24 11:43:52 - SY 2023 Selected
+26-Apr-24 11:43:52 - Org Dropdown clicked
+26-Apr-24 11:43:52 - Organization selected
+26-Apr-24 11:43:52 - Enrolled selected
+26-Apr-24 11:44:02 - Request file clicked on
+26-Apr-24 11:44:02 - Out of iframe
+26-Apr-24 11:44:12 - Switched to LEA CAASPP Coordinator at Animo James B. Taylor Charter Middle
+26-Apr-24 11:44:12 - LEA Reports clicked
+26-Apr-24 11:44:16 - Switched to iframe
+26-Apr-24 11:44:16 - CAASPP Student Score Data Extract Report Clicked
+26-Apr-24 11:44:17 - Dropdown Administration Year Selected
+26-Apr-24 11:44:17 - SY 2023 Selected
+26-Apr-24 11:44:17 - Org Dropdown clicked
+26-Apr-24 11:44:17 - Organization selected
+26-Apr-24 11:44:17 - Enrolled selected
+26-Apr-24 11:44:29 - Request file clicked on
+26-Apr-24 11:44:29 - Out of iframe
+26-Apr-24 11:44:41 - Switched to LEA CAASPP Coordinator at Animo Jefferson Charter Middle
+26-Apr-24 11:44:41 - LEA Reports clicked
+26-Apr-24 11:44:46 - Switched to iframe
+26-Apr-24 11:44:46 - CAASPP Student Score Data Extract Report Clicked
+26-Apr-24 11:44:46 - Dropdown Administration Year Selected
+26-Apr-24 11:44:46 - SY 2023 Selected
+26-Apr-24 11:44:46 - Org Dropdown clicked
+26-Apr-24 11:44:46 - Organization selected
+26-Apr-24 11:44:46 - Enrolled selected
+26-Apr-24 11:44:54 - Request file clicked on
+26-Apr-24 11:44:54 - Out of iframe
+26-Apr-24 11:45:04 - Switched to LEA CAASPP Coordinator at Animo Leadership High
+26-Apr-24 11:45:04 - LEA Reports clicked
+26-Apr-24 11:45:09 - Switched to iframe
+26-Apr-24 11:45:09 - CAASPP Student Score Data Extract Report Clicked
+26-Apr-24 11:45:09 - Dropdown Administration Year Selected
+26-Apr-24 11:45:10 - SY 2023 Selected
+26-Apr-24 11:45:10 - Org Dropdown clicked
+26-Apr-24 11:45:15 - Organization was not selected
+26-Apr-24 11:45:15 - Enrolled selected
+26-Apr-24 11:45:27 - Request file clicked on
+26-Apr-24 11:45:27 - Out of iframe
+26-Apr-24 11:45:36 - Switched to LEA CAASPP Coordinator at Animo Legacy Charter Middle
+26-Apr-24 11:45:36 - LEA Reports clicked
+26-Apr-24 11:45:40 - Switched to iframe
+26-Apr-24 11:45:41 - CAASPP Student Score Data Extract Report Clicked
+26-Apr-24 11:45:41 - Dropdown Administration Year Selected
+26-Apr-24 11:45:41 - SY 2023 Selected
+26-Apr-24 11:45:41 - Org Dropdown clicked
+26-Apr-24 11:45:41 - Organization selected
+26-Apr-24 11:45:41 - Enrolled selected
+26-Apr-24 11:45:53 - Request file clicked on
+26-Apr-24 11:45:53 - Out of iframe
+26-Apr-24 11:46:03 - Switched to LEA CAASPP Coordinator at Animo Mae Jemison Charter Middle
+26-Apr-24 11:46:03 - LEA Reports clicked
+26-Apr-24 11:46:08 - Switched to iframe
+26-Apr-24 11:46:08 - CAASPP Student Score Data Extract Report Clicked
+26-Apr-24 11:46:08 - Dropdown Administration Year Selected
+26-Apr-24 11:46:08 - SY 2023 Selected
+26-Apr-24 11:46:08 - Org Dropdown clicked
+26-Apr-24 11:46:08 - Organization selected
+26-Apr-24 11:46:08 - Enrolled selected
+26-Apr-24 11:46:21 - Request file clicked on
+26-Apr-24 11:46:21 - Out of iframe
+26-Apr-24 11:46:31 - Switched to LEA CAASPP Coordinator at Animo Pat Brown
+26-Apr-24 11:46:31 - LEA Reports clicked
+26-Apr-24 11:46:36 - Switched to iframe
+26-Apr-24 11:46:36 - CAASPP Student Score Data Extract Report Clicked
+26-Apr-24 11:46:36 - Dropdown Administration Year Selected
+26-Apr-24 11:46:36 - SY 2023 Selected
+26-Apr-24 11:46:36 - Org Dropdown clicked
+26-Apr-24 11:46:36 - Organization selected
+26-Apr-24 11:46:36 - Enrolled selected
+26-Apr-24 11:46:48 - Request file clicked on
+26-Apr-24 11:46:48 - Out of iframe
+26-Apr-24 11:46:59 - Switched to LEA CAASPP Coordinator at Animo Ralph Bunche Charter High
+26-Apr-24 11:46:59 - LEA Reports clicked
+26-Apr-24 11:47:03 - Switched to iframe
+26-Apr-24 11:47:03 - CAASPP Student Score Data Extract Report Clicked
+26-Apr-24 11:47:04 - Dropdown Administration Year Selected
+26-Apr-24 11:47:04 - SY 2023 Selected
+26-Apr-24 11:47:04 - Org Dropdown clicked
+26-Apr-24 11:47:04 - Organization selected
+26-Apr-24 11:47:04 - Enrolled selected
+26-Apr-24 11:47:16 - Request file clicked on
+26-Apr-24 11:47:17 - Out of iframe
+26-Apr-24 11:47:23 - Switched to LEA CAASPP Coordinator at Animo South Los Angeles Charter
+26-Apr-24 11:47:27 - LEA Reports clicked
+26-Apr-24 11:47:32 - Switched to iframe
+26-Apr-24 11:47:32 - CAASPP Student Score Data Extract Report Clicked
+26-Apr-24 11:47:32 - Dropdown Administration Year Selected
+26-Apr-24 11:47:32 - SY 2023 Selected
+26-Apr-24 11:47:32 - Org Dropdown clicked
+26-Apr-24 11:47:32 - Organization selected
+26-Apr-24 11:47:32 - Enrolled selected
+26-Apr-24 11:47:45 - Request file clicked on
+26-Apr-24 11:47:45 - Out of iframe
+26-Apr-24 11:47:55 - Switched to LEA CAASPP Coordinator at Animo Venice Charter High
+26-Apr-24 11:47:55 - LEA Reports clicked
+26-Apr-24 11:48:00 - Switched to iframe
+26-Apr-24 11:48:00 - CAASPP Student Score Data Extract Report Clicked
+26-Apr-24 11:48:01 - Dropdown Administration Year Selected
+26-Apr-24 11:48:01 - SY 2023 Selected
+26-Apr-24 11:48:01 - Org Dropdown clicked
+26-Apr-24 11:48:06 - Organization was not selected
+26-Apr-24 11:48:06 - Enrolled selected
+26-Apr-24 11:48:18 - Request file clicked on
+26-Apr-24 11:48:18 - Out of iframe
+26-Apr-24 11:48:28 - Switched to LEA CAASPP Coordinator at Animo Watts College Preparatory Academy
+26-Apr-24 11:48:28 - LEA Reports clicked
+26-Apr-24 11:48:34 - Switched to iframe
+26-Apr-24 11:48:34 - CAASPP Student Score Data Extract Report Clicked
+26-Apr-24 11:48:34 - Dropdown Administration Year Selected
+26-Apr-24 11:48:34 - SY 2023 Selected
+26-Apr-24 11:48:34 - Org Dropdown clicked
+26-Apr-24 11:48:34 - Organization selected
+26-Apr-24 11:48:34 - Enrolled selected
+26-Apr-24 11:48:46 - Request file clicked on
+26-Apr-24 11:48:46 - Out of iframe
+26-Apr-24 11:48:56 - Switched to LEA CAASPP Coordinator at Oscar De La Hoya Animo Charter High
+26-Apr-24 11:48:56 - LEA Reports clicked
+26-Apr-24 11:49:01 - Switched to iframe
+26-Apr-24 11:49:01 - CAASPP Student Score Data Extract Report Clicked
+26-Apr-24 11:49:01 - Dropdown Administration Year Selected
+26-Apr-24 11:49:01 - SY 2023 Selected
+26-Apr-24 11:49:01 - Org Dropdown clicked
+26-Apr-24 11:49:06 - Organization was not selected
+26-Apr-24 11:49:07 - Enrolled selected
+26-Apr-24 11:49:19 - Request file clicked on
+26-Apr-24 11:49:19 - Out of iframe
+26-Apr-24 11:49:25 - Requested reports section clicked into
+26-Apr-24 11:49:37 - Switched to iframe within downloads section
+26-Apr-24 11:49:37 - ActionChains scrolled to school Animo Inglewood Charter High
+26-Apr-24 11:49:38 - Download occured for Animo Inglewood Charter High
+26-Apr-24 11:49:38 - ActionChains scrolled to school Animo South Los Angeles Charter
+26-Apr-24 11:49:39 - Download occured for Animo South Los Angeles Charter
+26-Apr-24 11:49:39 - ActionChains scrolled to school Animo Florence-Firestone Charter Middle
+26-Apr-24 11:49:40 - Download occured for Animo Florence-Firestone Charter Middle
+26-Apr-24 11:49:40 - ActionChains scrolled to school Animo Leadership High
+26-Apr-24 11:49:41 - Download occured for Animo Leadership High
+26-Apr-24 11:49:41 - ActionChains scrolled to school Animo Mae Jemison Charter Middle
+26-Apr-24 11:49:42 - Download occured for Animo Mae Jemison Charter Middle
+26-Apr-24 11:49:42 - ActionChains scrolled to school Animo Pat Brown
+26-Apr-24 11:49:43 - Download occured for Animo Pat Brown
+26-Apr-24 11:49:43 - ActionChains scrolled to school Animo Ellen Ochoa Charter Middle
+26-Apr-24 11:49:44 - Download occured for Animo Ellen Ochoa Charter Middle
+26-Apr-24 11:49:44 - ActionChains scrolled to school Animo Jefferson Charter Middle
+26-Apr-24 11:49:45 - Download occured for Animo Jefferson Charter Middle
+26-Apr-24 11:49:45 - ActionChains scrolled to school Animo Venice Charter High
+26-Apr-24 11:49:46 - Download occured for Animo Venice Charter High
+26-Apr-24 11:49:46 - ActionChains scrolled to school Animo Watts College Preparatory Academy
+26-Apr-24 11:49:47 - Download occured for Animo Watts College Preparatory Academy
+26-Apr-24 11:49:47 - ActionChains scrolled to school Animo Jackie Robinson High
+26-Apr-24 11:49:48 - Download occured for Animo Jackie Robinson High
+26-Apr-24 11:49:48 - ActionChains scrolled to school Animo City of Champions Charter High
+26-Apr-24 11:49:49 - Download occured for Animo City of Champions Charter High
+26-Apr-24 11:49:49 - ActionChains scrolled to school Animo James B. Taylor Charter Middle
+26-Apr-24 11:49:50 - Download occured for Animo James B. Taylor Charter Middle
+26-Apr-24 11:49:50 - ActionChains scrolled to school Animo Ralph Bunche Charter High
+26-Apr-24 11:49:51 - Download occured for Animo Ralph Bunche Charter High
+26-Apr-24 11:49:51 - ActionChains scrolled to school Animo Legacy Charter Middle
+26-Apr-24 11:49:52 - Download occured for Animo Legacy Charter Middle
+26-Apr-24 11:49:52 - ActionChains scrolled to school Alain Leroy Locke College Preparatory Academy
+26-Apr-24 11:49:52 - Download occured for Alain Leroy Locke College Preparatory Academy
+26-Apr-24 11:49:53 - ActionChains scrolled to school Oscar De La Hoya Animo Charter High
+26-Apr-24 11:49:53 - Download occured for Oscar De La Hoya Animo Charter High
+26-Apr-24 11:49:54 - ActionChains scrolled to school Animo Compton Charter
+26-Apr-24 11:49:54 - Download occured for Animo Compton Charter
+26-Apr-24 11:50:07 - All files are downloaded for 2023 CAASPP Student Score Data File By Enrolled LEA
+26-Apr-24 11:50:07 - Files moved successfully to c:\Users\samuel.taylor\Desktop\Python_Scripts\Manual_Triggers\ELPAC_SBAC_Results_Selenium\file_downloads\sbac\04_26
+26-Apr-24 11:56:34 - Switched to LEA ELPAC Coordinator at Alain Leroy Locke College Preparatory Academy
+26-Apr-24 11:56:34 - LEA Reports clicked
+26-Apr-24 11:56:39 - Switched to iframe
+26-Apr-24 11:56:39 - ELPAC Data File Clicked
+26-Apr-24 11:56:39 - Dropdown Administration Year Selected
+26-Apr-24 11:56:39 - SY 2023 Selected
+26-Apr-24 11:56:49 - Organization was not selected
+26-Apr-24 11:56:49 - Enrolled selected
+26-Apr-24 11:56:57 - Request file clicked on
+26-Apr-24 11:56:58 - Out of iframe
+26-Apr-24 11:57:08 - Switched to LEA ELPAC Coordinator at Animo City of Champions Charter High
+26-Apr-24 11:57:08 - LEA Reports clicked
+26-Apr-24 11:57:13 - Switched to iframe
+26-Apr-24 11:57:13 - ELPAC Data File Clicked
+26-Apr-24 11:57:13 - Dropdown Administration Year Selected
+26-Apr-24 11:57:13 - SY 2023 Selected
+26-Apr-24 11:57:24 - Organization was not selected
+26-Apr-24 11:57:24 - Enrolled selected
+26-Apr-24 11:57:36 - Request file clicked on
+26-Apr-24 11:57:36 - Out of iframe
+26-Apr-24 11:57:47 - Switched to LEA ELPAC Coordinator at Animo Compton Charter
+26-Apr-24 11:57:47 - LEA Reports clicked
+26-Apr-24 11:57:51 - Switched to iframe
+26-Apr-24 11:57:51 - ELPAC Data File Clicked
+26-Apr-24 11:57:52 - Dropdown Administration Year Selected
+26-Apr-24 11:57:52 - SY 2023 Selected
+26-Apr-24 11:58:02 - Organization was not selected
+26-Apr-24 11:58:02 - Enrolled selected
+26-Apr-24 11:58:14 - Request file clicked on
+26-Apr-24 11:58:14 - Out of iframe
+26-Apr-24 11:58:23 - Switched to LEA ELPAC Coordinator at Animo Ellen Ochoa Charter Middle
+26-Apr-24 11:58:23 - LEA Reports clicked
+26-Apr-24 11:58:28 - Switched to iframe
+26-Apr-24 11:58:28 - ELPAC Data File Clicked
+26-Apr-24 11:58:28 - Dropdown Administration Year Selected
+26-Apr-24 11:58:28 - SY 2023 Selected
+26-Apr-24 11:58:38 - Organization was not selected
+26-Apr-24 11:58:38 - Enrolled selected
+26-Apr-24 11:58:50 - Request file clicked on
+26-Apr-24 11:58:51 - Out of iframe
+26-Apr-24 11:59:00 - Switched to LEA ELPAC Coordinator at Animo Florence-Firestone Charter Middle
+26-Apr-24 11:59:00 - LEA Reports clicked
+26-Apr-24 11:59:05 - Switched to iframe
+26-Apr-24 11:59:05 - ELPAC Data File Clicked
+26-Apr-24 11:59:05 - Dropdown Administration Year Selected
+26-Apr-24 11:59:05 - SY 2023 Selected
+26-Apr-24 11:59:15 - Organization was not selected
+26-Apr-24 11:59:15 - Enrolled selected
+26-Apr-24 11:59:24 - Request file clicked on
+26-Apr-24 11:59:24 - Out of iframe
+26-Apr-24 11:59:34 - Switched to LEA ELPAC Coordinator at Animo Inglewood Charter High
+26-Apr-24 11:59:34 - LEA Reports clicked
+26-Apr-24 11:59:39 - Switched to iframe
+26-Apr-24 11:59:39 - ELPAC Data File Clicked
+26-Apr-24 11:59:39 - Dropdown Administration Year Selected
+26-Apr-24 11:59:39 - SY 2023 Selected
+26-Apr-24 11:59:49 - Organization was not selected
+26-Apr-24 11:59:49 - Enrolled selected
+26-Apr-24 12:00:01 - Request file clicked on
+26-Apr-24 12:00:02 - Out of iframe
+26-Apr-24 12:00:11 - Switched to LEA ELPAC Coordinator at Animo Jackie Robinson High
+26-Apr-24 12:00:11 - LEA Reports clicked
+26-Apr-24 12:00:17 - Switched to iframe
+26-Apr-24 12:00:17 - ELPAC Data File Clicked
+26-Apr-24 12:00:17 - Dropdown Administration Year Selected
+26-Apr-24 12:00:17 - SY 2023 Selected
+26-Apr-24 12:00:27 - Organization was not selected
+26-Apr-24 12:00:27 - Enrolled selected
+26-Apr-24 12:00:39 - Request file clicked on
+26-Apr-24 12:00:39 - Out of iframe
+26-Apr-24 12:00:49 - Switched to LEA ELPAC Coordinator at Animo James B. Taylor Charter Middle
+26-Apr-24 12:00:49 - LEA Reports clicked
+26-Apr-24 12:00:54 - Switched to iframe
+26-Apr-24 12:00:54 - ELPAC Data File Clicked
+26-Apr-24 12:00:54 - Dropdown Administration Year Selected
+26-Apr-24 12:00:54 - SY 2023 Selected
+26-Apr-24 12:01:04 - Organization was not selected
+26-Apr-24 12:01:04 - Enrolled selected
+26-Apr-24 12:01:16 - Request file clicked on
+26-Apr-24 12:01:16 - Out of iframe
+26-Apr-24 12:01:22 - Switched to LEA ELPAC Coordinator at Animo Jefferson Charter Middle
+26-Apr-24 12:01:26 - LEA Reports clicked
+26-Apr-24 12:01:30 - Switched to iframe
+26-Apr-24 12:01:31 - ELPAC Data File Clicked
+26-Apr-24 12:01:31 - Dropdown Administration Year Selected
+26-Apr-24 12:01:31 - SY 2023 Selected
+26-Apr-24 12:01:41 - Organization was not selected
+26-Apr-24 12:01:41 - Enrolled selected
+26-Apr-24 12:01:53 - Request file clicked on
+26-Apr-24 12:01:53 - Out of iframe
+26-Apr-24 12:02:03 - Switched to LEA ELPAC Coordinator at Animo Leadership High
+26-Apr-24 12:02:03 - LEA Reports clicked
+26-Apr-24 12:02:09 - Switched to iframe
+26-Apr-24 12:02:09 - ELPAC Data File Clicked
+26-Apr-24 12:02:09 - Dropdown Administration Year Selected
+26-Apr-24 12:02:09 - SY 2023 Selected
+26-Apr-24 12:02:19 - Organization was not selected
+26-Apr-24 12:02:19 - Enrolled selected
+26-Apr-24 12:02:28 - Request file clicked on
+26-Apr-24 12:02:28 - Out of iframe
+26-Apr-24 12:02:38 - Switched to LEA ELPAC Coordinator at Animo Legacy Charter Middle
+26-Apr-24 12:02:38 - LEA Reports clicked
+26-Apr-24 12:02:43 - Switched to iframe
+26-Apr-24 12:02:43 - ELPAC Data File Clicked
+26-Apr-24 12:02:44 - Dropdown Administration Year Selected
+26-Apr-24 12:02:44 - SY 2023 Selected
+26-Apr-24 12:02:54 - Organization was not selected
+26-Apr-24 12:02:54 - Enrolled selected
+26-Apr-24 12:03:07 - Request file clicked on
+26-Apr-24 12:03:07 - Out of iframe
+26-Apr-24 12:03:16 - Switched to LEA ELPAC Coordinator at Animo Mae Jemison Charter Middle
+26-Apr-24 12:03:17 - LEA Reports clicked
+26-Apr-24 12:03:22 - Switched to iframe
+26-Apr-24 12:03:22 - ELPAC Data File Clicked
+26-Apr-24 12:03:22 - Dropdown Administration Year Selected
+26-Apr-24 12:03:22 - SY 2023 Selected
+26-Apr-24 12:03:33 - Organization was not selected
+26-Apr-24 12:03:33 - Enrolled selected
+26-Apr-24 12:03:45 - Request file clicked on
+26-Apr-24 12:03:45 - Out of iframe
+26-Apr-24 12:03:52 - Switched to LEA ELPAC Coordinator at Animo Pat Brown
+26-Apr-24 12:03:56 - LEA Reports clicked
+26-Apr-24 12:04:00 - Switched to iframe
+26-Apr-24 12:04:00 - ELPAC Data File Clicked
+26-Apr-24 12:04:00 - Dropdown Administration Year Selected
+26-Apr-24 12:04:01 - SY 2023 Selected
+26-Apr-24 12:04:11 - Organization was not selected
+26-Apr-24 12:04:11 - Enrolled selected
+26-Apr-24 12:04:22 - Request file clicked on
+26-Apr-24 12:04:22 - Out of iframe
+26-Apr-24 12:04:33 - Switched to LEA ELPAC Coordinator at Animo Ralph Bunche Charter High
+26-Apr-24 12:04:33 - LEA Reports clicked
+26-Apr-24 12:04:38 - Switched to iframe
+26-Apr-24 12:04:38 - ELPAC Data File Clicked
+26-Apr-24 12:04:38 - Dropdown Administration Year Selected
+26-Apr-24 12:04:38 - SY 2023 Selected
+26-Apr-24 12:04:49 - Organization was not selected
+26-Apr-24 12:04:49 - Enrolled selected
+26-Apr-24 12:05:01 - Request file clicked on
+26-Apr-24 12:05:01 - Out of iframe
+26-Apr-24 12:05:11 - Switched to LEA ELPAC Coordinator at Animo South Los Angeles Charter
+26-Apr-24 12:05:11 - LEA Reports clicked
+26-Apr-24 12:05:15 - Switched to iframe
+26-Apr-24 12:05:15 - ELPAC Data File Clicked
+26-Apr-24 12:05:16 - Dropdown Administration Year Selected
+26-Apr-24 12:05:16 - SY 2023 Selected
+26-Apr-24 12:05:26 - Organization was not selected
+26-Apr-24 12:05:26 - Enrolled selected
+26-Apr-24 12:05:39 - Request file clicked on
+26-Apr-24 12:05:39 - Out of iframe
+26-Apr-24 12:05:50 - Switched to LEA ELPAC Coordinator at Animo Venice Charter High
+26-Apr-24 12:05:50 - LEA Reports clicked
+26-Apr-24 12:05:55 - Switched to iframe
+26-Apr-24 12:05:55 - ELPAC Data File Clicked
+26-Apr-24 12:05:55 - Dropdown Administration Year Selected
+26-Apr-24 12:05:55 - SY 2023 Selected
+26-Apr-24 12:06:05 - Organization was not selected
+26-Apr-24 12:06:05 - Enrolled selected
+26-Apr-24 12:06:17 - Request file clicked on
+26-Apr-24 12:06:17 - Out of iframe
+26-Apr-24 12:06:27 - Switched to LEA ELPAC Coordinator at Animo Watts College Preparatory Academy
+26-Apr-24 12:06:27 - LEA Reports clicked
+26-Apr-24 12:06:32 - Switched to iframe
+26-Apr-24 12:06:32 - ELPAC Data File Clicked
+26-Apr-24 12:06:32 - Dropdown Administration Year Selected
+26-Apr-24 12:06:32 - SY 2023 Selected
+26-Apr-24 12:06:42 - Organization was not selected
+26-Apr-24 12:06:42 - Enrolled selected
+26-Apr-24 12:06:55 - Request file clicked on
+26-Apr-24 12:06:55 - Out of iframe
+26-Apr-24 12:07:05 - Switched to LEA ELPAC Coordinator at Oscar De La Hoya Animo Charter High
+26-Apr-24 12:07:05 - LEA Reports clicked
+26-Apr-24 12:07:09 - Switched to iframe
+26-Apr-24 12:07:10 - ELPAC Data File Clicked
+26-Apr-24 12:07:10 - Dropdown Administration Year Selected
+26-Apr-24 12:07:10 - SY 2023 Selected
+26-Apr-24 12:07:20 - Organization was not selected
+26-Apr-24 12:07:20 - Enrolled selected
+26-Apr-24 12:07:28 - Request file clicked on
+26-Apr-24 12:07:28 - Out of iframe
+26-Apr-24 12:07:34 - Requested reports section clicked into
+26-Apr-24 12:07:45 - Switched to iframe within downloads section
+26-Apr-24 12:07:46 - ActionChains scrolled to school Animo Inglewood Charter High
+26-Apr-24 12:07:46 - Download occured for Animo Inglewood Charter High
+26-Apr-24 12:07:47 - ActionChains scrolled to school Animo South Los Angeles Charter
+26-Apr-24 12:07:47 - Download occured for Animo South Los Angeles Charter
+26-Apr-24 12:07:48 - ActionChains scrolled to school Animo Florence-Firestone Charter Middle
+26-Apr-24 12:07:48 - Download occured for Animo Florence-Firestone Charter Middle
+26-Apr-24 12:07:49 - ActionChains scrolled to school Animo Leadership High
+26-Apr-24 12:07:49 - Download occured for Animo Leadership High
+26-Apr-24 12:07:50 - ActionChains scrolled to school Animo Mae Jemison Charter Middle
+26-Apr-24 12:07:50 - Download occured for Animo Mae Jemison Charter Middle
+26-Apr-24 12:07:51 - ActionChains scrolled to school Animo Pat Brown
+26-Apr-24 12:07:52 - Download occured for Animo Pat Brown
+26-Apr-24 12:07:52 - ActionChains scrolled to school Animo Ellen Ochoa Charter Middle
+26-Apr-24 12:07:53 - Download occured for Animo Ellen Ochoa Charter Middle
+26-Apr-24 12:07:53 - ActionChains scrolled to school Animo Jefferson Charter Middle
+26-Apr-24 12:07:54 - Download occured for Animo Jefferson Charter Middle
+26-Apr-24 12:07:54 - ActionChains scrolled to school Animo Venice Charter High
+26-Apr-24 12:07:55 - Download occured for Animo Venice Charter High
+26-Apr-24 12:07:55 - ActionChains scrolled to school Animo Watts College Preparatory Academy
+26-Apr-24 12:07:56 - Download occured for Animo Watts College Preparatory Academy
+26-Apr-24 12:07:56 - ActionChains scrolled to school Animo Jackie Robinson High
+26-Apr-24 12:07:57 - Download occured for Animo Jackie Robinson High
+26-Apr-24 12:07:57 - ActionChains scrolled to school Animo City of Champions Charter High
+26-Apr-24 12:07:58 - Download occured for Animo City of Champions Charter High
+26-Apr-24 12:07:58 - ActionChains scrolled to school Animo James B. Taylor Charter Middle
+26-Apr-24 12:07:59 - Download occured for Animo James B. Taylor Charter Middle
+26-Apr-24 12:07:59 - ActionChains scrolled to school Animo Ralph Bunche Charter High
+26-Apr-24 12:08:00 - Download occured for Animo Ralph Bunche Charter High
+26-Apr-24 12:08:00 - ActionChains scrolled to school Animo Legacy Charter Middle
+26-Apr-24 12:08:00 - Download occured for Animo Legacy Charter Middle
+26-Apr-24 12:08:01 - ActionChains scrolled to school Alain Leroy Locke College Preparatory Academy
+26-Apr-24 12:08:01 - Download occured for Alain Leroy Locke College Preparatory Academy
+26-Apr-24 12:08:02 - ActionChains scrolled to school Oscar De La Hoya Animo Charter High
+26-Apr-24 12:08:02 - Download occured for Oscar De La Hoya Animo Charter High
+26-Apr-24 12:08:03 - ActionChains scrolled to school Animo Compton Charter
+26-Apr-24 12:08:03 - Download occured for Animo Compton Charter
+26-Apr-24 12:08:16 - All files are downloaded for 2023 Summative ELPAC and Summative Alternate ELPAC Student Score Data File By Enrolled LEA
+26-Apr-24 12:08:20 - Moved SBAC XLSX files to p-drive
+26-Apr-24 12:08:20 - Moved ELPAC XLSX files to p-drive
+26-Apr-24 12:08:20 - Success, all schools are here for sbac
+26-Apr-24 12:08:20 - Success, merging worked for all schools sbac
+26-Apr-24 12:08:20 - Success, all schools are here for elpac
+26-Apr-24 12:08:20 - Success, merging worked for all schools elpac
+26-Apr-24 13:05:05 - ELPAC sent to P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing for ellevation pickup
+26-Apr-24 13:05:05 - SBAC sent to P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing for ellevation pickup
+26-Apr-24 13:05:05 - CAST sent to P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing for ellevation pickup
+26-Apr-24 13:22:27 - ELPAC sent to P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing for ellevation pickup
+26-Apr-24 13:22:27 - SBAC sent to P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing for ellevation pickup
+26-Apr-24 13:22:28 - CAST sent to P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing for ellevation pickup
+26-Apr-24 13:31:58 - ELPAC sent to P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing for ellevation pickup
+26-Apr-24 13:31:59 - SBAC sent to P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing for ellevation pickup
+26-Apr-24 13:31:59 - CAST sent to P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing for ellevation pickup
+26-Apr-24 13:37:20 - ELPAC sent to P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing for ellevation pickup
+26-Apr-24 13:37:20 - SBAC sent to P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing for ellevation pickup
+26-Apr-24 13:37:21 - CAST sent to P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing for ellevation pickup
+26-Apr-24 13:42:22 - ELPAC sent to P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing for ellevation pickup
+26-Apr-24 13:42:22 - SBAC sent to P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing for ellevation pickup
+26-Apr-24 13:42:22 - CAST sent to P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing for ellevation pickup
+26-Apr-24 13:47:24 - ELPAC sent to P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing for ellevation pickup
+26-Apr-24 13:47:25 - SBAC sent to P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing for ellevation pickup
+26-Apr-24 13:47:25 - CAST sent to P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing for ellevation pickup

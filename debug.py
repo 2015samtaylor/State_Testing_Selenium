@@ -1,6 +1,11 @@
 from config import username, password
+print(password)
 from modules.login_module import logIn, launch_to_homescreen, create_directory
-from modules.download_files_module import request_report_process, whats_missing, download_process
+from modules.download_files_module import request_report_process, download_loop_missing, download_process,  move_files_over, unzip_xlsx_file, unzip_files_in_same_dir, move_xlsx_files
+from modules.unit_testing import TestFileProcessing
+from modules.data_transformation import *
+from modules.post_download_change import *
+
 
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
@@ -15,71 +20,108 @@ import pandas as pd
 import logging
 import time
 from datetime import datetime
+from modules import sql_query_module
+import urllib
+import sqlalchemy
+
+
 today_date = datetime.now()
-formatted_month_day = today_date.strftime("%m_%d")
+# ---------------------------------STACKING & SENDING FILES----------------------------------
 
-logging.basicConfig(filename='ELPAC_SBAC_results.log', level=logging.INFO,
-                   format='%(asctime)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S',force=True)
-logging.info('\n\n-------------ELPAC_SBAC_results new instance log')
-
-#create file_download dir, and establish download directory
-create_directory('file_downloads')
-create_directory(f'file_downloads\\sbac\\{formatted_month_day}')
-create_directory(f'file_downloads\\elpac\\{formatted_month_day}')
-
-# Set up Chrome options
-download_directory = os.getcwd() + f'\\file_downloads\\sbac\\{formatted_month_day}'
-chrome_options = webdriver.ChromeOptions()
-prefs = {'download.default_directory' : download_directory,
-         'profile.default_content_setting_values.automatic_downloads': 1,
-         'profile.content_settings.exceptions.automatic_downloads.*.setting': 1}
-chrome_options.add_experimental_option('prefs', prefs)
-driver = webdriver.Chrome(ChromeDriverManager().install(), options = chrome_options)
-
-logIn(username, password, driver)
-launch_to_homescreen(driver)
-
-caaspp_list = ['LEA CAASPP Coordinator at Alain Leroy Locke College Preparatory Academy',
-                'LEA CAASPP Coordinator at Animo City of Champions Charter High',
-                'LEA CAASPP Coordinator at Animo Compton Charter',
-                'LEA CAASPP Coordinator at Animo Ellen Ochoa Charter Middle',
-                'LEA CAASPP Coordinator at Animo Florence-Firestone Charter Middle',
-                'LEA CAASPP Coordinator at Animo Inglewood Charter High',
-                'LEA CAASPP Coordinator at Animo Jackie Robinson High',
-                'LEA CAASPP Coordinator at Animo James B. Taylor Charter Middle',
-                'LEA CAASPP Coordinator at Animo Jefferson Charter Middle',
-                'LEA CAASPP Coordinator at Animo Leadership High',
-                'LEA CAASPP Coordinator at Animo Legacy Charter Middle',
-                'LEA CAASPP Coordinator at Animo Mae Jemison Charter Middle',
-                'LEA CAASPP Coordinator at Animo Pat Brown',
-                'LEA CAASPP Coordinator at Animo Ralph Bunche Charter High',
-                'LEA CAASPP Coordinator at Animo South Los Angeles Charter',
-                'LEA CAASPP Coordinator at Animo Venice Charter High',
-                'LEA CAASPP Coordinator at Animo Watts College Preparatory Academy',
-                'LEA CAASPP Coordinator at Oscar De La Hoya Animo Charter High']
-
-#This exists when passing names into the requested reports. 
-school_report_names = [entry.split(' at ', 1)[1] for entry in caaspp_list]
-
-# Call the function
-request_report_process(driver, caaspp_list)
-download_process(school_report_names, driver)    
-
-def download_for_missing(dir_path, driver):
-    files = whats_missing(dir_path)
-    if files.loc[files['files'].isna()].empty == True:
-        logging.info('All files are downloaded')
-    else:
-        logging.info(f"These schools are missing {files.loc[files['files'].isna()]['School_Name'].values}")
-        missing_frame = files.loc[files['files'].isna()]
-        missing_schools = list(missing_frame['School_Name'])
-        print(f'These schools are missing - {missing_schools}')
-
-    try:
-        for i in missing_schools:
-            download_process(missing_schools, driver)
-    except Exception as e:
-        print(e)
+directory_path = r'P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing'
+formatted_month_day_year = today_date.strftime("%m_%d")
 
 
-download_for_missing(f'sbac\\{formatted_month_day}', driver)
+directory_path_sbac = os.path.join(directory_path, f'sbac_{formatted_month_day_year}')
+sbac = stack_files(directory_path_sbac)
+sbac['CALPADSSchoolCode'] = sbac['CALPADSSchoolCode'].astype(str).str[7:]
+
+
+directory_path_elpac = os.path.join(directory_path, f'elpac_{formatted_month_day_year}')
+elpac = stack_files(directory_path_elpac)
+elpac['CALPADSSchoolCode'] = elpac['CALPADSSchoolCode'].astype(str).str[7:]
+
+sbac = filter_on_full_cds_code(sbac, 'CALPADSSchoolCode')
+elpac = filter_on_full_cds_code(elpac, 'CALPADSSchoolCode')
+
+
+# -------------------------------------------get_elpac_import------------------
+elpac = get_elpac_import(elpac)
+elpac.name = 'ELPAC'
+directory_path_elpac = os.path.join(directory_path, f'ELPAC_STACKED_{formatted_month_day_year}.csv')
+try:
+    elpac.to_csv(directory_path_elpac, index=False)
+    logging.info(f'ELPAC sent to {directory_path} for ellevation pickup')
+except:
+    logging.info(f'ELPAC unable to send for ellevation pickup')
+
+
+#Differing decoding method. Refer to message with Abi
+# ss_decode = {4.0: 'WelDev', 
+#                 3.0: 'ModDev', 
+#                 2.0: 'SomDev',
+#                 1.0: 'MinDev', 
+#                 '': 'No Score', 
+#                 'NS': 'No Score'}
+
+# -------------------------------Get SBAC import-------------------------
+
+#Missing PLScore Column and ProficiencyLevelCode Mapping
+sbac_final = get_sbac_cols(sbac, 'SBAC')
+sbac_final.name = 'SBAC'
+directory_path_sbac = os.path.join(directory_path, f'SBAC_STACKED_{formatted_month_day_year}.csv')
+try:
+    sbac_final.to_csv(directory_path_sbac, index=False)
+    logging.info(f'SBAC sent to {directory_path} for ellevation pickup')
+except:
+    logging.info(f'SBAC unable to send for ellevation pickup')
+
+# PL Score 1	STNM
+# PL Score 2	STNL
+# PL Score 3	STMT
+# PL Score 4	STEX
+
+# ------------------------------Get CAST import-------------------------
+
+cast = get_cast_cols(sbac, 'CAST')
+cast.name = 'CAST'
+directory_path_cast = os.path.join(directory_path, f'CAST_STACKED_{formatted_month_day_year}.csv')
+try:
+    cast.to_csv(directory_path_cast, index=False)
+    logging.info(f'CAST sent to {directory_path} for ellevation pickup')
+except:
+    logging.info(f'CAST unable send for ellevation pickup')
+
+# PL Score 1	BLST
+# PL Score 2	ANST
+# PL Score 3	ABST
+
+# ------------------------------------------------------send to DataTeamSandbox on 89 server-----------------------------
+
+# quoted = urllib.parse.quote_plus("Driver={SQL Server Native Client 11.0};"
+#                      "Server=10.0.0.89;"
+#                      "Database=DataTeamSandbox;"
+#                      "Trusted_Connection=yes;")
+
+# engine = sqlalchemy.create_engine('mssql+pyodbc:///?odbc_connect={}'.format(quoted))
+
+
+
+# def send_to_SQL(file):
+    
+#     dtypes, table_cols = sql_query_module.SQL_query.get_dtypes(file, 'DataTeamSandbox', f'{file.name}_Scores')
+#     elpac.to_sql(f'{file.name}_Scores', schema='dbo', con = engine, if_exists = 'replace', index = False, dtype=dtypes)
+#     engine.dispose()
+
+
+# send_to_SQL(elpac)
+# send_to_SQL(sbac_final)
+# send_to_SQL(cast)
+
+
+#What about selecting the initial admin year when switching over Y2Y?
+
+
+file = elpac
+
+dtypes, col_names = sql_query_module.SQL_query.get_dtypes(file, 'DataTeamSandbox', f'{file.name}_Scores')

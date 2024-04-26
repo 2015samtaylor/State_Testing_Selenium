@@ -110,7 +110,10 @@ class SQL_query:
             data_type = row['DATA_TYPE']
             length = row['CHARACTER_MAXIMUM_LENGTH']
             if data_type == 'varchar' or data_type == 'nvarchar':
-                dtypes[column_name] = sqlalchemy.types.VARCHAR(length=int(length))
+                if length < 0: #column has no values default to varchar 150
+                    dtypes[column_name] = sqlalchemy.types.VARCHAR(length=(150))
+                elif length > 0:
+                    dtypes[column_name] = sqlalchemy.types.VARCHAR(length=int(length))
             elif data_type == 'int':
                 dtypes[column_name] = sqlalchemy.types.Integer()
             elif data_type == 'float':
