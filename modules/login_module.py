@@ -93,3 +93,14 @@ def create_directory(directory_path):
         print(f"Directory '{directory_path}' already exists.")
 
     
+
+#Automated Login to Scrape Password
+# import imaplib
+# import email
+
+# username = 'gdtestingcoordinator@greendot.org'
+
+# imap_server = imaplib.IMAP4_SSL('imap-mail.outlook.com')
+
+# # Login to the server
+# imap_server.login(username, password)

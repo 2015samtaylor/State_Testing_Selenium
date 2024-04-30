@@ -65,4 +65,3 @@ def filter_on_full_cds_code(df, column):
     return(GD)
 
 
-

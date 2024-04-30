@@ -3,8 +3,16 @@ import sqlalchemy
 from sqlalchemy import create_engine, VARCHAR
 import pandas as pd
 import numpy as np
+import urllib
 
 class SQL_query:
+
+    quoted = urllib.parse.quote_plus("Driver={SQL Server Native Client 11.0};"
+                     "Server=10.0.0.89;"
+                     "Database=DataTeamSandbox;"
+                     "Trusted_Connection=yes;")
+
+    engine = sqlalchemy.create_engine('mssql+pyodbc:///?odbc_connect={}'.format(quoted))
 
     @staticmethod
     def SQL_query_89(query):
@@ -136,3 +144,24 @@ class SQL_query:
         # dtypes.update(missing_cols_dict)
 
         return(dtypes, col_names)
+    
+    @classmethod
+    def get_new(cls, table_name_89, columns):
+
+        columns_str = ', '.join(columns)
+
+    
+        query = f'''
+        SELECT {columns_str}
+        FROM DataTeamSandbox.dbo.{table_name_89.upper()}_Scores
+        '''
+
+        prior = cls.SQL_query_89(query)
+
+        print(len(prior))
+
+        # #identify new rows in new_frame compared to prior
+        # new_rows = new_frame[~new_frame.isin(prior)].drop_duplicates()
+
+        # return(new_rows)
+        return(prior)
