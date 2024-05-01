@@ -1,5 +1,7 @@
 import pandas as pd
 import datetime
+import numpy as np
+from .sql_query_module import SQL_query
 
 def get_elpac_cols(df, testname):
 
@@ -226,3 +228,92 @@ def get_elpac_import(elpac):
 
        return(e)
 
+
+
+# ----------------------------------------Steps to get new records---------------------------------------
+
+
+    # SSID if incoming files is int64
+    #ScaleScore is a float64
+    #Confirm this in db query
+
+    #The query has NS and NaN inside the dw. Clean it up rather than catering to it. 
+    #Write a unit test to ensure it.
+
+    #ScaleScore is coming across as varchar(150) need to set it up to be a float in MS-SQL
+
+    #Test out isin
+
+    #elpac_clean has no zeros for ssid
+
+
+class Clean:
+
+    query_cols = ['Abbreviation',  'StudentNumber', 'SSID', 'TestGrade', 'ELStatus', 'TestDate',
+    'TestType', 'testname', 'ScaleScore','PLScore', 'ProficiencyLevelCode']
+
+    blank_cols = ['SchoolID', 'MasterSchoolID', 'StudentID', 'DisplayDate', 'TestPeriod', 'TestScoreType']
+
+
+    def __init__(self, file, file_name):
+        self.file = file
+        self.file_name = file_name
+
+
+    def clean_up_rotating_file(self):
+
+        #Filter down given file to prepare for a merge, get rid of blank cols
+        file = self.file[Clean.query_cols]
+
+        clean_cols = ['ScaleScore', 'PLScore']
+
+        for col in clean_cols:
+
+            # Replace 'NS' and NaN values with a placeholder value
+            file[col] = file[col].replace(['NS', np.nan], 0)
+            # Convert the column to float
+            file[col] = file[col].astype(float)
+            # Optionally, revert the placeholder value to NaN
+            file[col] = file[col].replace(0, np.nan)
+
+        return(file)
+
+
+    def obtain_new_scores(self):
+
+        query = SQL_query.get_new(self.file_name, Clean.query_cols)
+
+        return(query)
+
+
+
+
+
+# class Car:
+#     def __init__(self, make, model, year):
+#         self.make = make
+#         self.model = model
+#         self.year = year
+#         self.odometer_reading = 0
+
+#     def get_descriptive_name(self):
+#         full_name = f"{self.year} {self.make} {self.model}"
+#         return full_name.title()
+
+#     def read_odometer(self):
+#         print(f"This car has {self.odometer_reading} miles on it.")
+
+#     def update_odometer(self, mileage):
+#         if mileage >= self.odometer_reading:
+#             self.odometer_reading = mileage
+#         else:
+#             print("You can't roll back an odometer!")
+
+#     def increment_odometer(self, miles):
+#         self.odometer_reading += miles
+
+# # Creating an instance of the Car class
+# my_car = Car('audi', 'a4', 2019)
+
+# # Accessing attributes and calling methods
+# print(my_car.get_descript
