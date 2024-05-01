@@ -158,7 +158,7 @@ class SQL_query:
 
         prior = cls.SQL_query_89(query)
 
-        print(len(prior))
+        print(f'There is {len(prior)} prior rows')
 
         # #identify new rows in new_frame compared to prior
         # new_rows = new_frame[~new_frame.isin(prior)].drop_duplicates()
