@@ -265,9 +265,9 @@ class Clean:
         #Filter down given file to prepare for a merge, get rid of blank cols
         file = self.file[Clean.query_cols]
 
-        clean_cols = ['ScaleScore', 'PLScore']
+        clean_cols_float = ['ScaleScore', 'PLScore']
 
-        for col in clean_cols:
+        for col in clean_cols_float:
 
             # Replace 'NS' and NaN values with a placeholder value
             file[col] = file[col].replace(['NS', np.nan], 0)
@@ -275,45 +275,16 @@ class Clean:
             file[col] = file[col].astype(float)
             # Optionally, revert the placeholder value to NaN
             file[col] = file[col].replace(0, np.nan)
+        
+
+        file['TestGrade'] = file['TestGrade'].astype(int)
+        file['TestDate'] = pd.to_datetime(file['TestDate'])
 
         return(file)
 
 
-    def obtain_new_scores(self):
-
-        query = SQL_query.get_new(self.file_name, Clean.query_cols)
-
-        return(query)
 
 
 
 
 
-# class Car:
-#     def __init__(self, make, model, year):
-#         self.make = make
-#         self.model = model
-#         self.year = year
-#         self.odometer_reading = 0
-
-#     def get_descriptive_name(self):
-#         full_name = f"{self.year} {self.make} {self.model}"
-#         return full_name.title()
-
-#     def read_odometer(self):
-#         print(f"This car has {self.odometer_reading} miles on it.")
-
-#     def update_odometer(self, mileage):
-#         if mileage >= self.odometer_reading:
-#             self.odometer_reading = mileage
-#         else:
-#             print("You can't roll back an odometer!")
-
-#     def increment_odometer(self, miles):
-#         self.odometer_reading += miles
-
-# # Creating an instance of the Car class
-# my_car = Car('audi', 'a4', 2019)
-
-# # Accessing attributes and calling methods
-# print(my_car.get_descript
