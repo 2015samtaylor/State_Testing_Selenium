@@ -28420,3 +28420,73 @@ Stacktrace:
 30-Apr-24 15:28:30 - Appending 8209 to elpac_Scores
 01-May-24 09:56:42 - elpac_new_records.csv sent to file downloads
 01-May-24 09:56:44 - Appending 8209 to elpac_Scores
+02-May-24 11:55:00 - There is 8947 prior rows
+02-May-24 11:57:07 - There is 8947 prior rows
+02-May-24 11:57:07 - Merge counts 
+ both          8947
+right_only    1000
+left_only        0
+Name: _merge, dtype: int64
+02-May-24 11:57:45 - There is 8947 prior rows
+02-May-24 11:57:45 - Merge counts 
+ both          8947
+right_only    1000
+left_only        0
+Name: _merge, dtype: int64
+02-May-24 11:58:47 - There is 8947 prior rows
+02-May-24 11:58:47 - Merge counts 
+ both          8947
+right_only    1000
+left_only        0
+Name: _merge, dtype: int64
+02-May-24 12:11:57 - There is 8947 prior rows
+02-May-24 12:11:57 - Merge counts 
+ both          8947
+right_only    1000
+left_only        0
+Name: _merge, dtype: int64
+02-May-24 12:12:25 - There is 8947 prior rows
+02-May-24 12:12:25 - Merge counts 
+ both          8947
+right_only    1000
+left_only        0
+Name: _merge, dtype: int64
+02-May-24 12:13:06 - There is 8947 prior rows
+02-May-24 12:13:06 - Merge counts 
+ both          8947
+right_only    1000
+left_only        0
+Name: _merge, dtype: int64
+02-May-24 12:13:06 - ELPAC_new_records.csv sent to file downloads
+02-May-24 12:13:06 - Unable to append to table ELPAC_Scores due to 
+ (pyodbc.ProgrammingError) ('42S22', "[42S22] [Microsoft][SQL Server Native Client 11.0][SQL Server]Invalid column name 'SchoolID'. (207) (SQLExecDirectW); [42S22] [Microsoft][SQL Server Native Client 11.0][SQL Server]Invalid column name 'MasterSchoolID'. (207); [42S22] [Microsoft][SQL Server Native Client 11.0][SQL Server]Invalid column name 'StudentID'. (207); [42S22] [Microsoft][SQL Server Native Client 11.0][SQL Server]Invalid column name 'DisplayDate'. (207); [42S22] [Microsoft][SQL Server Native Client 11.0][SQL Server]Invalid column name 'TestPeriod'. (207); [42S22] [Microsoft][SQL Server Native Client 11.0][SQL Server]Invalid column name 'TestScoreType'. (207); [42S22] [Microsoft][SQL Server Native Client 11.0][SQL Server]Statement(s) could not be prepared. (8180)")
+[SQL: INSERT INTO dbo.[ELPAC_Scores] ([Abbreviation], [SchoolID], [MasterSchoolID], [StudentNumber], [StudentID], [SSID], [TestGrade], [ELStatus], [TestDate], [DisplayDate], [TestType], [TestPeriod], [TestScoreType], testname, [ScaleScore], [PLScore], [ProficiencyLevelCode]) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)]
+[parameters: (('Oscar De La Hoya Animo Charter High', None, None, 70786, None, 8302001725, 9, 'Yes', '2024-03-31', None, 'ELPAC', None, None, 'ELPAC-Overall', '1553.0', '3.0', 'WelDev'), ('Oscar De La Hoya Animo Charter High', None, None, 83613, None, 9090968962, 11, 'Yes', '2024-03-31', None, 'ELPAC', None, None, 'ELPAC-Overall', '1618.0', '4.0', 'WelDev'), ('Oscar De La Hoya Animo Charter High', None, None, 77622, None, 7765342705, 10, 'Yes', '2024-03-31', None, 'ELPAC', None, None, 'ELPAC-Overall', '1541.0', '2.0', 'Som-ModDev'), ('Animo Ellen Ochoa Charter Middle', None, None, 76240, None, 1671847716, 8, 'Yes', '2024-03-31', None, 'ELPAC', None, None, 'ELPAC-Overall', '1546.0', '3.0', 'WelDev'), ('Oscar De La Hoya Animo Charter High', None, None, 77615, None, 3527097153, 10, 'Yes', '2024-03-31', None, 'ELPAC', None, None, 'ELPAC-Overall', '1606.0', '4.0', 'WelDev'), ('Oscar De La Hoya Animo Charter High', None, None, 61922, None, 8584196218, 11, 'Yes', '2024-03-31', None, 'ELPAC', None, None, 'ELPAC-Overall', '1566.0', '3.0', 'WelDev'), ('Oscar De La Hoya Animo Charter High', None, None, 80797, None, 5375663583, 9, 'Yes', '2024-03-31', None, 'ELPAC', None, None, 'ELPAC-Overall', '1559.0', '3.0', 'WelDev'), ('Animo Ellen Ochoa Charter Middle', None, None, 81564, None, 3680068443, 8, 'Yes', '2024-03-31', None, 'ELPAC', None, None, 'ELPAC-Overall', '1678.0', '4.0', 'WelDev')  ... displaying 10 of 9947 total bound parameter sets ...  ('Animo Inglewood Charter High', None, None, 74313, None, 7623978164, 11, 'Yes', '2024-03-31', None, 'ELPAC', None, None, 'ELPAC-Writing', '1579.0', '2.0', 'Som-ModDev'), ('Animo Inglewood Charter High', None, None, 75507, None, 3112457106, 11, 'Yes', '2024-03-31', None, 'ELPAC', None, None, 'ELPAC-Writing', '1579.0', '2.0', 'Som-ModDev'))]
+(Background on this error at: https://sqlalche.me/e/14/f405)
+02-May-24 12:14:23 - There is 8947 prior rows
+02-May-24 12:14:23 - Merge counts 
+ both          8947
+right_only    1000
+left_only        0
+Name: _merge, dtype: int64
+02-May-24 12:14:33 - There is 8947 prior rows
+02-May-24 12:14:33 - Merge counts 
+ both          8947
+right_only    1000
+left_only        0
+Name: _merge, dtype: int64
+02-May-24 12:16:19 - There is 8947 prior rows
+02-May-24 12:16:19 - Merge counts 
+ both          8947
+right_only    1000
+left_only        0
+Name: _merge, dtype: int64
+02-May-24 12:16:19 - ELPAC_new_records.csv sent to file downloads
+02-May-24 12:16:19 - Appending 9947 records to ELPAC_Scores
+02-May-24 12:17:19 - There is 9947 prior rows
+02-May-24 12:17:19 - Merge counts 
+ both          9947
+left_only        0
+right_only       0
+Name: _merge, dtype: int64
+02-May-24 12:17:19 - No new records to insert, ELPAC file is empty
