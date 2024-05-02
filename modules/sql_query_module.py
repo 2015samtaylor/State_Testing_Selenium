@@ -1,9 +1,11 @@
 import pyodbc
 import sqlalchemy
 from sqlalchemy import create_engine, VARCHAR
+from sqlalchemy.types import VARCHAR as vc
 import pandas as pd
 import numpy as np
 import urllib
+import logging
 
 class SQL_query:
 
@@ -60,13 +62,18 @@ class SQL_query:
     def update_varchar_lengths(df, dtypes): 
             # Function 1: Get longest string lengths for each column in existing frame
             def get_longest_string_lengths(dataframe):
-                max_lengths_df = pd.DataFrame(columns=['Column', 'Max_Length'])
-                for column in dataframe.columns:
-                    max_length = dataframe[column].apply(lambda x: len(str(x))).max()
-                    max_lengths_df = max_lengths_df.append({'Column': column, 'Max_Length': max_length}, ignore_index=True)
+                max_lengths_df = pd.DataFrame(columns=['Column', 'Max_Length']) #create empty frame
+                #iterate over each column in df
+                for column in dataframe.columns: 
+                    data_type = dtypes.get(column)
+                    if type(data_type) == type(vc()):
+                        max_length = dataframe[column].apply(lambda x: len(str(x))).max()
+                        max_lengths_df = max_lengths_df.append({'Column': column, 'Max_Length': max_length}, ignore_index=True)
+                    else:
+                        pass
                 return(max_lengths_df)
 
-            # Function 2: Create the dataframe to make the modifications on the VARCHAR lengths
+            # Function 2: Create the dataframe to make the modifications on the VARCHAR lengths that are not long enough
             def identify_max_lengths_frame(lengths, dtypes):
                 dtypes_frame = pd.DataFrame.from_dict(dtypes, orient='index', columns=['dtype'])
                 dtypes_frame['dtype'] = dtypes_frame['dtype'].astype(str)
@@ -89,6 +96,8 @@ class SQL_query:
                     max_length = int(row['Max_Length'])
                     sql_alchemy_type = VARCHAR
                     row_dict = {column_name: sql_alchemy_type(length=max_length)}
+
+                    
                     result_list.append(row_dict)
                     for i in result_list:
                         for key, value in i.items():
@@ -118,12 +127,11 @@ class SQL_query:
             data_type = row['DATA_TYPE']
             length = row['CHARACTER_MAXIMUM_LENGTH']
             if data_type == 'varchar' or data_type == 'nvarchar':
-                if length < 0: #column has no values default to varchar 150
-                    dtypes[column_name] = sqlalchemy.types.VARCHAR(length=(150))
-                elif length > 0:
-                    dtypes[column_name] = sqlalchemy.types.VARCHAR(length=int(length))
+                dtypes[column_name] = sqlalchemy.types.VARCHAR(length=int(length))
             elif data_type == 'int':
                 dtypes[column_name] = sqlalchemy.types.Integer()
+            elif data_type == 'bigint':
+                dtypes[column_name] = sqlalchemy.types.BigInteger()
             elif data_type == 'float':
                 dtypes[column_name] = sqlalchemy.types.Float()
             elif data_type == 'datetime':
@@ -145,23 +153,33 @@ class SQL_query:
 
         return(dtypes, col_names)
     
-    @classmethod
-    def get_new(cls, table_name_89, columns):
+    @staticmethod
+    def obtain_new(file, file_name, merging_cols):
 
-        columns_str = ', '.join(columns)
-
-    
         query = f'''
-        SELECT {columns_str}
-        FROM DataTeamSandbox.dbo.{table_name_89.upper()}_Scores
+        SELECT * FROM DataTeamSandbox.dbo.{file_name}_Scores
         '''
-
-        prior = cls.SQL_query_89(query)
+        prior = SQL_query.SQL_query_89(query)
 
         print(f'There is {len(prior)} prior rows')
+        logging.info(f'There is {len(prior)} prior rows')
 
-        # #identify new rows in new_frame compared to prior
-        # new_rows = new_frame[~new_frame.isin(prior)].drop_duplicates()
+        merged_df = pd.merge(prior, file, on=merging_cols, how='outer', indicator=True,suffixes=('_prior', '_file'))
 
-        # return(new_rows)
-        return(prior)
+        merge_counts = merged_df['_merge'].value_counts()
+        logging.info(f'Merge counts \n {merge_counts}')
+
+        new_records = merged_df.loc[merged_df['_merge'] == 'right_only']
+        #drop the merge col
+        new_records = new_records.drop('_merge', axis=1)
+
+        #Subset the frame down to _file columns
+        file_columns = [col for col in list(new_records.columns) if col.endswith("_file")]
+        file_columns.extend(merging_cols)
+        new_records = new_records[file_columns]
+
+        #rename the columns to original convention
+        column_mapping = {col: col.replace('_file', '') for col in new_records.columns}
+        new_records = new_records.rename(columns=column_mapping)
+
+        return(new_records)
