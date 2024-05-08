@@ -6,6 +6,7 @@ import pandas as pd
 import numpy as np
 import urllib
 import logging
+from pandas.io.sql import DatabaseError
 
 class SQL_query:
 
@@ -31,31 +32,6 @@ class SQL_query:
         conn.close()
         return(df_SQL)
     
-
-# --------------------------------------------------------------#Needs to be re-worked to refer to 89 instead of 90
-    #Make it to where it checks the missing columns, and says no dtypes for this column assuming varchar 50 value
-
-    # def create_default_dtype_for_missing(dtypes_90, table_89, varchar_length=None):
-
-    #     #Must have table already created on 90, and matches up against frame being sent to 89
-    #     #Then matches to see what columns are missing, and defaults the dtype to VARCHAR(50)
-
-    #     c = pd.DataFrame(dtypes_90.keys(), columns = ['cols_with_types'])
-    #     eighty_nine = pd.DataFrame(table_89.columns, columns = ['all_89_columns'])
-    #     product = pd.merge(c, eighty_nine, left_on='cols_with_types', right_on='all_89_columns', how='outer')
-    #     product = product[product.isna().any(axis=1)]
-
-    #     combined_list = []
-    #     combined_list.extend(product['cols_with_types'][pd.notna(product['cols_with_types'])].tolist())
-    #     combined_list.extend(product['all_89_columns'][pd.notna(product['all_89_columns'])].tolist())
-
-    #     if varchar_length == None:
-    #         # Create a dictionary with all values set to VARCHAR(length=50)
-    #         missing_cols_dict = {column: VARCHAR(length=50) for column in combined_list}
-    #     else: 
-    #         missing_cols_dict = {column: VARCHAR(length=varchar_length) for column in combined_list}
-
-    #     return(missing_cols_dict)
 
 # ----------------------------------------------------Identifies what VARCHAR values are not long enough and fixes----------------------
 
@@ -153,13 +129,23 @@ class SQL_query:
 
         return(dtypes, col_names)
     
+    
     @staticmethod
     def obtain_new(file, file_name, merging_cols):
 
         query = f'''
         SELECT * FROM DataTeamSandbox.dbo.{file_name}_Scores
         '''
-        prior = SQL_query.SQL_query_89(query)
+
+        try:
+            prior = SQL_query.SQL_query_89(query)
+        except DatabaseError as e:
+            print(f"Error: {e}")
+            logging.info(f"The {file_name} does not exist or there is an issue with the SQL query. Passing obtain new entirely")
+            print(f"The {file_name} does not exist or there is an issue with the SQL query. Passing obtain new entirely")
+            return(file) 
+            #If the table is not created, return the entire frame 
+
 
         print(f'There is {len(prior)} prior rows')
         logging.info(f'There is {len(prior)} prior rows')
@@ -183,3 +169,41 @@ class SQL_query:
         new_records = new_records.rename(columns=column_mapping)
 
         return(new_records)
+
+    def get_cols_only(db, table_name, which_server):
+        
+            query = f'''
+                    SELECT COLUMN_NAME
+                    FROM {db}.INFORMATION_SCHEMA.COLUMNS
+                    WHERE TABLE_NAME = '{table_name}'
+                    AND TABLE_SCHEMA = 'dbo';
+                    '''
+            if which_server == 90:
+                cols = SQL_query.SQL_query_90(query)  
+            
+            elif which_server == 89:
+                cols = SQL_query.SQL_query_89(query)  # Pass only the query string
+
+            else:
+                print('Issue with which_server var')
+
+            return(cols)
+    
+
+
+    def send_to_SQL(new_records, file_name, append_or_replace):
+
+        dtypes, table_cols = SQL_query.get_dtypes(new_records, 'DataTeamSandbox', f'{file_name}_Scores')
+
+        #Send csv locally overwriting current, and append new records to existing table
+        if new_records.empty == True:
+            logging.info(f'No new records to insert, {file_name} file is empty')
+        else:
+            new_records.to_csv(f'file_downloads/{file_name}_new_records.csv')
+            logging.info(f'{file_name}_new_records.csv sent to file downloads')
+            try:
+                new_records.to_sql(f'{file_name}_Scores', schema='dbo', con = SQL_query.engine, if_exists = append_or_replace, index = False, dtype=dtypes)
+                logging.info(f'Appending {len(new_records)} records to {file_name}_Scores')
+
+            except Exception as e:
+                logging.info(f'Unable to append to table {file_name}_Scores due to \n {e}')

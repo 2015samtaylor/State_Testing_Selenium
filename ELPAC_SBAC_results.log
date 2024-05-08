@@ -28490,3 +28490,42 @@ left_only        0
 right_only       0
 Name: _merge, dtype: int64
 02-May-24 12:17:19 - No new records to insert, ELPAC file is empty
+02-May-24 14:00:02 - ELPAC sent to P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing for ellevation pickup
+02-May-24 16:25:42 - ELPAC sent to P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing for ellevation pickup
+02-May-24 16:28:38 - ELPAC sent to P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing for ellevation pickup
+02-May-24 16:52:24 - ELPAC sent to P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing for ellevation pickup
+02-May-24 16:55:46 - ELPAC sent to P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing for ellevation pickup
+02-May-24 16:55:56 - SBAC sent to P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing for ellevation pickup
+06-May-24 11:53:03 - ELPAC sent to P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing\ELPAC_STACKED_04_26_24.csv for ellevation pickup
+06-May-24 11:53:13 - SBAC sent to P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing\SBAC_STACKED_04_26_24.csv for ellevation pickup
+06-May-24 11:53:17 - CAST sent to P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing\CAST_STACKED_04_26_24.csv for ellevation pickup
+06-May-24 11:55:23 - ELPAC sent to P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing\Stacked_Files\ELPAC_STACKED_04_26_24.csv for Ellevation pickup
+06-May-24 11:55:37 - SBAC sent to P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing\Stacked_Files\SBAC_STACKED_04_26_24.csv for Ellevation pickup
+06-May-24 11:55:41 - CAST sent to P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing\Stacked_Files\CAST_STACKED_04_26_24.csv for Ellevation pickup
+06-May-24 12:08:49 - There is 9947 prior rows
+06-May-24 12:09:21 - There is 9947 prior rows
+06-May-24 12:11:45 - There is 9947 prior rows
+06-May-24 12:14:19 - There is 9947 prior rows
+06-May-24 12:17:22 - There is 9947 prior rows
+06-May-24 12:17:22 - Merge counts 
+ both          9842
+left_only      105
+right_only      21
+Name: _merge, dtype: int64
+06-May-24 12:17:59 - ELPAC_new_records.csv sent to file downloads
+06-May-24 12:18:01 - Appending 21 records to ELPAC_Scores
+06-May-24 12:18:34 - There is 9968 prior rows
+06-May-24 12:18:34 - Merge counts 
+ both          9863
+left_only      105
+right_only       0
+Name: _merge, dtype: int64
+06-May-24 12:18:35 - No new records to insert, ELPAC file is empty
+08-May-24 05:41:04 - The CAST does not exist or there is an issue with the SQL query. Passing obtain new entirely
+08-May-24 05:41:45 - There is 9968 prior rows
+08-May-24 05:41:45 - Merge counts 
+ both          9863
+left_only      105
+right_only       0
+Name: _merge, dtype: int64
+08-May-24 05:42:09 - There is 9863 prior rows

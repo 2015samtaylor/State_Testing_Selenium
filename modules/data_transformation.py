@@ -23,6 +23,9 @@ def stack_files(directory_path):
 
     # Use pd.concat to concatenate all DataFrames in the list
     combined_data = pd.concat(dataframes, ignore_index=True)
+
+    combined_data['CALPADSSchoolCode'] = combined_data['CALPADSSchoolCode'].astype(str).str[7:]
+
     return(combined_data)
 
 # -----------------------------------------------------------
