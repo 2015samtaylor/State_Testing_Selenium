@@ -15,7 +15,7 @@ import shutil
 import os
 import zipfile
 today_date = datetime.now()
-formatted_month_day = today_date.strftime("%m_%d")
+formatted_month_day = today_date.strftime("%m_%d_%y")
 
 
 def change_login_role(school_coord_text, driver):
@@ -244,7 +244,7 @@ def whats_missing(dir_path):
     # Get today's date
     today_date = datetime.now()
     # Format the month and day
-    formatted_month_day = today_date.strftime("%m_%d")
+    formatted_month_day = today_date.strftime("%m_%d_%y")
 
     dir_path = os.getcwd() + f'\\file_downloads\\{dir_path}'
     file_list = [file for file in os.listdir(dir_path) if os.path.isfile(os.path.join(dir_path, file))]
@@ -372,6 +372,8 @@ def download_loop_missing(dir_path, test_type, driver, max_attempts=5):
 def move_files_over():
     source_directory = os.getcwd() + f'\\file_downloads\\elpac\\{formatted_month_day}'
     destination_directory = os.getcwd() + f'\\file_downloads\\sbac\\{formatted_month_day}'
+
+    print(source_directory)
 
     # List all files in the source directory
     files = os.listdir(source_directory)

@@ -2,7 +2,7 @@
 
 # Automated State Testing Data Retrieval and Processing
 
-This Python script automates the retrieval and processing of state testing data for the ELPAC (English Language Proficiency Assessments for California) and SBAC (Smarter Balanced Assessment Consortium). The script utilizes Selenium for web automation to log in to the testing portal, request specific reports, and download the corresponding data files.
+This Python script automates the retrieval and processing of state testing data for the ELPAC (English Language Proficiency Assessments for California) and SBAC (Smarter Balanced Assessment Consortium). The script utilizes Selenium for web automation to log in to the testing portal, request specific reports, and download the corresponding data files. Once file are downloaded as zip files, the necessary data is extracted stacked and strictly new records are appended to the tables ELPAC_Scores, SBAC_Scores, CAST_Scores
 
 ## Overview
 
@@ -62,3 +62,35 @@ June 13
 June 20
 June 27
 
+
+General Notes
+Abbreviation - map on CALPADSDIstrictName
+schoolid blank
+MasterSchoolID blank
+StudentNumber - LocalStudentId
+StudentID blank
+SSID - SSID
+TestGrade - GradeAssessed
+ELStatus Blank
+TestDate - End of the month for the month uploaded
+DisplayDate blank
+testtype - 21 (General ELPAC) 23(ALT ELPAC)
+testperiod blank
+testscoretype blank
+testname ListeningPL	SpeakingPL	ReadingPL	WritingPL 
+scalescore and plscore melt down
+proficiencylevelcode is hard mapping
+
+How often do you need this done?
+People dont start asking until end of the testing window, but want a monthly pull. As we lose enrollments of students, we lose access to their scores
+#End of the month from Feb through May. Last day of Feb.
+
+Prioritize ELPAC pulldowns are Feb-May. 
+SBAC is April - June (mid) (End of April for SBAC/CAST)
+
+CAST has recordtypes that are taken apart within the SBAC file. 
+
+What table do they send it to?
+ELPAC [TestScores].[dbo].[vw_rpt_ELPACScores]
+CAST  [TestScores].[dbo].[CASTScores]
+SBAC: ELA/Math [TestScores].[dbo].[vw_rpt_SBACScores]
