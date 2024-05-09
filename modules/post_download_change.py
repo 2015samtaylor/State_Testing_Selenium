@@ -307,6 +307,8 @@ def grab_new_records(file, file_name):
     file_obj = Clean(file, file_name) #This is going to need to have some exceptions based on each file
     file_obj_clean = file_obj.clean_up_rotating_file()
 
+    #query can be done here & clean up rotating fil emaybe
+
     merging_cols = ['SSID', 'TestType', 'TestName', 'ScaleScore'] #These should work for all 3 files
     new_records = SQL_query.obtain_new(file_obj_clean, file_name, merging_cols)
 

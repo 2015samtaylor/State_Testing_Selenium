@@ -44,6 +44,14 @@ class SQL_query:
                     data_type = dtypes.get(column)
                     if type(data_type) == type(vc()):
                         max_length = dataframe[column].apply(lambda x: len(str(x))).max()
+
+                        if max_length == 0:  #If the column has nothing in it give it a default value of varchar 150
+                            max_length = 150
+                        else:
+                            pass
+                            
+
+
                         max_lengths_df = max_lengths_df.append({'Column': column, 'Max_Length': max_length}, ignore_index=True)
                     else:
                         pass
@@ -66,19 +74,27 @@ class SQL_query:
 
             # Function 3: Declare varchar update lengths throuhg iteration then update the original dictionary
             def declare_varchar_update_lengths(changes, dtypes):
-                result_list = []
                 for index, row in changes.iterrows():
                     column_name = row['Column']
                     max_length = int(row['Max_Length'])
                     sql_alchemy_type = VARCHAR
-                    row_dict = {column_name: sql_alchemy_type(length=max_length)}
+                    dtypes[column_name] = sql_alchemy_type(length=max_length)
+                    print(f'{column_name} column being updated as VARCHAR({max_length})')
+
+            # def declare_varchar_update_lengths(changes, dtypes):
+            #     result_list = []
+            #     for index, row in changes.iterrows():
+            #         column_name = row['Column']
+            #         max_length = int(row['Max_Length'])
+            #         sql_alchemy_type = VARCHAR
+            #         row_dict = {column_name: sql_alchemy_type(length=max_length)}
 
                     
-                    result_list.append(row_dict)
-                    for i in result_list:
-                        for key, value in i.items():
-                            print(f'{key} column being updated as VARCHAR({value})')
-                            dtypes[key] = value
+            #         result_list.append(row_dict)
+            #         for i in result_list:
+            #             for key, value in i.items():
+            #                 print(f'{key} column being updated as VARCHAR({value})')
+            #                 dtypes[key] = value
 
             # Call the functions sequentially,
             lengths = get_longest_string_lengths(df)
@@ -106,6 +122,11 @@ class SQL_query:
                 # if length == -1: #Default to varchar 150 if nothing in the col
                     # dtypes[column_name] = sqlalchemy.types.VARCHAR(length=150)
                 dtypes[column_name] = sqlalchemy.types.VARCHAR(length=int(length))
+
+                #Needs to be a sub function here
+
+
+
             elif data_type == 'int':
                 dtypes[column_name] = sqlalchemy.types.Integer()
             elif data_type == 'bigint':
