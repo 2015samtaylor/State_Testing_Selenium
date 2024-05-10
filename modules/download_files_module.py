@@ -304,21 +304,30 @@ def download_process(what_schools, test_type, driver):
                 pass
                 logging.info('Requested reports did not get clicked into')
 
+
+            try:
+                WebDriverWait(driver, 60).until(
+                    EC.presence_of_element_located((By.CSS_SELECTOR, "iframe.applicationContentFrame[style*='display: block']")))
+                logging.info('Spinner has dissapeared on Requested Reports Page')
+            except:
+                logging.info('Spinner never dissapeared on Requested Reports Page')
+
+
             iframe = WebDriverWait(driver, 30).until(
-            EC.element_to_be_clickable((By.ID, 'theFrame'))
-            )
-            #must switch to iframe, HTML page built on encapsulation. 
+                            EC.element_to_be_clickable((By.ID, 'theFrame'))
+                            )
+
             try:
                 driver.switch_to.frame(iframe)
                 logging.info('Switched to iframe within downloads section')
             except:
-                pass
                 logging.info('Failed to switch to iframe within downloads section')
-        
+                pass
         else:
             pass
 
         download_files(school_name, test_type, driver)
+
 
 
 def request_report_process(driver, test_type, actual_test, schools_list, SY):
