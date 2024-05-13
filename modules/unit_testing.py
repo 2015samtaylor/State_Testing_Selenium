@@ -4,7 +4,7 @@ import pandas as pd
 import logging
 from datetime import datetime
 today_date = datetime.now()
-formatted_month_day = today_date.strftime("%m_%d")
+formatted_month_day = today_date.strftime("%m_%d_%y")
 
 logging.basicConfig(filename='ELPAC_SBAC_results.log', level=logging.INFO,
                    format='%(asctime)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S',force=True)
