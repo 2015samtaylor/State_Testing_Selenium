@@ -17,10 +17,54 @@ import zipfile
 today_date = datetime.now()
 formatted_month_day = today_date.strftime("%m_%d_%y")
 
+coord_list = ['LEA CAASPP Coordinator at Alain Leroy Locke College Preparatory Academy',
+ 'LEA CAASPP Coordinator at Animo City of Champions Charter High',
+ 'LEA CAASPP Coordinator at Animo Compton Charter',
+ 'LEA CAASPP Coordinator at Animo Ellen Ochoa Charter Middle',
+ 'LEA CAASPP Coordinator at Animo Florence-Firestone Charter Middle',
+ 'LEA CAASPP Coordinator at Animo Inglewood Charter High',
+ 'LEA CAASPP Coordinator at Animo Jackie Robinson High',
+ 'LEA CAASPP Coordinator at Animo James B. Taylor Charter Middle',
+ 'LEA CAASPP Coordinator at Animo Jefferson Charter Middle',
+ 'LEA CAASPP Coordinator at Animo Leadership High',
+ 'LEA CAASPP Coordinator at Animo Legacy Charter Middle',
+ 'LEA CAASPP Coordinator at Animo Mae Jemison Charter Middle',
+ 'LEA CAASPP Coordinator at Animo Pat Brown',
+ 'LEA CAASPP Coordinator at Animo Ralph Bunche Charter High',
+ 'LEA CAASPP Coordinator at Animo South Los Angeles Charter',
+ 'LEA CAASPP Coordinator at Animo Venice Charter High',
+ 'LEA CAASPP Coordinator at Animo Watts College Preparatory Academy',
+ 'LEA CAASPP Coordinator at Oscar De La Hoya Animo Charter High',
+ 'LEA ELPAC Coordinator at Alain Leroy Locke College Preparatory Academy',
+ 'LEA ELPAC Coordinator at Animo City of Champions Charter High',
+ 'LEA ELPAC Coordinator at Animo Compton Charter',
+ 'LEA ELPAC Coordinator at Animo Ellen Ochoa Charter Middle',
+ 'LEA ELPAC Coordinator at Animo Florence-Firestone Charter Middle',
+ 'LEA ELPAC Coordinator at Animo Inglewood Charter High',
+ 'LEA ELPAC Coordinator at Animo Jackie Robinson High',
+ 'LEA ELPAC Coordinator at Animo James B. Taylor Charter Middle',
+ 'LEA ELPAC Coordinator at Animo Jefferson Charter Middle',
+ 'LEA ELPAC Coordinator at Animo Leadership High',
+ 'LEA ELPAC Coordinator at Animo Legacy Charter Middle',
+ 'LEA ELPAC Coordinator at Animo Mae Jemison Charter Middle',
+ 'LEA ELPAC Coordinator at Animo Pat Brown',
+ 'LEA ELPAC Coordinator at Animo Ralph Bunche Charter High',
+ 'LEA ELPAC Coordinator at Animo South Los Angeles Charter',
+ 'LEA ELPAC Coordinator at Animo Venice Charter High',
+ 'LEA ELPAC Coordinator at Animo Watts College Preparatory Academy',
+ 'LEA ELPAC Coordinator at Oscar De La Hoya Animo Charter High']
+
+elpac_coordinators = [coord for coord in coord_list if 'ELPAC' in coord]
+caaspp_coordinators = [coord for coord in coord_list if 'CAASPP' in coord]
+
+#This exists when passing names into the requested reports, as a subset. Change list into a set to only retain unique schools
+school_report_names = [entry.split(' at ', 1)[1] for entry in elpac_coordinators]
+school_report_names = list(set(school_report_names))
+
 
 def change_login_role(school_coord_text, driver):
 
-    # Find the toms-header-container element
+    # Find the toms-header-container 
     header_container = WebDriverWait(driver, 10).until(
         EC.element_to_be_clickable((By.CLASS_NAME, 'toms-header-container'))
     )
@@ -112,7 +156,7 @@ def request_report(driver, test_type, actual_test, SY):
     else:
         print('Wrong test type')
 
-
+    #Does not matter on the test type. Must occur for both
     try:
         #select SY from second drop down
         schoolyear = WebDriverWait(driver, 30).until(
@@ -153,6 +197,29 @@ def request_report(driver, test_type, actual_test, SY):
         logging.info('Enrolled not selected')
 
     if test_type == 'SBAC':
+        
+        #These date inputs only exists for 2023-2024
+        if SY == '2024':
+            try:
+                start_date_input = driver.find_element_by_id("caasppLeaDownloadableRptstartdate")
+                start_date_input.clear()
+                start_date = f"02/01/{SY}"
+                start_date_input.send_keys(start_date)
+                logging.info(f'Start date sent over of {start_date}')
+            except:
+                logging.info(f'Unable to send over start_date of {start_date} ')
+
+            try:
+                end_date_input = driver.find_element_by_id("caasppLeaDownloadableRptenddate")
+                formatted_month_day = today_date.strftime("%m/%d/")
+                end_date = formatted_month_day + SY
+                end_date_input.send_keys(end_date)
+                logging.info(f'End date sent over of {end_date}')
+            except:
+                logging.info(f'Unable to send over end_date of {end_date}')
+
+        else:
+            pass
 
         request_file = WebDriverWait(driver, 30).until(
             EC.element_to_be_clickable((By.XPATH, '//*[@id="caasppScoreExRep"]'))
@@ -163,7 +230,40 @@ def request_report(driver, test_type, actual_test, SY):
         except:
             logging.info('Request file unable to be clicked')
 
+        try:
+            file_download_warning = WebDriverWait(driver, 10).until(
+                EC.visibility_of_element_located((By.ID, "filedownloadwarning"))
+            )
+            logging.info("File download warning message found: {}".format(file_download_warning.text))
+        except TimeoutException:
+            logging.info("File is available for download")
+                    
+
     elif test_type == 'ELPAC':
+
+        #These date inputs only exists for 2023-2024
+        if SY == '2024':
+
+            try:
+                start_date_input = driver.find_element_by_id("caasppLeaDownloadableRptstartdate")
+                start_date_input.clear()
+                start_date = f"04/15/{SY}"
+                start_date_input.send_keys(start_date)
+                logging.info(f'Start date sent over of {start_date}')
+            except:
+                logging.info(f'Unable to send over start_date of {start_date} ')
+
+            try:
+                end_date_input = driver.find_element_by_id("caasppLeaDownloadableRptenddate")
+                formatted_month_day = today_date.strftime("%m/%d/")
+                end_date = formatted_month_day + SY
+                end_date_input.send_keys(end_date)
+                logging.info(f'End date sent over of {end_date}')
+            except:
+                logging.info(f'Unable to send over end_date of {end_date}')
+
+        else:
+            pass
 
         request_file = WebDriverWait(driver, 30).until(
             EC.element_to_be_clickable((By.XPATH, '//*[@id="ldrDownloadReport"]'))
@@ -173,7 +273,15 @@ def request_report(driver, test_type, actual_test, SY):
             logging.info('Request file clicked on')
         except:
             logging.info('Request file unable to be clicked')
-            
+
+        try:
+            file_download_warning = WebDriverWait(driver, 10).until(
+                EC.visibility_of_element_located((By.ID, "filedownloadwarning"))
+            )
+            logging.info("File download warning message found: {}".format(file_download_warning.text))
+        except TimeoutException:
+            logging.info("File is available for download")
+                    
 
     driver.back()
     try:

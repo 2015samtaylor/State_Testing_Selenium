@@ -304,7 +304,7 @@ class Clean:
 
 def grab_new_records(file, file_name):
 
-    file_obj = Clean(file, file_name) #This is going to need to have some exceptions based on each file
+    file_obj = Clean(file, file_name) #Clean up ELPAC, SBAC, CAST incoming file for merge
     file_obj_clean = file_obj.clean_up_rotating_file()
 
     #query can be done here & clean up rotating fil emaybe

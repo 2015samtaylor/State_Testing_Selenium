@@ -119,8 +119,6 @@ class SQL_query:
             data_type = row['DATA_TYPE']
             length = row['CHARACTER_MAXIMUM_LENGTH']
             if data_type == 'varchar' or data_type == 'nvarchar':
-                # if length == -1: #Default to varchar 150 if nothing in the col
-                    # dtypes[column_name] = sqlalchemy.types.VARCHAR(length=150)
                 dtypes[column_name] = sqlalchemy.types.VARCHAR(length=int(length))
 
                 #Needs to be a sub function here
@@ -162,10 +160,10 @@ class SQL_query:
 
         try:
             prior = SQL_query.SQL_query_89(query)
-        except DatabaseError as e:
+        except DatabaseError as e:                   
             print(f"Error: {e}")
-            logging.info(f"The {file_name} does not exist or there is an issue with the SQL query. Returning all of original file")
-            print(f"The {file_name} does not exist or there is an issue with the SQL query. Returning all of original file")
+            logging.info(f"The {file_name} does not exist or there is an issue with the SQL query. Returning current file as is")
+            print(f"The {file_name} does not exist or there is an issue with the SQL query. Returning current file as is")
             return(file) 
             #If the table is not created, return the entire frame 
 
