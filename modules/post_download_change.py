@@ -24,7 +24,7 @@ decode_test_name = {
 rename_cols = {'CALPADSDistrictName': 'Abbreviation',
                 'CALPADSSchoolCode': 'schoolid',
                 # 'MasterSchoolID': '' blank insert
-                'LocalStudentID': 'studentnumber',
+                'LocalStudentID': 'studentnumber', #blank insert only for SBAC
                 # 'StudentID': '', blank insert
                 'SSID' : 'SSID',
 
@@ -43,11 +43,12 @@ rename_cols = {'CALPADSDistrictName': 'Abbreviation',
                 #  'ProficiencyLevelCode': '' mapped in get_elpac_import based on the PLScore generation
                 }
 
-all_blanks = ['MasterSchoolID', 'StudentID', 'DisplayDate', 'TestSubjectGroup', 'TestSubject',  'RawScore', 'ProficiencyLevelCode']
+all_blanks = ['MasterSchoolID', 'StudentID', 'DisplayDate', 'TestSubjectGroup', 'TestSubject',  'RawScore', 'ProficiencyLevelCode', 'studentnumber', 'TestName', 'PLScore']
 
 
 def get_SS_frame(e_original):
 
+    #variable column is generated here. Columns are melted down, and variable becomes name of the column
     ss_columns = ['OverallScaleScore', 'OralLanguageScaleScore','WrittenLanguageScaleScore']
     remaining_columns = [col for col in e_original.columns if col not in ss_columns]
     e_scale_score = pd.melt(e_original, id_vars = remaining_columns, value_vars= ss_columns, value_name='ScaleScore')
@@ -83,18 +84,24 @@ def assimilate_frames(df, testname):
     original['TestPeriod'] = 'SPR'
     original['TestDate'] = pd.to_datetime(datetime.date.today()) + pd.offsets.MonthEnd(0)
 
-    scale_score = get_SS_frame(original) #melting down the scale score to be merged back together by SSID and TestName
-    pl_score = get_pl_frame(original) #melting down the PL score to be merged back together by SSID and TestaName
+   
+    if testname == 'ELPAC':
+        scale_score = get_SS_frame(original) #melting down the scale score to be merged back together by SSID and TestName
+        pl_score = get_pl_frame(original) #melting down the PL score to be merged back together by SSID and TestaName
 
-    #The merge is occurs on testname, and SSID together. THis keeps rows unique
-    output = pd.merge(pl_score, scale_score, left_on=['SSID', 'TestName'], right_on = ['SSID', 'TestName'], suffixes= ['', '_SS'], how='left')
-
-    print(rename_cols.values())
+        #The merge is occurs on testname, and SSID together. THis keeps rows unique
+        original = pd.merge(pl_score, scale_score, left_on=['SSID', 'TestName'], right_on = ['SSID', 'TestName'], suffixes= ['', '_SS'], how='left')
+    else:
+        blank_columns = ['studentnumber', 'TestName', 'PLScore']
+    
+        # Assign blank columns to the DataFrame
+        original = original.assign(**{col: np.nan for col in blank_columns})
+        
 
     #cut down cols
-    output = output[list(rename_cols.values())]
+    original = original[list(rename_cols.values())]   # "['studentnumber', 'TestName', 'PLScore'] not in index" occurs for SBAC
 
-    return(output)
+    return(original)
 
 
 
@@ -126,17 +133,19 @@ def get_elpac_import(df, testname):
 
     df['TestScoreType'] = df['TestName'].map(TestScoreType_Decode)
 
-    # Insert blank columns
-    for col_name in all_blanks:
-        try:
-            df.insert(loc=len(df.columns), column=col_name, value=None)
-        except ValueError as e:
-            print(e)
-
 
     #call sql query to re-organize cols
     elpac_cols = SQL_query.get_cols_only('TestScores', 'ELPAC_Import', 90)
     elpac_cols = list(elpac_cols['COLUMN_NAME'])
+
+    # Insert blank columns beofre cutting down the cols. See if this is logical here
+    for col_name in all_blanks:
+        try:
+            df.insert(loc=len(df.columns), column=col_name, value=None)
+            logging.info(f'{col_name} inserted')
+        except ValueError as e:
+            print(e)
+  
 
     df = df[elpac_cols]
     # "['TestSubject', 'RawScore'] not in index"
@@ -160,14 +169,6 @@ def get_sbac_import(df, testname):
     # all_blanks.remove('RawScore')
     # try except should bypass this
 
-     # Insert blank columns
-    for col_name in all_blanks:
-        try:
-            df.insert(loc=len(df.columns), column=col_name, value=None)
-        except ValueError as e:
-            print(e)
-
- 
     
     # #Trim frame down to ELA & Match for SBAC
     df = df.loc[(df['TestSubjectGroup'] == 1) | (df['TestSubjectGroup'] == 2)]
@@ -187,6 +188,14 @@ def get_sbac_import(df, testname):
     # #call sql query to re-organize cols
     sbac_cols = SQL_query.get_cols_only('TestScores', 'SBAC_Import', 90)
     sbac_cols = list(sbac_cols['COLUMN_NAME'])
+
+    # Insert blank columns beofre cutting down the cols. See if this is logical here
+    for col_name in all_blanks:
+        try:
+            df.insert(loc=len(df.columns), column=col_name, value=None)
+            logging.info(f'{col_name} inserted')
+        except ValueError as e:
+            print(e)
 
     df = df[sbac_cols]
     return(df)
