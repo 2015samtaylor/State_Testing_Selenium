@@ -14,6 +14,7 @@ from datetime import datetime
 import shutil
 import os
 import zipfile
+from modules.unit_testing import TestFileProcessing
 today_date = datetime.now()
 formatted_month_day = today_date.strftime("%m_%d_%y")
 
@@ -110,7 +111,7 @@ def request_report(driver, test_type, actual_test, SY):
         driver.switch_to.frame(iframe)
         logging.info('Switched to iframe')
     except:
-        logging.info('Unable to swtich to iframe')
+        logging.info('Unable to switch to iframe')
 
     if test_type == 'SBAC':
         # 'CAASPP_Student_Score_Data_Extract_Report'
@@ -252,7 +253,12 @@ def request_report(driver, test_type, actual_test, SY):
             file_download_warning = WebDriverWait(driver, 10).until(
                 EC.visibility_of_element_located((By.ID, "filedownloadwarning"))
             )
-            logging.info("File download warning message found: {}".format(file_download_warning.text))
+            logging.info("File download warning message found, ending request_report function: {}".format(file_download_warning.text)) #if this was available during the 10 seconds it means the file was not available
+
+            driver.back()
+
+            return('No files')
+
         except TimeoutException:
             logging.info("File is available for download")
                     
@@ -264,8 +270,9 @@ def request_report(driver, test_type, actual_test, SY):
 
             try:
                 start_date_input = WebDriverWait(driver, 30).until(
-                    EC.element_to_be_clickable((By.ID, 'caasppLeaDownloadableRptstartdate'))
+                    EC.element_to_be_clickable((By.ID, 'leaDwnRptstartdate'))
                 )
+
                 try:
                     start_date_input.click()
                     logging.info('Start date input selected')
@@ -282,8 +289,9 @@ def request_report(driver, test_type, actual_test, SY):
             try:
 
                 end_date_input = WebDriverWait(driver, 30).until(
-                    EC.element_to_be_clickable((By.ID, 'caasppLeaDownloadableRptenddate'))
+                    EC.element_to_be_clickable((By.ID, 'leaDwnRptenddate'))
                 )
+
                 try:
                     end_date_input.click()
                     logging.info('End date input selected')
@@ -313,11 +321,14 @@ def request_report(driver, test_type, actual_test, SY):
             file_download_warning = WebDriverWait(driver, 10).until(
                 EC.visibility_of_element_located((By.ID, "filedownloadwarning"))
             )
-            logging.info("File download warning message found: {}".format(file_download_warning.text))
+            logging.info("File download warning message found, ending request_report function: {}".format(file_download_warning.text)) #if this was available during the 10 seconds it means the file was not available
+
+            driver.back()
+
+            return('No files')
         except TimeoutException:
             logging.info("File is available for download")
                     
-
     driver.back()
     try:
         driver.switch_to.default_content()
@@ -490,7 +501,13 @@ def request_report_process(driver, test_type, actual_test, schools_list, SY):
         reports.click()
         
         # Call the function to request a report
-        request_report(driver, test_type, actual_test, SY)
+        indicator = request_report(driver, test_type, actual_test, SY)
+        logging.info(f'Here is the indicator {indicator}')
+  
+        if indicator == 'No files':
+            logging.info('No files available for download request_report_process ended prematurely')
+            return('No files')
+        
 
 
 def download_loop_missing(dir_path, test_type, driver, max_attempts=5):
@@ -593,11 +610,19 @@ def move_xlsx_files(elpac_or_sbac):
 
 def SBAC_package_func(driver, SY, formatted_month_day_year):
 
-    request_report_process(driver, 'SBAC', 'CAASPP_Student_Score_Data_Extract_Report', caaspp_coordinators, SY)
-    try:
-        download_process(school_report_names, f'{SY} CAASPP Student Score Data File By Enrolled LEA', driver) 
-    except TimeoutException:
-        logging.info(f'CAASPP Student Score Data File by Enrolled LEA is not available for {SY}')
+    indicator = request_report_process(driver, 'SBAC', 'CAASPP_Student_Score_Data_Extract_Report', caaspp_coordinators, SY)
+
+    if indicator != 'No files':
+
+    #if at any time there is a report that showed not available given date params. It ends the func and returns a string value of 'No files'
+        try:
+            download_process(school_report_names, f'{SY} CAASPP Student Score Data File By Enrolled LEA', driver) 
+        except TimeoutException:
+            logging.info(f'CAASPP Student Score Data File by Enrolled LEA is not available for {SY}')
+            return('No files')
+    else:
+        logging.info('No files to download within SBAC_package_func\n\n')
+
         return('No files')
     
 
@@ -614,11 +639,18 @@ def SBAC_package_func(driver, SY, formatted_month_day_year):
 
 def ELPAC_package_func(driver, SY, formatted_month_day_year):
     driver.switch_to.default_content() #switch out of iframe
-    request_report_process(driver, 'ELPAC', 'Student_Results_Report_Student_Score_Data_Extract', elpac_coordinators, SY)
-    try:
-        download_process(school_report_names, f'{SY} Summative ELPAC and Summative Alternate ELPAC Student Score Data File By Enrolled LEA', driver) 
-    except:    
-        logging.info(f'ELPAC Student Score Data File by Enrolled LEA is not available for {SY}')
+    indicator = request_report_process(driver, 'ELPAC', 'Student_Results_Report_Student_Score_Data_Extract', elpac_coordinators, SY)
+
+    if indicator != 'No files':
+
+        try:
+            download_process(school_report_names, f'{SY} Summative ELPAC and Summative Alternate ELPAC Student Score Data File By Enrolled LEA', driver) 
+        except:    
+            logging.info(f'ELPAC Student Score Data File by Enrolled LEA is not available for {SY}')
+            return('No files')
+    else:
+        logging.info('No files to download within ELPAC_package_func\n\n')
+        
         return('No files')
 
     time.sleep(10) #implemented to give time for files to download
@@ -628,6 +660,24 @@ def ELPAC_package_func(driver, SY, formatted_month_day_year):
 
     #Close out driver window once done
     driver.close()
+
+
+
+def unzip_move_and_unit(SBAC_ELPAC_output, test_name):
+    if SBAC_ELPAC_output != 'No files':
+        unzip_files_in_same_dir(test_name)
+
+        #Keeps raw zip files in the same dir. Only moves over xlsx files
+        try:
+            move_xlsx_files(test_name)
+            logging.info(f'Moved {test_name} XLSX files to p-drive')
+
+            test_instance = TestFileProcessing() #unit test
+            test_instance.test_file_processing(test_name)
+        except:
+            logging.info(f'Unable to move {test_name} XLSX files to the p-drive, must be connected to the VPN')
+    else:
+        return('No files')
 
 
 #Coded out piece, used for manual checks.
