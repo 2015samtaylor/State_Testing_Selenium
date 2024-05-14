@@ -201,7 +201,15 @@ def request_report(driver, test_type, actual_test, SY):
         #These date inputs only exists for 2023-2024
         if SY == '2024':
             try:
-                start_date_input = driver.find_element_by_id("caasppLeaDownloadableRptstartdate")
+                start_date_input = WebDriverWait(driver, 30).until(
+                    EC.element_to_be_clickable((By.ID, 'caasppLeaDownloadableRptstartdate'))
+                )
+                try:
+                    start_date_input.click()
+                    logging.info('Start date input selected')
+                except:
+                    logging.info('Start date input not selected')
+
                 start_date_input.clear()
                 start_date = f"02/01/{SY}"
                 start_date_input.send_keys(start_date)
@@ -210,7 +218,17 @@ def request_report(driver, test_type, actual_test, SY):
                 logging.info(f'Unable to send over start_date of {start_date} ')
 
             try:
-                end_date_input = driver.find_element_by_id("caasppLeaDownloadableRptenddate")
+
+           
+                end_date_input = WebDriverWait(driver, 30).until(
+                    EC.element_to_be_clickable((By.ID, 'caasppLeaDownloadableRptenddate'))
+                )
+                try:
+                    end_date_input.click()
+                    logging.info('End date input selected')
+                except:
+                    logging.info('End date input not selected')
+
                 formatted_month_day = today_date.strftime("%m/%d/")
                 end_date = formatted_month_day + SY
                 end_date_input.send_keys(end_date)
@@ -245,7 +263,15 @@ def request_report(driver, test_type, actual_test, SY):
         if SY == '2024':
 
             try:
-                start_date_input = driver.find_element_by_id("caasppLeaDownloadableRptstartdate")
+                start_date_input = WebDriverWait(driver, 30).until(
+                    EC.element_to_be_clickable((By.ID, 'caasppLeaDownloadableRptstartdate'))
+                )
+                try:
+                    start_date_input.click()
+                    logging.info('Start date input selected')
+                except:
+                    logging.info('Start date input not selected')
+
                 start_date_input.clear()
                 start_date = f"04/15/{SY}"
                 start_date_input.send_keys(start_date)
@@ -254,7 +280,16 @@ def request_report(driver, test_type, actual_test, SY):
                 logging.info(f'Unable to send over start_date of {start_date} ')
 
             try:
-                end_date_input = driver.find_element_by_id("caasppLeaDownloadableRptenddate")
+
+                end_date_input = WebDriverWait(driver, 30).until(
+                    EC.element_to_be_clickable((By.ID, 'caasppLeaDownloadableRptenddate'))
+                )
+                try:
+                    end_date_input.click()
+                    logging.info('End date input selected')
+                except:
+                    logging.info('End date input not selected')
+            
                 formatted_month_day = today_date.strftime("%m/%d/")
                 end_date = formatted_month_day + SY
                 end_date_input.send_keys(end_date)
@@ -554,6 +589,45 @@ def move_xlsx_files(elpac_or_sbac):
         destination_path = os.path.join(destination_directory, xlsx_file)
         shutil.copy2(source_path, destination_path)
         print(f"Moved '{xlsx_file}' to '{destination_directory}'.")
+
+
+def SBAC_package_func(driver, SY, formatted_month_day_year):
+
+    request_report_process(driver, 'SBAC', 'CAASPP_Student_Score_Data_Extract_Report', caaspp_coordinators, SY)
+    try:
+        download_process(school_report_names, f'{SY} CAASPP Student Score Data File By Enrolled LEA', driver) 
+    except TimeoutException:
+        logging.info(f'CAASPP Student Score Data File by Enrolled LEA is not available for {SY}')
+        return('No files')
+    
+
+    #This is here three times to see if anything got skipped the first time. Initial dir is set at ELPAC only to move the files over to SBAC dir
+    #Will run 5 times
+
+    time.sleep(10) #implemented to give time for files to download, removed pending tag
+    download_loop_missing(f'elpac\\{formatted_month_day_year}', f'{SY} CAASPP Student Score Data File By Enrolled LEA', driver)
+
+    #This moves the files from ELPAC  timestamp dir to SBAC timestamp dir. 
+    #This is because the download dir cannot be changed in Selenium
+    move_files_over()
+
+
+def ELPAC_package_func(driver, SY, formatted_month_day_year):
+    driver.switch_to.default_content() #switch out of iframe
+    request_report_process(driver, 'ELPAC', 'Student_Results_Report_Student_Score_Data_Extract', elpac_coordinators, SY)
+    try:
+        download_process(school_report_names, f'{SY} Summative ELPAC and Summative Alternate ELPAC Student Score Data File By Enrolled LEA', driver) 
+    except:    
+        logging.info(f'ELPAC Student Score Data File by Enrolled LEA is not available for {SY}')
+        return('No files')
+
+    time.sleep(10) #implemented to give time for files to download
+    #This is here three times to see if anything got skipped the first time. 
+    #Dir remains ELPAC for constant download directory
+    download_loop_missing(f'elpac\\{formatted_month_day_year}', f'{SY} Summative ELPAC and Summative Alternate ELPAC Student Score Data File By Enrolled LEA', driver)
+
+    #Close out driver window once done
+    driver.close()
 
 
 #Coded out piece, used for manual checks.
