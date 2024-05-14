@@ -89,7 +89,7 @@ def change_login_role(school_coord_text, driver):
 
 
 # 'CAASPP_Student_Score_Data_Extract_Report'
-def request_report(driver, test_type, actual_test, SY):
+def request_report(driver, test_type, Enrolled_or_Tested, actual_test, SY):
 
     # Wait for the button to be clickable based on text
     LEA_Reports = WebDriverWait(driver, 30).until(
@@ -189,13 +189,13 @@ def request_report(driver, test_type, actual_test, SY):
 
     
     enrolled = WebDriverWait(driver, 30).until(
-        EC.element_to_be_clickable((By.XPATH, '//option[@value="Enrolled"]'))
+        EC.element_to_be_clickable((By.XPATH, f'//option[@value="{Enrolled_or_Tested}"]'))
     )
     try:
         enrolled.click()
-        logging.info('Enrolled selected')
+        logging.info(f'{Enrolled_or_Tested} selected')
     except:
-        logging.info('Enrolled not selected')
+        logging.info(f'{Enroled_or_Tested} not selected')
 
     if test_type == 'SBAC':
         
@@ -608,7 +608,7 @@ def move_xlsx_files(elpac_or_sbac):
         print(f"Moved '{xlsx_file}' to '{destination_directory}'.")
 
 
-def SBAC_package_func(driver, SY, formatted_month_day_year):
+def SBAC_package_func(driver, SY, Enrolled_or_Tested formatted_month_day_year):
 
     indicator = request_report_process(driver, 'SBAC', 'CAASPP_Student_Score_Data_Extract_Report', caaspp_coordinators, SY)
 

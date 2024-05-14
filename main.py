@@ -47,66 +47,23 @@ prefs = {'download.default_directory' : download_directory,
 chrome_options.add_experimental_option('prefs', prefs)
 driver = webdriver.Chrome(ChromeDriverManager().install(), options = chrome_options)
 
-SY = '2024'
-logIn(username, password, driver)
-launch_to_homescreen(driver)
 
-# ---------------------------------------SBAC Files Request and Download-------
+def selenium_process(SY):
 
-# Call the function, school report names variable is called for just school name
-#Equivalent of Student Score Data File
-request_report_process(driver, 'SBAC', 'CAASPP_Student_Score_Data_Extract_Report', caaspp_coordinators, SY)
-download_process(school_report_names, f'{SY} CAASPP Student Score Data File By Enrolled LEA', driver) 
+    logIn(username, password, driver)
+    launch_to_homescreen(driver)
 
-#This is here three times to see if anything got skipped the first time. Initial dir is set at ELPAC only to move the files over to SBAC dir
-#Will run 5 times
+    # ---------------------------------------SBAC & ELPAC Files Request and Download-------
+    # Call the function, school report names variable is called for just school name. MUst occur in this order for Selenium
+    #Equivalent of Student Score Data File
+    SBAC_output = SBAC_package_func(driver, SY, formatted_month_day_year)
+    ELPAC_output = ELPAC_package_func(driver, SY, formatted_month_day_year)
 
-time.sleep(10) #implemented to give time for files to download, removed pending tag
-download_loop_missing(f'elpac\\{formatted_month_day_year}', f'{SY} CAASPP Student Score Data File By Enrolled LEA', driver)
+    # -----------------------------------------Unzip the Files and Move them to the P-Drive in this location 'P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing'
+    SBAC_output = unzip_move_and_unit(SBAC_output, 'sbac')
+    ELPAC_output = unzip_move_and_unit(ELPAC_output, 'elpac')
 
-#This moves the files from ELPAC  timestamp dir to SBAC timestamp dir. 
-#This is because the download dir cannot be changed in Selenium
-move_files_over()
-
-# --------------------------------------------ELPAC Files Request and Download
-
-driver.switch_to.default_content() #switch out of iframe
-request_report_process(driver, 'ELPAC', 'Student_Results_Report_Student_Score_Data_Extract', elpac_coordinators, SY)
-download_process(school_report_names, f'{SY} Summative ELPAC and Summative Alternate ELPAC Student Score Data File By Enrolled LEA', driver) 
-
-time.sleep(10) #implemented to give time for files to download
-#This is here three times to see if anything got skipped the first time. 
-#Dir remains ELPAC for constant download directory
-download_loop_missing(f'elpac\\{formatted_month_day_year}', f'{SY} Summative ELPAC and Summative Alternate ELPAC Student Score Data File By Enrolled LEA', driver)
-
-#Close out driver window once done
-driver.close()
-
-#Takes 14 mins to run up to this point
-# -----------------------------------------Unzip the Files and Move them to the P-Drive in this location 'P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing'
-unzip_files_in_same_dir('elpac')
-unzip_files_in_same_dir('sbac')
-
-#Keeps raw zip files in the same dir. Only moves over xlsx files
-try:
-    move_xlsx_files('sbac')
-    logging.info('Moved SBAC XLSX files to p-drive')
-except:
-    logging.info('Unable to move SBAC XLSX files to the p-drive, must be connected to the VPN')
-try:
-    move_xlsx_files('elpac')
-    logging.info('Moved ELPAC XLSX files to p-drive')
-except:
-    logging.info('Unable to move ELPAC XLSX files to the p-drive, must be connected to the VPN')
-
-
-#Unit test for school count that also interacts with the log 
-test_instance = TestFileProcessing()
-test_instance.test_file_processing('sbac')
-test_instance.test_file_processing('elpac')
-
-# #Takes roughly 25 mins to download and send
-# #Must be connected to the p-drive
+selenium_process('2023')
 
 
 # ---------------------------------POST SELENIUM PROCESS, STACKING & SENDING FILES----------------------------------
@@ -124,7 +81,7 @@ sbac_stack = filter_on_full_cds_code(sbac_stack, 'CALPADSSchoolCode')
 # elpac_stack = pd.read_csv('file_downloads\elpac_stack.csv') #For testing purposes to start from this point
 # sbac_stack = pd.read_csv('file_downloads\sbac_stack.csv')
 
-# -----------------------------Where the normailization of the dataframes occur, column changing & mapping------------------
+# -----------------------------Where the normalization of the dataframes occur, column changing & mapping------------------
 elpac = get_elpac_import(elpac_stack, 'ELPAC')
 sbac = get_sbac_import(sbac_stack, 'SBAC')  #For some reason, raw ELPAC file does not have LocalStudentID or studentnumber present for SBAC ELA & Math overall 
 cast = get_cast_import(sbac_stack, 'CAST')
@@ -135,12 +92,15 @@ send_stacked_csv(sbac, 'SBAC', directory_path, formatted_month_day_year)
 send_stacked_csv(cast, 'CAST', directory_path, formatted_month_day_year)
 
 # -----------------------------------------------Send over new records------------------------
-#used in combination with obtain_new and clean class to cleanse dtypes, merge and find new records
-def final(frame, frame_name, append_or_replace):
-    new_records_elpac = grab_new_records(frame, frame_name) #will return original frame first time
-    SQL_query.send_to_SQL(new_records_elpac, frame_name, append_or_replace) #dtypes is acquired within function
+def send_to_sql(frame, file_name):
+    dtypes, table_cols = SQL_query.get_dtypes(frame, 'DataTeamSandbox', f'{file_name}_Scores')
 
-final(elpac, 'ELPAC', 'append')
-final(cast, 'CAST', 'append')
-final(sbac, 'SBAC', 'append')
-
+    try:
+        frame.to_sql(f'{file_name}_Scores', schema='dbo', con = SQL_query.engine, if_exists = 'replace', index = False, dtype=dtypes)
+        logging.info('Sent data to {file_name}_Scores')
+    except:
+        logging.info(f'Unable to send data to {file_name}_Scores')
+        
+send_to_sql(elpac, 'ELPAC')
+send_to_sql(sbac, 'SBAC')
+send_to_sql(cast, 'CAST')
