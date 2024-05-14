@@ -195,7 +195,7 @@ def request_report(driver, test_type, Enrolled_or_Tested, actual_test, SY):
         enrolled.click()
         logging.info(f'{Enrolled_or_Tested} selected')
     except:
-        logging.info(f'{Enroled_or_Tested} not selected')
+        logging.info(f'{Enrolled_or_Tested} not selected')
 
     if test_type == 'SBAC':
         
@@ -484,7 +484,7 @@ def download_process(what_schools, test_type, driver):
 
 
 
-def request_report_process(driver, test_type, actual_test, schools_list, SY):
+def request_report_process(driver, test_type, Enrolled_or_Tested, actual_test, schools_list, SY):
     for idx, school_coord in enumerate(schools_list):
         
         if idx == 0 and test_type == 'SBAC':
@@ -501,7 +501,7 @@ def request_report_process(driver, test_type, actual_test, schools_list, SY):
         reports.click()
         
         # Call the function to request a report
-        indicator = request_report(driver, test_type, actual_test, SY)
+        indicator = request_report(driver, test_type, Enrolled_or_Tested, actual_test, SY)
         logging.info(f'Here is the indicator {indicator}')
   
         if indicator == 'No files':
@@ -608,17 +608,17 @@ def move_xlsx_files(elpac_or_sbac):
         print(f"Moved '{xlsx_file}' to '{destination_directory}'.")
 
 
-def SBAC_package_func(driver, SY, Enrolled_or_Tested formatted_month_day_year):
+def SBAC_package_func(driver, SY, Enrolled_or_Tested, formatted_month_day_year):
 
-    indicator = request_report_process(driver, 'SBAC', 'CAASPP_Student_Score_Data_Extract_Report', caaspp_coordinators, SY)
+    indicator = request_report_process(driver, 'SBAC', Enrolled_or_Tested, 'CAASPP_Student_Score_Data_Extract_Report', caaspp_coordinators, SY)
 
     if indicator != 'No files':
 
     #if at any time there is a report that showed not available given date params. It ends the func and returns a string value of 'No files'
-        try:
-            download_process(school_report_names, f'{SY} CAASPP Student Score Data File By Enrolled LEA', driver) 
+        try:                                   
+            download_process(school_report_names, f'{SY} CAASPP Student Score Data File By {Enrolled_or_Tested} LEA', driver) 
         except TimeoutException:
-            logging.info(f'CAASPP Student Score Data File by Enrolled LEA is not available for {SY}')
+            logging.info(f'CAASPP Student Score Data File by {Enrolled_or_Tested} LEA is not available for {SY}')
             return('No files')
     else:
         logging.info('No files to download within SBAC_package_func\n\n')
@@ -630,23 +630,23 @@ def SBAC_package_func(driver, SY, Enrolled_or_Tested formatted_month_day_year):
     #Will run 5 times
 
     time.sleep(10) #implemented to give time for files to download, removed pending tag
-    download_loop_missing(f'elpac\\{formatted_month_day_year}', f'{SY} CAASPP Student Score Data File By Enrolled LEA', driver)
+    download_loop_missing(f'elpac\\{formatted_month_day_year}', f'{SY} CAASPP Student Score Data File By {Enrolled_or_Tested} LEA', driver)
 
     #This moves the files from ELPAC  timestamp dir to SBAC timestamp dir. 
     #This is because the download dir cannot be changed in Selenium
     move_files_over()
 
 
-def ELPAC_package_func(driver, SY, formatted_month_day_year):
+def ELPAC_package_func(driver, SY, Enrolled_or_Tested, formatted_month_day_year):
     driver.switch_to.default_content() #switch out of iframe
-    indicator = request_report_process(driver, 'ELPAC', 'Student_Results_Report_Student_Score_Data_Extract', elpac_coordinators, SY)
+    indicator = request_report_process(driver, 'ELPAC', Enrolled_or_Tested, 'Student_Results_Report_Student_Score_Data_Extract', elpac_coordinators, SY)
 
     if indicator != 'No files':
 
         try:
-            download_process(school_report_names, f'{SY} Summative ELPAC and Summative Alternate ELPAC Student Score Data File By Enrolled LEA', driver) 
+            download_process(school_report_names, f'{SY} Summative ELPAC and Summative Alternate ELPAC Student Score Data File By {Enrolled_or_Tested} LEA', driver) 
         except:    
-            logging.info(f'ELPAC Student Score Data File by Enrolled LEA is not available for {SY}')
+            logging.info(f'ELPAC Student Score Data File by {Enrolled_or_Tested} LEA is not available for {SY}')
             return('No files')
     else:
         logging.info('No files to download within ELPAC_package_func\n\n')
@@ -656,7 +656,7 @@ def ELPAC_package_func(driver, SY, formatted_month_day_year):
     time.sleep(10) #implemented to give time for files to download
     #This is here three times to see if anything got skipped the first time. 
     #Dir remains ELPAC for constant download directory
-    download_loop_missing(f'elpac\\{formatted_month_day_year}', f'{SY} Summative ELPAC and Summative Alternate ELPAC Student Score Data File By Enrolled LEA', driver)
+    download_loop_missing(f'elpac\\{formatted_month_day_year}', f'{SY} Summative ELPAC and Summative Alternate ELPAC Student Score Data File By {Enrolled_or_Tested} LEA', driver)
 
     #Close out driver window once done
     driver.close()

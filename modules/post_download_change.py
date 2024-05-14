@@ -98,7 +98,7 @@ def assimilate_frames(df, testname):
         original = original.assign(**{col: np.nan for col in blank_columns})
         
 
-    #cut down cols
+    #cut down colBA
     original = original[list(rename_cols.values())]   # "['studentnumber', 'TestName', 'PLScore'] not in index" occurs for SBAC
 
     return(original)
