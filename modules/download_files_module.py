@@ -230,8 +230,8 @@ def request_report(driver, test_type, Enrolled_or_Tested, actual_test, SY):
                 except:
                     logging.info('End date input not selected')
 
-                formatted_month_day = today_date.strftime("%m/%d/")
-                end_date = formatted_month_day + SY
+                formatted_month = today_date.strftime("%m/%d/")
+                end_date = formatted_month + SY
                 end_date_input.send_keys(end_date)
                 logging.info(f'End date sent over of {end_date}')
             except:
@@ -298,8 +298,8 @@ def request_report(driver, test_type, Enrolled_or_Tested, actual_test, SY):
                 except:
                     logging.info('End date input not selected')
             
-                formatted_month_day = today_date.strftime("%m/%d/")
-                end_date = formatted_month_day + SY
+                formatted_month = today_date.strftime("%m/%d/")
+                end_date = formatted_month + SY
                 end_date_input.send_keys(end_date)
                 logging.info(f'End date sent over of {end_date}')
             except:
