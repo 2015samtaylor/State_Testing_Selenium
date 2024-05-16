@@ -19,6 +19,27 @@ decode_test_name = {
 'WritingPL': 'ELPAC-Writing'
 }
 
+abbreviation_decode = {
+'Animo Pat Brown': 'BRW',
+'Animo Florence-Firestone Charter Middle': 'FLO',
+'Alain Leroy Locke College Preparatory Academy': 'LCK',
+'Animo Jefferson Charter Middle':'JMS',
+'Animo Leadership High':'LEA',
+'Animo Venice Charter High':'VEN',
+'Oscar De La Hoya Animo Charter High':'DLH',
+'Animo Ellen Ochoa Charter Middle':'AEO',
+'Animo Jackie Robinson High':'ROB',
+'Animo James B. Taylor Charter Middle': 'JAM',
+'Animo South Los Angeles Charter':'SLA',
+'Animo Ralph Bunche Charter High':'BUN',
+'Animo Inglewood Charter High':'BUN',
+'Animo Legacy Charter Middle':'LGC',
+'Animo Mae Jemison Charter Middle':'MAE',
+'Animo Compton Charter':'CMP',
+'Animo City of Champions Charter High':'CHA',
+'Animo Watts College Preparatory Academy':'WAT'
+}
+
 
 
 rename_cols = {'CALPADSDistrictName': 'Abbreviation',
@@ -39,11 +60,12 @@ rename_cols = {'CALPADSDistrictName': 'Abbreviation',
                 # 'TestScoreType': '' blank insert
                 # 'RawScore' : '' blank insert
                 'ScaleScore': 'ScaleScore', #generated in get_SS_frame 
-                'PLScore': 'PLScore' #generate in get_PL_score
+                #'PLScore': 'PLScore', #generate in get_PL_score for ELPAC
+                'AchievementLevels': 'PLScore' #this is the PL_score column for SBAC
                 #  'ProficiencyLevelCode': '' mapped in get_elpac_import based on the PLScore generation
                 }
 
-all_blanks = ['MasterSchoolID', 'StudentID', 'DisplayDate', 'TestSubjectGroup', 'TestSubject',  'RawScore', 'ProficiencyLevelCode', 'studentnumber', 'TestName', 'PLScore']
+all_blanks = ['MasterSchoolID', 'StudentID', 'DisplayDate', 'TestSubjectGroup', 'TestSubject',  'RawScore', 'ProficiencyLevelCode', 'studentnumber', 'TestName']
 
 
 def get_SS_frame(e_original):
@@ -62,7 +84,7 @@ def get_SS_frame(e_original):
 
 def get_pl_frame(e_original):
 
-    pl_columns = [ 'OverallPL','OralLanguagePL', 'WrittenLanguagePL', 'ListeningPL', 'SpeakingPL', 'ReadingPL', 'WritingPL']
+    pl_columns = [ 'OverallPL','OralLanguagePL', 'WrittenLanguagePL', 'ListeningPL', 'SpeakingPL', 'ReadingPL', 'WritingPL'] #For ELPAC raw file
     remaining_columns = [col for col in e_original.columns if col not in pl_columns]
     e_pl_score = pd.melt(e_original, id_vars = remaining_columns, value_vars= pl_columns, value_name='PLScore')
 
@@ -83,7 +105,12 @@ def assimilate_frames(df, testname):
     original['TestType'] = testname
     original['TestPeriod'] = 'SPR'
     original['TestDate'] = pd.to_datetime(datetime.date.today()) + pd.offsets.MonthEnd(0)
+    #remove leading zero on the schoolid column, insert 3 letter abbreviation for schools
+    original['schoolid'] = original['schoolid'].astype(str)
 
+    original['schoolid'] = original['schoolid'].str.lstrip('0')
+    original['Abbreviation'] = original['Abbreviation'].map(abbreviation_decode)
+    
    
     if testname == 'ELPAC':
         scale_score = get_SS_frame(original) #melting down the scale score to be merged back together by SSID and TestName
@@ -92,14 +119,17 @@ def assimilate_frames(df, testname):
         #The merge is occurs on testname, and SSID together. THis keeps rows unique
         original = pd.merge(pl_score, scale_score, left_on=['SSID', 'TestName'], right_on = ['SSID', 'TestName'], suffixes= ['', '_SS'], how='left')
     else:
-        blank_columns = ['studentnumber', 'TestName', 'PLScore']
+
+
+        blank_columns = ['studentnumber', 'TestName']  #PLScore gets melted for ELPAC, SBAC it is AchievementLevel
     
         # Assign blank columns to the DataFrame
         original = original.assign(**{col: np.nan for col in blank_columns})
         
 
-    #cut down colBA
-    original = original[list(rename_cols.values())]   # "['studentnumber', 'TestName', 'PLScore'] not in index" occurs for SBAC
+    #cut down col
+    original = original[list(rename_cols.values())]   # "['studentnumber', 'TestName'] not in index" occurs for SBAC
+    original['RawScore'] = original['ScaleScore']
 
     return(original)
 
@@ -113,14 +143,17 @@ def get_elpac_import(df, testname):
 
     
     pl_decode = {4.0: 'WelDev', 
-    3.0: 'WelDev', 
-    2.0: 'Som-ModDev',
-    1.0: 'MinDev', 
+    '3.0': 'WelDev', 
+    '2.0': 'Som-ModDev',
+    '1.0': 'MinDev', 
     '': 'No Score', 
     'NS': 'No Score'}
 
     #PLScore is not showing for ELPAC import
+    df['PLScore'] = df['PLScore'].astype(str)
     df['ProficiencyLevelCode'] = df['PLScore'].map(pl_decode)
+    df['TestSubjectGroup'] = df['TestSubjectGroup'].map({21: 'ELPAC', 23: 'Alt-ELPAC'}) 
+    df['TestSubject'] = 'ELA'
 
 
     TestScoreType_Decode = {'ELPAC-Overall':'Test',
@@ -176,7 +209,6 @@ def get_sbac_import(df, testname):
     df['TestSubject'] = df['TestSubjectGroup'] + '- Overall'   
     df['TestName'] = 'SBAC - ' +  df['TestSubject'] 
     df['TestName'] = df['TestName'].str.replace(r'(ELA|Math)-', r'\1')
-    df['RawScore'] = df['ScaleScore']
        
     #mapping
     TestScoreType_Decode = {'SBAC - Math Overall':'Test',
@@ -220,7 +252,6 @@ def get_cast_import(df, testname):
     df['TestSubjectGroup'] = 'Science'
     df['TestSubject'] = df['TestSubjectGroup'] + ' - Overall'
     df['TestName'] = 'CAST - Overall'
-    df['RawScore'] = df['ScaleScore']
     df['TestDate'] = pd.to_datetime(datetime.date.today()) + pd.offsets.MonthEnd(0)
 
     #mapping
@@ -258,21 +289,6 @@ def send_stacked_csv(file, file_name, directory_path, formatted_month_day_year):
 
 
 # ----------------------------------------Steps to get new records---------------------------------------
-
-
-    # SSID if incoming files is int64
-    #ScaleScore is a float64
-    #Confirm this in db query
-
-    #The query has NS and NaN inside the dw. Clean it up rather than catering to it. 
-    #Write a unit test to ensure it.
-
-    #ScaleScore is coming across as varchar(150) need to set it up to be a float in MS-SQL
-
-    #Test out isin
-
-    #elpac_clean has no zeros for ssid
-
 
 class Clean:
 

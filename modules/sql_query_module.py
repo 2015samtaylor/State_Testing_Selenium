@@ -212,7 +212,7 @@ class SQL_query:
     
 
 
-    def send_to_SQL(new_records, file_name, append_or_replace):
+    def send_new_records_SQL(new_records, file_name, append_or_replace):
 
         dtypes, table_cols = SQL_query.get_dtypes(new_records, 'DataTeamSandbox', f'{file_name}_Scores')
 
