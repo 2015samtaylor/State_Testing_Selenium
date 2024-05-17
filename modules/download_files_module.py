@@ -586,13 +586,17 @@ def unzip_files_in_same_dir(elpac_or_sbac):
         unzip_xlsx_file(file, elpac_or_sbac)
 
 
-def move_xlsx_files(elpac_or_sbac):
+def move_xlsx_files(elpac_or_sbac, formatted_month_day_year):
     
-    destination_directory = r'P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing' +  f"\\{elpac_or_sbac + '_' +  formatted_month_day}"
+    destination_directory = r'P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing' +  f"\\{elpac_or_sbac + '_' +  formatted_month_day_year}"
     # Ensure the destination directory exists, create it if not
-    os.makedirs(destination_directory, exist_ok=True)
+    try:
+        os.makedirs(destination_directory, exist_ok=True)
+    except Exception as e:
+        logging.CRITICAL(f'Unable to create dir {destination_directory} due to \n {e}')
 
-    source_directory = os.getcwd() + f'\\file_downloads\\{elpac_or_sbac}\\{formatted_month_day}'
+
+    source_directory = os.getcwd() + f'\\file_downloads\\{elpac_or_sbac}\\{formatted_month_day_year}'
 
     # List all files in the source directory
     files = os.listdir(source_directory)
@@ -663,13 +667,13 @@ def ELPAC_package_func(driver, SY, Enrolled_or_Tested, formatted_month_day_year)
 
 
 
-def unzip_move_and_unit(SBAC_ELPAC_output, test_name):
+def unzip_move_and_unit(SBAC_ELPAC_output, test_name, formatted_month_day_year):
     if SBAC_ELPAC_output != 'No files':
         unzip_files_in_same_dir(test_name)
 
         #Keeps raw zip files in the same dir. Only moves over xlsx files
         try:
-            move_xlsx_files(test_name)
+            move_xlsx_files(test_name, formatted_month_day_year)
             logging.info(f'Moved {test_name} XLSX files to p-drive')
 
             test_instance = TestFileProcessing() #unit test

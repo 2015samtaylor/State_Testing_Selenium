@@ -56,14 +56,16 @@ def selenium_process(SY):
     # ---------------------------------------SBAC & ELPAC Files Request and Download-------
     # Call the function, school report names variable is called for just school name. MUst occur in this order for Selenium
     #Equivalent of Student Score Data File
-    SBAC_output = SBAC_package_func(driver, SY, formatted_month_day_year)
-    ELPAC_output = ELPAC_package_func(driver, SY, formatted_month_day_year)
+    SBAC_output = SBAC_package_func(driver, SY, 'Tested', formatted_month_day_year)
+    ELPAC_output = ELPAC_package_func(driver, SY, 'Tested', formatted_month_day_year)
 
     # -----------------------------------------Unzip the Files and Move them to the P-Drive in this location 'P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing'
-    SBAC_output = unzip_move_and_unit(SBAC_output, 'sbac')
-    ELPAC_output = unzip_move_and_unit(ELPAC_output, 'elpac')
+    SBAC_output = unzip_move_and_unit(SBAC_output, 'sbac', formatted_month_day_year)
+    ELPAC_output = unzip_move_and_unit(ELPAC_output, 'elpac', formatted_month_day_year)
 
-selenium_process('2023')
+    return(SBAC_output, ELPAC_output)
+
+SBAC_output, ELPAC_output = selenium_process('2023')
 
 
 # ---------------------------------POST SELENIUM PROCESS, STACKING & SENDING FILES----------------------------------
@@ -86,20 +88,38 @@ elpac = get_elpac_import(elpac_stack, 'ELPAC')
 sbac = get_sbac_import(sbac_stack, 'SBAC')  #For some reason, raw ELPAC file does not have LocalStudentID or studentnumber present for SBAC ELA & Math overall 
 cast = get_cast_import(sbac_stack, 'CAST')
 
-#For Helens Ellevation Pickup.
+#For Helens Ellevation Pickup, send to same dir in stacked folder
 send_stacked_csv(elpac, 'ELPAC', directory_path, formatted_month_day_year) 
 send_stacked_csv(sbac, 'SBAC', directory_path, formatted_month_day_year)
 send_stacked_csv(cast, 'CAST', directory_path, formatted_month_day_year)
 
 # -----------------------------------------------Send over new records------------------------
+
 def send_to_sql(frame, file_name):
     dtypes, table_cols = SQL_query.get_dtypes(frame, 'DataTeamSandbox', f'{file_name}_Scores')
 
+    # Reference the DataTeamSandbox master tables before they are fully replaced with today's update in order to find the incoming records
+    new_records = {
+        'CAST': grab_new_records(cast, 'CAST'),
+        'ELPAC': grab_new_records(elpac, 'ELPAC'),
+        'SBAC': grab_new_records(sbac, 'SBAC')
+    }
+    
+    #Update the master table with a full replace
     try:
         frame.to_sql(f'{file_name}_Scores', schema='dbo', con = SQL_query.engine, if_exists = 'replace', index = False, dtype=dtypes)
-        logging.info('Sent data to {file_name}_Scores')
-    except:
-        logging.info(f'Unable to send data to {file_name}_Scores')
+        logging.info(f"Sent data to {file_name}_Scores")
+    except Exception as e:
+        logging.info(f'Unable to send data to {file_name}_Scores due to \n {e}')
+
+    #Update the table with append of only new records, and timestamp it
+    try:
+        new_records[file_name].to_sql(f'{file_name}_New_Scores', schema='dbo', con = SQL_query.engine, if_exists = 'append', index = False, dtype=dtypes)
+        logging.info(f"Sent data to {file_name}_New_Scores, by appending {len(new_records[file_name])} new records")
+    except Exception as e:
+        logging.info(f'Unable to send data to {file_name}_New_Scores due to \n {e}')
+
+ 
         
 send_to_sql(elpac, 'ELPAC')
 send_to_sql(sbac, 'SBAC')

@@ -168,10 +168,10 @@ class SQL_query:
             #If the table is not created, return the entire frame 
 
 
-        print(f'There is {len(prior)} prior rows')
-        logging.info(f'There is {len(prior)} prior rows')
+        print(f'There is {len(prior)} prior rows in SQL before the full replace')
+        logging.info(f'There is {len(prior)} prior rows in SQL before the full replace')
 
-        merged_df = pd.merge(prior, file, on=merging_cols, how='outer', indicator=True,suffixes=('_prior', '_file'))
+        merged_df = pd.merge(prior, file, on=merging_cols, how='outer', indicator=True, suffixes=('_prior', '_file'))
 
         merge_counts = merged_df['_merge'].value_counts()
         logging.info(f'Merge counts \n {merge_counts}')

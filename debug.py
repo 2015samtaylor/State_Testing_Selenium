@@ -47,145 +47,61 @@ prefs = {'download.default_directory' : download_directory,
 chrome_options.add_experimental_option('prefs', prefs)
 driver = webdriver.Chrome(ChromeDriverManager().install(), options = chrome_options)
 
-logIn(username, password, driver)
-launch_to_homescreen(driver)
 
-coord_list = ['LEA CAASPP Coordinator at Alain Leroy Locke College Preparatory Academy',
- 'LEA CAASPP Coordinator at Animo City of Champions Charter High',
- 'LEA CAASPP Coordinator at Animo Compton Charter',
- 'LEA CAASPP Coordinator at Animo Ellen Ochoa Charter Middle',
- 'LEA CAASPP Coordinator at Animo Florence-Firestone Charter Middle',
- 'LEA CAASPP Coordinator at Animo Inglewood Charter High',
- 'LEA CAASPP Coordinator at Animo Jackie Robinson High',
- 'LEA CAASPP Coordinator at Animo James B. Taylor Charter Middle',
- 'LEA CAASPP Coordinator at Animo Jefferson Charter Middle',
- 'LEA CAASPP Coordinator at Animo Leadership High',
- 'LEA CAASPP Coordinator at Animo Legacy Charter Middle',
- 'LEA CAASPP Coordinator at Animo Mae Jemison Charter Middle',
- 'LEA CAASPP Coordinator at Animo Pat Brown',
- 'LEA CAASPP Coordinator at Animo Ralph Bunche Charter High',
- 'LEA CAASPP Coordinator at Animo South Los Angeles Charter',
- 'LEA CAASPP Coordinator at Animo Venice Charter High',
- 'LEA CAASPP Coordinator at Animo Watts College Preparatory Academy',
- 'LEA CAASPP Coordinator at Oscar De La Hoya Animo Charter High',
- 'LEA ELPAC Coordinator at Alain Leroy Locke College Preparatory Academy',
- 'LEA ELPAC Coordinator at Animo City of Champions Charter High',
- 'LEA ELPAC Coordinator at Animo Compton Charter',
- 'LEA ELPAC Coordinator at Animo Ellen Ochoa Charter Middle',
- 'LEA ELPAC Coordinator at Animo Florence-Firestone Charter Middle',
- 'LEA ELPAC Coordinator at Animo Inglewood Charter High',
- 'LEA ELPAC Coordinator at Animo Jackie Robinson High',
- 'LEA ELPAC Coordinator at Animo James B. Taylor Charter Middle',
- 'LEA ELPAC Coordinator at Animo Jefferson Charter Middle',
- 'LEA ELPAC Coordinator at Animo Leadership High',
- 'LEA ELPAC Coordinator at Animo Legacy Charter Middle',
- 'LEA ELPAC Coordinator at Animo Mae Jemison Charter Middle',
- 'LEA ELPAC Coordinator at Animo Pat Brown',
- 'LEA ELPAC Coordinator at Animo Ralph Bunche Charter High',
- 'LEA ELPAC Coordinator at Animo South Los Angeles Charter',
- 'LEA ELPAC Coordinator at Animo Venice Charter High',
- 'LEA ELPAC Coordinator at Animo Watts College Preparatory Academy',
- 'LEA ELPAC Coordinator at Oscar De La Hoya Animo Charter High']
+def selenium_process(SY):
 
-elpac_coordinators = [coord for coord in coord_list if 'ELPAC' in coord]
-caaspp_coordinators = [coord for coord in coord_list if 'CAASPP' in coord]
+    logIn(username, password, driver)
+    launch_to_homescreen(driver)
 
-#This exists when passing names into the requested reports, as a subset. Change list into a set to only retain unique schools
-school_report_names = [entry.split(' at ', 1)[1] for entry in elpac_coordinators]
-school_report_names = list(set(school_report_names))
+    # ---------------------------------------SBAC & ELPAC Files Request and Download-------
+    # Call the function, school report names variable is called for just school name. MUst occur in this order for Selenium
+    #Equivalent of Student Score Data File
+    SBAC_output = SBAC_package_func(driver, SY, 'Tested', formatted_month_day_year)
+    ELPAC_output = ELPAC_package_func(driver, SY, 'Tested', formatted_month_day_year)
 
-# ---------------------------------------SBAC Files Request and Download
+    # -----------------------------------------Unzip the Files and Move them to the P-Drive in this location 'P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing'
+    SBAC_output = unzip_move_and_unit(SBAC_output, 'sbac')
+    ELPAC_output = unzip_move_and_unit(ELPAC_output, 'elpac')
 
-# Call the function, school report names variable is called for just school name
-#Equivalent of Student Score Data File
-request_report(driver, 'SBAC', 'CAASPP_Student_Score_Data_Extract_Report', '2024')
-# request_report_process(driver, 'SBAC', 'CAASPP_Student_Score_Data_Extract_Report', caaspp_coordinators, '2023')
-# download_process(school_report_names, '2023 CAASPP Student Score Data File By Enrolled LEA', driver) 
-
-# #This is here three times to see if anything got skipped the first time. Initial dir is set at ELPAC only to move the files over to SBAC dir
-# #Will run 5 times
-
-# time.sleep(10) #implemented to give time for files to download, removed pending tag
-# download_loop_missing(f'elpac\\{formatted_month_day_year}', '2023 CAASPP Student Score Data File By Enrolled LEA', driver)
-
-# #This moves the files from ELPAC  timestamp dir to SBAC timestamp dir. 
-# #This is because the download dir cannot be changed in Selenium
-# move_files_over()
-
-# # --------------------------------------------ELPAC Files Request and Download
-
-# driver.switch_to.default_content()
-# request_report_process(driver, 'ELPAC', 'Student_Results_Report_Student_Score_Data_Extract', elpac_coordinators, '2023')
-# download_process(school_report_names, '2023 Summative ELPAC and Summative Alternate ELPAC Student Score Data File By Enrolled LEA', driver) 
-
-# time.sleep(10) #implemented to give time for files to download
-# #This is here three times to see if anything got skipped the first time. 
-# #Dir remains ELPAC for constant download directory
-# download_loop_missing(f'elpac\\{formatted_month_day_year}', '2023 Summative ELPAC and Summative Alternate ELPAC Student Score Data File By Enrolled LEA', driver)
-
-# #Close out driver window once done
-# driver.close()
-
-# #Takes 14 mins to run up to this point
-# # -----------------------------------------Unzip the Files and Move them to the P-Drive in this location 'P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing'
-# unzip_files_in_same_dir('elpac')
-# unzip_files_in_same_dir('sbac')
-
-# #Keeps raw zip files in the same dir. Only moves over xlsx files
-# try:
-#     move_xlsx_files('sbac')
-#     logging.info('Moved SBAC XLSX files to p-drive')
-# except:
-#     logging.info('Unable to move SBAC XLSX files to the p-drive, must be connected to the VPN')
-# try:
-#     move_xlsx_files('elpac')
-#     logging.info('Moved ELPAC XLSX files to p-drive')
-# except:
-#     logging.info('Unable to move ELPAC XLSX files to the p-drive, must be connected to the VPN')
+selenium_process('2024')
 
 
-# #Checks these dirs, for all files being there
-# test_instance = TestFileProcessing()
-# test_instance.test_file_processing('sbac')
-# test_instance.test_file_processing('elpac')
+# ---------------------------------POST SELENIUM PROCESS, STACKING & SENDING FILES----------------------------------
 
-# # #Takes roughly 25 mins to download and send
-# # #Must be connected to the p-drive
+directory_path = r'P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing'
 
+directory_path_sbac = os.path.join(directory_path, f'sbac_{formatted_month_day_year}')
+sbac_stack = stack_files(directory_path_sbac)
 
-# # ---------------------------------POST SELENIUM PROCESS, STACKING & SENDING FILES----------------------------------
+directory_path_elpac = os.path.join(directory_path, f'elpac_{formatted_month_day_year}')
+elpac_stack = stack_files(directory_path_elpac)
 
-# directory_path = r'P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing'
+elpac_stack = filter_on_full_cds_code(elpac_stack, 'CALPADSSchoolCode')
+sbac_stack = filter_on_full_cds_code(sbac_stack, 'CALPADSSchoolCode')
+# elpac_stack = pd.read_csv('file_downloads\elpac_stack.csv') #For testing purposes to start from this point
+# sbac_stack = pd.read_csv('file_downloads\sbac_stack.csv')
 
-# directory_path_sbac = os.path.join(directory_path, f'sbac_{formatted_month_day_year}')
-# sbac_stack = stack_files(directory_path_sbac)
+# -----------------------------Where the normalization of the dataframes occur, column changing & mapping------------------
+elpac = get_elpac_import(elpac_stack, 'ELPAC')
+sbac = get_sbac_import(sbac_stack, 'SBAC')  #For some reason, raw ELPAC file does not have LocalStudentID or studentnumber present for SBAC ELA & Math overall 
+cast = get_cast_import(sbac_stack, 'CAST')
 
-# directory_path_elpac = os.path.join(directory_path, f'elpac_{formatted_month_day_year}')
-# elpac_stack = stack_files(directory_path_elpac)
+#For Helens Ellevation Pickup.
+send_stacked_csv(elpac, 'ELPAC', directory_path, formatted_month_day_year) 
+send_stacked_csv(sbac, 'SBAC', directory_path, formatted_month_day_year)
+send_stacked_csv(cast, 'CAST', directory_path, formatted_month_day_year)
 
+# -----------------------------------------------Send over new records------------------------
 
-# elpac_stack = filter_on_full_cds_code(elpac_stack, 'CALPADSSchoolCode')
-# sbac_stack = filter_on_full_cds_code(sbac_stack, 'CALPADSSchoolCode')
-# # elpac_stack = pd.read_csv('file_downloads\elpac_stack.csv') #For testing purposes
-# # sbac_stack = pd.read_csv('file_downloads\sbac_stack.csv')
-
-# # -----------------------------Where the normailization of the dataframes occur, column changing & mapping------------------
-# elpac = get_elpac_import(elpac_stack, 'ELPAC')
-# sbac = get_sbac_import(sbac_stack, 'SBAC')  #For some reason, raw ELPAC file does not have LocalStudentID or studentnumber present for SBAC ELA & Math overall 
-# cast = get_cast_import(sbac_stack, 'CAST')
-
-# #For Helens Ellevation Pickup.
-# send_stacked_csv(elpac, 'ELPAC', directory_path, formatted_month_day_year) 
-# send_stacked_csv(sbac, 'SBAC', directory_path, formatted_month_day_year)
-# send_stacked_csv(cast, 'CAST', directory_path, formatted_month_day_year)
-
-# # -----------------------------------------------Send over new records------------------------
-# #used in combination with obtain_new and clean class to cleanse dtypes, merge and find new records
-# def final(frame, frame_name, append_or_replace):
-#     new_records_elpac = grab_new_records(frame, frame_name) #will return original frame first time
-#     SQL_query.send_to_SQL(new_records_elpac, frame_name, append_or_replace) #dtypes is acquired within function
-
-# final(elpac, 'ELPAC', 'append')
-# final(cast, 'CAST', 'append')
-# final(sbac, 'SBAC', 'append')
-
+def send_to_sql(frame, file_name):
+    dtypes, table_cols = SQL_query.get_dtypes(frame, 'DataTeamSandbox', f'{file_name}_Scores')
+    
+    try:
+        frame.to_sql(f'{file_name}_Scores', schema='dbo', con = SQL_query.engine, if_exists = 'replace', index = False, dtype=dtypes)
+        logging.info('Sent data to f{file_name}_Scores')
+    except:
+        logging.info(f'Unable to send data to {file_name}_Scores')
+        
+send_to_sql(elpac, 'ELPAC')
+send_to_sql(sbac, 'SBAC')
+send_to_sql(cast, 'CAST')

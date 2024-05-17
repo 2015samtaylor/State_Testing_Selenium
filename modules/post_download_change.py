@@ -152,9 +152,10 @@ def get_elpac_import(df, testname):
     #PLScore is not showing for ELPAC import
     df['PLScore'] = df['PLScore'].astype(str)
     df['ProficiencyLevelCode'] = df['PLScore'].map(pl_decode)
+
     df['TestSubjectGroup'] = df['TestSubjectGroup'].map({21: 'ELPAC', 23: 'Alt-ELPAC'}) 
     df['TestSubject'] = 'ELA'
-
+     
 
     TestScoreType_Decode = {'ELPAC-Overall':'Test',
                             'ELPAC-Oral Language':'Subscore',
@@ -337,6 +338,8 @@ def grab_new_records(file, file_name):
     merging_cols = ['SSID', 'TestType', 'TestName', 'ScaleScore'] #These should work for all 3 files
     new_records = SQL_query.obtain_new(file_obj_clean, file_name, merging_cols)
 
+    new_records['last_update'] = datetime.date.today().strftime('%Y-%m-%d')
+    
     return(new_records)
 
 
