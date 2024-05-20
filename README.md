@@ -5,7 +5,7 @@
 This Python script automates the retrieval and processing of state testing data for the ELPAC (English Language Proficiency Assessments for California) and SBAC (Smarter Balanced Assessment Consortium) and CAST (California Science Test). The script utilizes Selenium for web automation to log in to the testing portal, request specific reports, and download the corresponding data files. Once file are downloaded as zip files, the necessary data is extracted and stacked. The master tables are updated everyday after new records are merged up with the existing table to see what is coming in as new. 
 
 * Master Table Names ELPAC_Scores, SBAC_Scores, CAST_Scores
-* Incoming Record Tabel Names ELPAC_Scores_New, SBAC_Scores_New, CAST_Scores_New
+* Incoming Record Table Names ELPAC_Scores_New, SBAC_Scores_New, CAST_Scores_New
 
 ## Overview
 
@@ -44,6 +44,7 @@ This Python script automates the retrieval and processing of state testing data 
 
 - The script ensures that unique school names are considered when passing names into the requested reports.
 - Directories are created dynamically based on the current date to organize downloaded files.
+- Triggers exist for all three of the New Scores tables. SSID, TestType, TestName, & ScaleScore are partitioned over to identify duplicates as an extra layer of data integrity.
 
 ## Running Schedule
 
