@@ -99,28 +99,39 @@ def send_to_sql(frame, file_name):
     dtypes, table_cols = SQL_query.get_dtypes(frame, 'DataTeamSandbox', f'{file_name}_Scores')
 
     # Reference the DataTeamSandbox master tables before they are fully replaced with today's update in order to find the incoming records
+    #These are populated within the dictionary before the master table is updated. Therefore they are good. 
     new_records = {
         'CAST': grab_new_records(cast, 'CAST'),
         'ELPAC': grab_new_records(elpac, 'ELPAC'),
         'SBAC': grab_new_records(sbac, 'SBAC')
     }
     
-    #Update the master table with a full replace
+    #Update the master table with a full replace, after assessing todays incoming records by each table
     try:
         frame.to_sql(f'{file_name}_Scores', schema='dbo', con = SQL_query.engine, if_exists = 'replace', index = False, dtype=dtypes)
         logging.info(f"Sent data to {file_name}_Scores")
     except Exception as e:
         logging.info(f'Unable to send data to {file_name}_Scores due to \n {e}')
 
-    #Update the table with append of only new records, and timestamp it
+    #Update the table with append of only new records, and timestamp it within new_records func
     try:
         new_records[file_name].to_sql(f'{file_name}_New_Scores', schema='dbo', con = SQL_query.engine, if_exists = 'append', index = False, dtype=dtypes)
         logging.info(f"Sent data to {file_name}_New_Scores, by appending {len(new_records[file_name])} new records")
     except Exception as e:
         logging.info(f'Unable to send data to {file_name}_New_Scores due to \n {e}')
 
- 
-        
+
+ # OBTAINING NEW RECORDS PROCESS
+# The master tables get a full replace with todays data files, however this does not occur until todays data files
+# is compared to the master tables. 
+
+#Whatever is strictly coming in on the merge from the new frame from these 4 columns will be sent to new scores table
+# ['SSID', 'TestType', 'TestName', 'ScaleScore']
+
+#After new scores table is appended with new records with last_update timestamp, the master table gets a full replace of
+#todays data files. 
+
+
 send_to_sql(elpac, 'ELPAC')
 send_to_sql(sbac, 'SBAC')
 send_to_sql(cast, 'CAST')

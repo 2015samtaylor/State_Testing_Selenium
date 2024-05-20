@@ -168,14 +168,15 @@ class SQL_query:
             #If the table is not created, return the entire frame 
 
 
-        print(f'There is {len(prior)} prior rows in SQL before the full replace')
-        logging.info(f'There is {len(prior)} prior rows in SQL before the full replace')
+        # print(f'There is {len(prior)} prior rows in SQL table {file_name}_Scores before the full replace')
+        # logging.info(f'There is {len(prior)} prior rows in SQL table {file_name}_Scores before the full replace')
 
         merged_df = pd.merge(prior, file, on=merging_cols, how='outer', indicator=True, suffixes=('_prior', '_file'))
 
         merge_counts = merged_df['_merge'].value_counts()
-        logging.info(f'Merge counts \n {merge_counts}')
+        logging.info(f'Merge counts for {file_name} \n {merge_counts}')
 
+        #Right only grabs everyting coming from the incoming file
         new_records = merged_df.loc[merged_df['_merge'] == 'right_only']
         #drop the merge col
         new_records = new_records.drop('_merge', axis=1)

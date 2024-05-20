@@ -2,7 +2,10 @@
 
 # Automated State Testing Data Retrieval and Processing
 
-This Python script automates the retrieval and processing of state testing data for the ELPAC (English Language Proficiency Assessments for California) and SBAC (Smarter Balanced Assessment Consortium). The script utilizes Selenium for web automation to log in to the testing portal, request specific reports, and download the corresponding data files. Once file are downloaded as zip files, the necessary data is extracted stacked and strictly new records are appended to the tables ELPAC_Scores, SBAC_Scores, CAST_Scores
+This Python script automates the retrieval and processing of state testing data for the ELPAC (English Language Proficiency Assessments for California) and SBAC (Smarter Balanced Assessment Consortium) and CAST (California Science Test). The script utilizes Selenium for web automation to log in to the testing portal, request specific reports, and download the corresponding data files. Once file are downloaded as zip files, the necessary data is extracted and stacked. The master tables are updated everyday after new records are merged up with the existing table to see what is coming in as new. 
+
+* Master Table Names ELPAC_Scores, SBAC_Scores, CAST_Scores
+* Incoming Record Tabel Names ELPAC_Scores_New, SBAC_Scores_New, CAST_Scores_New
 
 ## Overview
 
@@ -13,8 +16,8 @@ This Python script automates the retrieval and processing of state testing data 
 - **Chrome Options:** Chrome options are set for Selenium to manage download preferences and establish a specific download directory.
 
 - **Request and Download Process:**
-  - **SBAC:** The script requests the 'CAASPP Student Score Data Extract Report' for CAASPP coordinators, then downloads and processes the data files.
-  - **ELPAC:** It requests the 'Student Score Data Extract Report' for ELPAC coordinators, then downloads and processes the corresponding data files.
+  - **SBAC:** The script requests the 'CAASPP Student Score Data Extract Report' for CAASPP coordinators, then downloads and processes the data files. Parameters within this function include School Year (SY), and By Enrolled of By Tested.
+  - **ELPAC:** It requests the 'Student Score Data Extract Report' for ELPAC coordinators, then downloads and processes the corresponding data files. Parameters within this function include School Year (SY), and By Enrolled of By Tested.
 
 - **Download Loop for Missing Files:** A loop is implemented to reattempt downloading in case of any missing files.
 
@@ -63,34 +66,9 @@ June 20
 June 27
 
 
-General Notes
-Abbreviation - map on CALPADSDIstrictName
-schoolid blank
-MasterSchoolID blank
-StudentNumber - LocalStudentId
-StudentID blank
-SSID - SSID
-TestGrade - GradeAssessed
-ELStatus Blank
-TestDate - End of the month for the month uploaded
-DisplayDate blank
-testtype - 21 (General ELPAC) 23(ALT ELPAC)
-testperiod blank
-testscoretype blank
-testname ListeningPL	SpeakingPL	ReadingPL	WritingPL 
-scalescore and plscore melt down
-proficiencylevelcode is hard mapping
 
-How often do you need this done?
-People dont start asking until end of the testing window, but want a monthly pull. As we lose enrollments of students, we lose access to their scores
-#End of the month from Feb through May. Last day of Feb.
-
-Prioritize ELPAC pulldowns are Feb-May. 
-SBAC is April - June (mid) (End of April for SBAC/CAST)
-
-CAST has recordtypes that are taken apart within the SBAC file. 
-
-What table do they send it to?
+## Final Tables on 90 after stored procedures
+-----------------------------------------
 ELPAC [TestScores].[dbo].[vw_rpt_ELPACScores]
 CAST  [TestScores].[dbo].[CASTScores]
 SBAC: ELA/Math [TestScores].[dbo].[vw_rpt_SBACScores]
