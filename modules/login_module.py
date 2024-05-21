@@ -87,10 +87,12 @@ def create_directory(directory_path):
         try:
             os.makedirs(os.getcwd() + f'\\{directory_path}')
             print(f"Directory '{directory_path}' created successfully.")
+            logging.info(f"Directory '{directory_path}' created successfully.")
         except OSError as e:
             print(f"Error creating directory '{directory_path}': {e}")
     else:
         print(f"Directory '{directory_path}' already exists.")
+        logging.info(f"Directory '{directory_path}' already exists.")
 
     
 

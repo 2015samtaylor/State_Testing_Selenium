@@ -278,7 +278,11 @@ def get_cast_import(df, testname):
 
 def send_stacked_csv(file, file_name, directory_path, formatted_month_day_year):
     stacked_dir = os.path.join(directory_path, 'Stacked_Files')
-    os.makedirs(stacked_dir, exist_ok=True)  # Create directory if it doesn't exist
+    try:
+        os.makedirs(stacked_dir, exist_ok=True)  # Create directory if it doesn't exist
+        logging.info(f'Directories created for {stacked_dir}')
+    except:
+        logging.info(f'Directories could not be created for {stacked_dir}')
 
     file_path = os.path.join(stacked_dir, f'{file_name}_STACKED_{formatted_month_day_year}.csv')
     
