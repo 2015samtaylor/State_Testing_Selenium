@@ -65,7 +65,7 @@ def selenium_process(SY):
 
     return(SBAC_output, ELPAC_output)
 
-SBAC_output, ELPAC_output = selenium_process('2023')
+SBAC_output, ELPAC_output = selenium_process('2024')
 
 
 # ---------------------------------POST SELENIUM PROCESS, STACKING & SENDING FILES----------------------------------
@@ -109,7 +109,7 @@ def send_to_sql(frame, file_name):
     #Update the master table with a full replace, after assessing todays incoming records by each table
     try:
         frame.to_sql(f'{file_name}_Scores', schema='dbo', con = SQL_query.engine, if_exists = 'replace', index = False, dtype=dtypes)
-        logging.info(f"Sent data to {file_name}_Scores")
+        logging.info(f"Sent data - {len(frame)} records to master table {file_name}_Scores")
     except Exception as e:
         logging.info(f'Unable to send data to {file_name}_Scores due to \n {e}')
 
@@ -135,3 +135,6 @@ def send_to_sql(frame, file_name):
 send_to_sql(elpac, 'ELPAC')
 send_to_sql(sbac, 'SBAC')
 send_to_sql(cast, 'CAST')
+
+#takes 16 mins to debug
+#coming across empty zip files for 2024

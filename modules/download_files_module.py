@@ -566,15 +566,24 @@ def unzip_xlsx_file(zip_file, elpac_or_sbac):
     zip_path = os.path.join(current_directory, zip_file)
 
     # Extract the first file with a '.xlsx' extension from the zip archive
-    with zipfile.ZipFile(zip_path, 'r') as zip_ref:
-        xlsx_files = [f for f in zip_ref.namelist() if f.endswith('.xlsx')]
+    try:
+        with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+            xlsx_files = [f for f in zip_ref.namelist() if f.endswith('.xlsx')]
+            # Process the .xlsx files as needed
+    except zipfile.BadZipFile:
+        logging.info(f"BadZipFile error: The file {zip_path} is not a zip file.\n Zip file contents are empty.")
+        print(f"BadZipFile error: The file {zip_path} is not a zip file or the zip file contents are empty.")
+        # Handle the error as needed (e.g., log it, skip the file, etc.)
 
         if xlsx_files:
             xlsx_file_to_extract = xlsx_files[0]
             zip_ref.extract(xlsx_file_to_extract, current_directory)
             print(f"File '{xlsx_file_to_extract}' extracted from '{zip_file}'.")
+            logging.info(f"File '{xlsx_file_to_extract}' extracted from '{zip_file}'.")
         else:
             print("No .xlsx file found in the zip archive.")
+            logging.info("No .xlsx file found in the zip archive.")
+            
 
 
 def unzip_files_in_same_dir(elpac_or_sbac):
