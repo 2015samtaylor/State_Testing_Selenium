@@ -199,46 +199,54 @@ def request_report(driver, test_type, Enrolled_or_Tested, actual_test, SY):
 
     if test_type == 'SBAC':
         
-        #These date inputs only exists for 2023-2024
-        if SY == '2024':
-            try:
-                start_date_input = WebDriverWait(driver, 30).until(
-                    EC.element_to_be_clickable((By.ID, 'caasppLeaDownloadableRptstartdate'))
-                )
-                try:
-                    start_date_input.click()
-                    logging.info('Start date input selected')
-                except:
-                    logging.info('Start date input not selected')
+    #     #These date inputs only exists for 2023-2024
+    #     if SY == '2024':
+    #         try:
+    #             start_date_input = WebDriverWait(driver, 30).until(
+    #                 EC.element_to_be_clickable((By.ID, 'caasppLeaDownloadableRptstartdate'))
+    #             )
+    #             # try:
+    #             #     start_date_input.click()
+    #             #     logging.info('Start date input selected')
+    #             # except:
+    #             #     logging.info('Start date input not selected')
+    #             current_value = start_date_input.get_attribute('value')
+    #             print(f"Current date value: {current_value}")
+    #             logging.info(f"Current date value: {current_value}")
 
-                start_date_input.clear()
-                start_date = f"02/01/{SY}"
-                start_date_input.send_keys(start_date)
-                logging.info(f'Start date sent over of {start_date}')
-            except:
-                logging.info(f'Unable to send over start_date of {start_date} ')
+    #             start_date_input.clear()
+    #             # start_date = f"02/01/24"
+    #             start_date = "Feb 01, 2024"
+    #             start_date_input.send_keys(start_date)
+    #             logging.info(f'Start date sent over of {start_date}')
+    #         except:
+    #             logging.info(f'Unable to send over start_date of {start_date} ')
 
-            try:
+    #         try:
 
            
-                end_date_input = WebDriverWait(driver, 30).until(
-                    EC.element_to_be_clickable((By.ID, 'caasppLeaDownloadableRptenddate'))
-                )
-                try:
-                    end_date_input.click()
-                    logging.info('End date input selected')
-                except:
-                    logging.info('End date input not selected')
+    #             end_date_input = WebDriverWait(driver, 30).until(
+    #                 EC.element_to_be_clickable((By.ID, 'caasppLeaDownloadableRptenddate'))
+    #             )
+    #             # try:
+    #             #     end_date_input.click()
+    #             #     logging.info('End date input selected')
+    #             # except:
+    #             #     logging.info('End date input not selected')
+    #             current_value = end_date_input.get_attribute('value')
+    #             print(f"Current date value: {current_value}")
+    #             logging.info(f"Current date value: {current_value}")
 
-                formatted_month = today_date.strftime("%m/%d/")
-                end_date = formatted_month + SY
-                end_date_input.send_keys(end_date)
-                logging.info(f'End date sent over of {end_date}')
-            except:
-                logging.info(f'Unable to send over end_date of {end_date}')
+    #             formatted_month = today_date.strftime("%m/%d/")
+    #             # end_date = formatted_month + SY
+    #             end_date = 'May 22, 2024'
+    #             end_date_input.send_keys(end_date)
+    #             logging.info(f'End date sent over of {end_date}')
+    #         except:
+    #             logging.info(f'Unable to send over end_date of {end_date}')
 
-        else:
-            pass
+    #     else:
+    #         pass
 
         request_file = WebDriverWait(driver, 30).until(
             EC.element_to_be_clickable((By.XPATH, '//*[@id="caasppScoreExRep"]'))
@@ -266,47 +274,47 @@ def request_report(driver, test_type, Enrolled_or_Tested, actual_test, SY):
     elif test_type == 'ELPAC':
 
         #These date inputs only exists for 2023-2024
-        if SY == '2024':
+        # if SY == '2024':
 
-            try:
-                start_date_input = WebDriverWait(driver, 30).until(
-                    EC.element_to_be_clickable((By.ID, 'leaDwnRptstartdate'))
-                )
+        #     try:
+        #         start_date_input = WebDriverWait(driver, 30).until(
+        #             EC.element_to_be_clickable((By.ID, 'leaDwnRptstartdate'))
+        #         )
 
-                try:
-                    start_date_input.click()
-                    logging.info('Start date input selected')
-                except:
-                    logging.info('Start date input not selected')
+        #         try:
+        #             start_date_input.click()
+        #             logging.info('Start date input selected')
+        #         except:
+        #             logging.info('Start date input not selected')
 
-                start_date_input.clear()
-                start_date = f"04/15/{SY}"
-                start_date_input.send_keys(start_date)
-                logging.info(f'Start date sent over of {start_date}')
-            except:
-                logging.info(f'Unable to send over start_date of {start_date} ')
+        #         start_date_input.clear()
+        #         start_date = f"04/15/24"
+        #         start_date_input.send_keys(start_date)
+        #         logging.info(f'Start date sent over of {start_date}')
+        #     except:
+        #         logging.info(f'Unable to send over start_date of {start_date} ')
 
-            try:
+        #     try:
 
-                end_date_input = WebDriverWait(driver, 30).until(
-                    EC.element_to_be_clickable((By.ID, 'leaDwnRptenddate'))
-                )
+        #         end_date_input = WebDriverWait(driver, 30).until(
+        #             EC.element_to_be_clickable((By.ID, 'leaDwnRptenddate'))
+        #         )
 
-                try:
-                    end_date_input.click()
-                    logging.info('End date input selected')
-                except:
-                    logging.info('End date input not selected')
+        #         try:
+        #             end_date_input.click()
+        #             logging.info('End date input selected')
+        #         except:
+        #             logging.info('End date input not selected')
             
-                formatted_month = today_date.strftime("%m/%d/")
-                end_date = formatted_month + SY
-                end_date_input.send_keys(end_date)
-                logging.info(f'End date sent over of {end_date}')
-            except:
-                logging.info(f'Unable to send over end_date of {end_date}')
+        #         formatted_month = today_date.strftime("%m/%d/")
+        #         end_date = formatted_month + SY
+        #         end_date_input.send_keys(end_date)
+        #         logging.info(f'End date sent over of {end_date}')
+        #     except:
+        #         logging.info(f'Unable to send over end_date of {end_date}')
 
-        else:
-            pass
+        # else:
+        #     pass
 
         request_file = WebDriverWait(driver, 30).until(
             EC.element_to_be_clickable((By.XPATH, '//*[@id="ldrDownloadReport"]'))
@@ -510,14 +518,14 @@ def request_report_process(driver, test_type, Enrolled_or_Tested, actual_test, s
         
 
 
-def download_loop_missing(dir_path, test_type, driver, max_attempts=5):
+def download_loop_missing(dir_path, test_type, driver, max_attempts=6):
     attempt_count = 0
 
     while attempt_count < max_attempts:
         files = whats_missing(dir_path)
 
         if files.loc[files['files'].isna()].empty:
-            logging.info(f'All files are downloaded for {test_type}')
+            logging.info(f'All files are downloaded for {test_type}\n\n')
             print(f'All files are downloaded for {test_type}')
             break
         else:
@@ -538,14 +546,16 @@ def download_loop_missing(dir_path, test_type, driver, max_attempts=5):
         print(f"Max attempts ({max_attempts}) reached, some files are still missing")
 
 
-def move_files_over():
+def move_files_over(formatted_month_day):
     source_directory = os.getcwd() + f'\\file_downloads\\elpac\\{formatted_month_day}'
     destination_directory = os.getcwd() + f'\\file_downloads\\sbac\\{formatted_month_day}'
 
-    print(source_directory)
+    print(f'Here is the destination directory that files will be moved to {destination_directory}')
+    logging.info(f'Here is the destination directory that files will be moved to {destination_directory}')
 
     # List all files in the source directory
     files = os.listdir(source_directory)
+    logging.info(f'There is {len(files)} files in the dir prior to moving to {destination_directory}')
 
     # Move each file to the destination directory
     for file in files:
@@ -558,41 +568,69 @@ def move_files_over():
 
 
 #This unzips individual files in the same dir. Then called in a loop under the func unzip_files_in_same_dir
-def unzip_xlsx_file(zip_file, elpac_or_sbac):
-    # Get the current working directory
-    current_directory = os.getcwd()  + f'\\file_downloads\\{elpac_or_sbac}\\{formatted_month_day}'
+# def unzip_xlsx_file(zip_file, elpac_or_sbac, formatted_month_day, current_working_dir):
+   
+#     # Create the full path for the zip file
+#     zip_path = os.path.join(current_working_dir, zip_file)
+
+#     # Extract the first file with a '.xlsx' extension from the zip archive
+#     try:
+#         with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+#             xlsx_files = [f for f in zip_ref.namelist() if f.endswith('.xlsx')]
+#             # Process the .xlsx files as needed
+#     except zipfile.BadZipFile:
+#         logging.info(f"BadZipFile error: The file {zip_path} is not a zip file.\n Zip file contents are empty.")
+#         print(f"BadZipFile error: The file {zip_path} is not a zip file or the zip file contents are empty.")
+#         # Handle the error as needed (e.g., log it, skip the file, etc.)
+
+#         if xlsx_files:
+#             xlsx_file_to_extract = xlsx_files[0]
+#             zip_ref.extract(xlsx_file_to_extract, current_working_dir)
+#             print(f"File '{xlsx_file_to_extract}' extracted from '{zip_file}'.")
+#             logging.info(f"File '{xlsx_file_to_extract}' extracted from '{zip_file}'.")
+#         else:
+#             print("No .xlsx file found in the zip archive.")
+#             logging.info("No .xlsx file found in the zip archive.")
+
+
+def unzip_xlsx_file(file_zips, elpac_or_sbac, files_dir):
+    
+   for zip_file in file_zips:
 
     # Create the full path for the zip file
-    zip_path = os.path.join(current_directory, zip_file)
+    zip_path = os.path.join(files_dir, zip_file)
 
-    # Extract the first file with a '.xlsx' extension from the zip archive
-    try:
-        with zipfile.ZipFile(zip_path, 'r') as zip_ref:
-            xlsx_files = [f for f in zip_ref.namelist() if f.endswith('.xlsx')]
-            # Process the .xlsx files as needed
-    except zipfile.BadZipFile:
-        logging.info(f"BadZipFile error: The file {zip_path} is not a zip file.\n Zip file contents are empty.")
-        print(f"BadZipFile error: The file {zip_path} is not a zip file or the zip file contents are empty.")
-        # Handle the error as needed (e.g., log it, skip the file, etc.)
+    # Extract the first file with a '.xlsx' extension from each zip_path
+    with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+        xlsx_file = [f for f in zip_ref.namelist() if f.endswith('.xlsx')]
 
-        if xlsx_files:
-            xlsx_file_to_extract = xlsx_files[0]
-            zip_ref.extract(xlsx_file_to_extract, current_directory)
-            print(f"File '{xlsx_file_to_extract}' extracted from '{zip_file}'.")
-            logging.info(f"File '{xlsx_file_to_extract}' extracted from '{zip_file}'.")
+        if xlsx_file:
+            xlsx_file_to_extract = xlsx_file[0]
+            zip_ref.extract(xlsx_file_to_extract, files_dir)
+       
         else:
             print("No .xlsx file found in the zip archive.")
-            logging.info("No .xlsx file found in the zip archive.")
+            logging.info('No .xlsx files found in the zip archive.')
+            return(None)
+       
             
 
 
-def unzip_files_in_same_dir(elpac_or_sbac):
+def unzip_files_in_same_dir(elpac_or_sbac, formatted_month_day):
 
-    files = os.listdir(os.getcwd()  + f'\\file_downloads\\{elpac_or_sbac}\\{formatted_month_day}')
-    file_zips = [file for file in files if file.endswith('.zip')]
+    files_dir = f'\\file_downloads\\{elpac_or_sbac}\\{formatted_month_day}'
+    files_dir_files = os.listdir(os.getcwd()  + files_dir)
+    files_dir = os.getcwd() + files_dir 
+    file_zips = [file for file in files_dir_files if file.endswith('.zip')]
 
-    for file in file_zips:
-        unzip_xlsx_file(file, elpac_or_sbac)
+    #pass in a list of file_zips to be iterated. 
+    #Create a param fo elpac_or_sbac for logging purposes
+
+    try:
+        unzip_xlsx_file(file_zips, elpac_or_sbac, files_dir )
+        logging.info(f'Unzipped all files for {elpac_or_sbac} into the {files_dir}')
+    except Exception as e:
+        logging.info(f'Unable to unzip file for {elpac_or_sbac} due to error - {e}')
 
 
 def move_xlsx_files(elpac_or_sbac, formatted_month_day_year):
@@ -601,6 +639,7 @@ def move_xlsx_files(elpac_or_sbac, formatted_month_day_year):
     # Ensure the destination directory exists, create it if not
     try:
         os.makedirs(destination_directory, exist_ok=True)
+        logging.info(f'Created dir on p-drive for files to be sent to {destination_directory}')
     except Exception as e:
         logging.CRITICAL(f'Unable to create dir {destination_directory} due to \n {e}')
 
@@ -640,14 +679,14 @@ def SBAC_package_func(driver, SY, Enrolled_or_Tested, formatted_month_day_year):
     
 
     #This is here three times to see if anything got skipped the first time. Initial dir is set at ELPAC only to move the files over to SBAC dir
-    #Will run 5 times
+    #Will run 6 times
 
     time.sleep(10) #implemented to give time for files to download, removed pending tag
     download_loop_missing(f'elpac\\{formatted_month_day_year}', f'{SY} CAASPP Student Score Data File By {Enrolled_or_Tested} LEA', driver)
 
     #This moves the files from ELPAC  timestamp dir to SBAC timestamp dir. 
     #This is because the download dir cannot be changed in Selenium
-    move_files_over()
+    move_files_over(formatted_month_day_year)
 
 
 def ELPAC_package_func(driver, SY, Enrolled_or_Tested, formatted_month_day_year):
@@ -678,7 +717,7 @@ def ELPAC_package_func(driver, SY, Enrolled_or_Tested, formatted_month_day_year)
 
 def unzip_move_and_unit(SBAC_ELPAC_output, test_name, formatted_month_day_year):
     if SBAC_ELPAC_output != 'No files':
-        unzip_files_in_same_dir(test_name)
+        unzip_files_in_same_dir(test_name, formatted_month_day_year)
 
         #Keeps raw zip files in the same dir. Only moves over xlsx files
         try:
@@ -691,6 +730,37 @@ def unzip_move_and_unit(SBAC_ELPAC_output, test_name, formatted_month_day_year):
             logging.info(f'Unable to move {test_name} XLSX files to the p-drive, must be connected to the VPN')
     else:
         return('No files')
+    
+
+
+def empty_directory(directory_path):
+    # Ensure the directory exists
+    if os.path.exists(directory_path):
+        # Keep track of errors
+        errors = False
+        
+        # Iterate over all the items in the directory
+        for filename in os.listdir(directory_path):
+            file_path = os.path.join(directory_path, filename)
+            try:
+                # Check if it is a file or directory
+                if os.path.isfile(file_path) or os.path.islink(file_path):
+                    os.unlink(file_path)  # Remove the file
+                elif os.path.isdir(file_path):
+                    shutil.rmtree(file_path)  # Remove the directory and its contents
+            except Exception as e:
+                errors = True
+                logging.error(f'Failed to delete {file_path}. Reason: {e}')
+        
+        # Log success if no errors occurred
+        if not errors:
+            logging.info(f'All files in {directory_path} have been successfully deleted')
+    else:
+        logging.warning(f'The directory {directory_path} does not exist')
+
+
+
+
 
 
 #Coded out piece, used for manual checks.

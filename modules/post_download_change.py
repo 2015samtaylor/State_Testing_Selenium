@@ -141,6 +141,13 @@ def get_elpac_import(df, testname):
 
     df = assimilate_frames(df, testname)
 
+    # Check for duplicate 'PLScore' columns and drop one if duplicates exist. 2024 files already has PLScore column but prior years did not
+    if 'PLScore' in df.columns and df.columns.tolist().count('PLScore') > 1:
+        # Drop the second occurrence of 'PLScore' column
+        df = df.loc[:, ~df.columns.duplicated()]
+    else:
+        pass
+
     
     pl_decode = {4.0: 'WelDev', 
     '3.0': 'WelDev', 
