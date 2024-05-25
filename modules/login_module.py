@@ -82,17 +82,25 @@ def launch_to_homescreen(driver):
     logon.click()
 
 
+
 def create_directory(directory_path):
-    if not os.path.exists(os.getcwd() + f'\\{directory_path}'):
+    # Convert the given path to an absolute path
+    absolute_path = os.path.abspath(directory_path)
+
+    if not os.path.exists(absolute_path):
         try:
-            os.makedirs(os.getcwd() + f'\\{directory_path}')
+            os.makedirs(absolute_path)
             print(f"Directory '{directory_path}' created successfully.")
             logging.info(f"Directory '{directory_path}' created successfully.")
         except OSError as e:
             print(f"Error creating directory '{directory_path}': {e}")
+            logging.error(f"Error creating directory '{directory_path}': {e}")
     else:
         print(f"Directory '{directory_path}' already exists.")
         logging.info(f"Directory '{directory_path}' already exists.")
+
+
+
 
     
 

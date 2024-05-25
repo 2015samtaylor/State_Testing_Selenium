@@ -1,32 +1,8 @@
 import os
 import pandas as pd
 from zipfile import BadZipFile
+import logging
 
-
-def stack_files(directory_path):
-    # Get a list of all files in the directory
-    file_list = [os.path.join(directory_path, file) for file in os.listdir(directory_path) if os.path.isfile(os.path.join(directory_path, file))]
-
-    # Initialize an empty list to store DataFrames
-    dataframes = []
-
-    # Loop through each file and read it into a DataFrame
-    for file in file_list:
-
-        try:
-            # Adjust the read_excel parameters based on your file format (e.g., header, delimiter, encoding)
-            data = pd.read_excel(file, header=1, engine='openpyxl')
-            dataframes.append(data)
-        except BadZipFile:
-            print(f'Issue iwth BadZipFile when reading excel file: {file}')
-
-
-    # Use pd.concat to concatenate all DataFrames in the list
-    combined_data = pd.concat(dataframes, ignore_index=True)
-
-    combined_data['CALPADSSchoolCode'] = combined_data['CALPADSSchoolCode'].astype(str).str[7:]
-
-    return(combined_data)
 
 # -----------------------------------------------------------
 
@@ -67,4 +43,33 @@ def filter_on_full_cds_code(df, column):
 
     return(GD)
 
+def stack_files(directory_path, str_matching):
+    # Get a list of all files in the directory
+    file_list = [os.path.join(directory_path, file) for file in os.listdir(directory_path) if os.path.isfile(os.path.join(directory_path, file))]
+
+    filtered_list = [file for file in file_list if str_matching in file]
+    logging.info(f'Stacking {len(filtered_list)} files that have {str_matching} string in them')
+
+    # Initialize an empty list to store DataFrames
+    dataframes = []
+
+    # Loop through each file and read it into a DataFrame
+    for file in filtered_list:
+
+        try:
+            # Adjust the read_excel parameters based on your file format (e.g., header, delimiter, encoding)
+            data = pd.read_excel(file, header=1, engine='openpyxl')
+            dataframes.append(data)
+        except BadZipFile:
+            print(f'Issue iwth BadZipFile when reading excel file: {file}')
+
+
+    # Use pd.concat to concatenate all DataFrames in the list
+    combined_data = pd.concat(dataframes, ignore_index=True)
+
+    combined_data['CALPADSSchoolCode'] = combined_data['CALPADSSchoolCode'].astype(str).str[7:]
+
+    combined_data = filter_on_full_cds_code(combined_data, 'CALPADSSchoolCode')
+
+    return(combined_data)
 

@@ -636,14 +636,6 @@ def unzip_files_in_same_dir(elpac_or_sbac, formatted_month_day):
 def move_xlsx_files(elpac_or_sbac, formatted_month_day_year):
     
     destination_directory = r'P:\Knowledge Management\Ellevation\Data Sent 2023-24\State Testing' +  f"\\{elpac_or_sbac + '_' +  formatted_month_day_year}"
-    # Ensure the destination directory exists, create it if not
-    try:
-        os.makedirs(destination_directory, exist_ok=True)
-        logging.info(f'Created dir on p-drive for files to be sent to {destination_directory}')
-    except Exception as e:
-        logging.CRITICAL(f'Unable to create dir {destination_directory} due to \n {e}')
-
-
     source_directory = os.getcwd() + f'\\file_downloads\\{elpac_or_sbac}\\{formatted_month_day_year}'
 
     # List all files in the source directory
@@ -657,7 +649,9 @@ def move_xlsx_files(elpac_or_sbac, formatted_month_day_year):
         source_path = os.path.join(source_directory, xlsx_file)
         destination_path = os.path.join(destination_directory, xlsx_file)
         shutil.copy2(source_path, destination_path)
-        print(f"Moved '{xlsx_file}' to '{destination_directory}'.")
+        print(f"Copied '{xlsx_file}' from '{source_directory}' to '{destination_directory}'.")
+
+    logging.info(f'Copied all excel files from {source_directory} to {destination_directory}')
 
 
 def SBAC_package_func(driver, SY, Enrolled_or_Tested, formatted_month_day_year):
