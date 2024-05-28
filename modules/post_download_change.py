@@ -8,15 +8,16 @@ from .sql_query_module import SQL_query
 
 decode_test_name = {
 'OverallScaleScore': 'ELPAC-Overall', 
-'OralLanguageScaleScore': 'ELPAC-Oral Language',
-'WrittenLanguageScaleScore':'ELPAC-Writing',
 'OverallPL': 'ELPAC-Overall',
+'OralLanguageScaleScore': 'ELPAC-Oral Language',
 'OralLanguagePL': 'ELPAC-Oral Language',
+'WrittenLanguageScaleScore':'ELPAC-Writing',
+'WritingPL': 'ELPAC-Writing',
 'WrittenLanguagePL': 'ELPAC-Written Language',    
 'ListeningPL': 'ELPAC-Listening',
 'SpeakingPL': 'ELPAC-Speaking',
 'ReadingPL': 'ELPAC-Reading',
-'WritingPL': 'ELPAC-Writing'
+
 }
 
 abbreviation_decode = {
@@ -198,7 +199,7 @@ def get_cast_import(df, testname):
 
 def get_SS_frame(e_original):
 
-    #variable column is generated here. Columns are melted down, and variable becomes name of the column
+    #variable column is generated here. Columns are melted down, and variable becomes name of the ScaleScore column
     ss_columns = ['OverallScaleScore', 'OralLanguageScaleScore','WrittenLanguageScaleScore']
     remaining_columns = [col for col in e_original.columns if col not in ss_columns]
     e_scale_score = pd.melt(e_original, id_vars = remaining_columns, value_vars= ss_columns, value_name='ScaleScore')
@@ -225,6 +226,35 @@ def get_PL_frame(e_original):
     return(e_pl_score)
 
 
+def map_proficiency_for_ELPAC(df):
+
+    point_scale_4 = ['ELPAC-Overall', 'ELPAC-Oral Language', 'ELPAC-Written Language']
+    point_scale_3 = ['ELPAC-Listening', 'ELPAC-Speaking', 'ELPAC-Writing', 'ELPAC-Reading']
+
+    e_sub_4 = df[df['TestName'].isin(point_scale_4)]
+    e_sub_3 = df[df['TestName'].isin(point_scale_3)]
+
+    pl_decode_4_scale = {
+    '4': 'WelDev', 
+    '3': 'ModDev', 
+    '2': 'Som-Dev',
+    '1': 'MinDev', 
+    '': 'No Score', 
+    'NS': 'No Score'} 
+
+    pl_decode_3_scale = {
+    '3': 'WelDev', 
+    '2': 'Som-ModDev',
+    '1': 'MinDev', 
+    '': 'No Score', 
+    'NS': 'No Score'} 
+
+    e_sub_4['ProficiencyLevelCode'] = e_sub_4['PLScore'].map(pl_decode_4_scale)
+    e_sub_3['ProficiencyLevelCode'] = e_sub_3['PLScore'].map(pl_decode_3_scale)
+
+    df = pd.concat([e_sub_4, e_sub_3], ignore_index=True)
+
+    return(df)
 
 
 
@@ -234,34 +264,23 @@ def get_elpac_import(df, testname):
     #PLScore, and ScaleScores does not show for ELPAC import therefore must melt down certain columns. 
     df = assimilate_frames(df, testname)
 
-    return(df)
-
-    scale_score = get_SS_frame(df) #melting down the scale score to be merged back together by SSID and TestName
-    pl_score = get_PL_frame(df) #melting down the PL score to be merged back together by SSID and TestaName
-
-    #The merge is occurs on testname, and SSID together keeping rows unique. 
-    #Left join because pl_score frame is much larger than scale_score frame. 
-    df = pd.merge(pl_score, scale_score, left_on=['SSID', 'TestName'], right_on = ['SSID', 'TestName'], suffixes= ['', '_SS'], how='left')
-
-    #Due to the differing lenths of frames afer the melts. Must maintain the one with more instances the pl_score has more records.  
-    #Idea to map ScaleScore based on SSID, TestName.
+    escale = get_SS_frame(df) #melting down the ScaleScore, and PLScore from raw frame to be merged back together by SSID and TestName
+    epl = get_PL_frame(df)
+    df = pd.merge(epl, escale, left_on=['SSID', 'TestName'], right_on = ['SSID', 'TestName'], suffixes= ['', '_SS'], how='left')
 
     # Insert blank columns beofre cutting down the cols. See if this is logical here
     df = insert_blanks_cols(df, testname)
-    
-     #No filter for TestSubjectGroup as it has all the TestSubjectGroups already
+
+
+    #No filter for TestSubjectGroup as it has all the TestSubjectGroups already
+    df['TestSubjectGroup'] = 'ELPAC'
+    df['TestSubject'] = 'ELA'
     df['RawScore'] = df['ScaleScore']
     df['PLScore'] = df['PLScore'].astype(str)
-    df['TestSubject'] = 'ELA'
 
-    pl_decode = {
-    '4': 'WelDev', 
-    '3': 'WelDev', 
-    '2': 'Som-ModDev',
-    '1': 'MinDev', 
-    '': 'No Score', 
-    'NS': 'No Score'}  
+    df = map_proficiency_for_ELPAC(df)
 
+    
     TestScoreType_Decode = {
     'ELPAC-Overall':'Test',
     'ELPAC-Oral Language':'Subscore',
@@ -271,21 +290,15 @@ def get_elpac_import(df, testname):
     'ELPAC-Reading':'Subscore',
     'ELPAC-Writing':'Subscore'}
 
-    df['ProficiencyLevelCode'] = df['PLScore'].map(pl_decode)
     df['TestScoreType'] = df['TestName'].map(TestScoreType_Decode)
-    df['TestSubjectGroup'] = df['TestSubjectGroup'].map({21: 'ELPAC', 23: 'Alt-ELPAC'}) 
 
-
+    
     #call sql query to re-organize cols
     elpac_cols = SQL_query.get_cols_only('TestScores', 'ELPAC_Import', 90)
     elpac_cols = list(elpac_cols['COLUMN_NAME'])
-
-  
     df = df[elpac_cols]
+  
     return(df)
-
-
-
 
 
 # ----------------------------------------Steps to get new records---------------------------------------
