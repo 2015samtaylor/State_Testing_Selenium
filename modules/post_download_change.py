@@ -11,14 +11,19 @@ decode_test_name = {
 'OverallPL': 'ELPAC-Overall',
 'OralLanguageScaleScore': 'ELPAC-Oral Language',
 'OralLanguagePL': 'ELPAC-Oral Language',
-'WrittenLanguageScaleScore':'ELPAC-Writing',
-'WritingPL': 'ELPAC-Writing',
+'WrittenLanguageScaleScore':'ELPAC-Written Language',
 'WrittenLanguagePL': 'ELPAC-Written Language',    
 'ListeningPL': 'ELPAC-Listening',
 'SpeakingPL': 'ELPAC-Speaking',
 'ReadingPL': 'ELPAC-Reading',
-
+'WritingPL': 'ELPAC-Writing',
 }
+
+
+# So in other words the ScaleScore of ELPAC-Writing be matched up to the 'TestName'  ELPAC-Written Language rather than ELPAC-Writing
+#This would result in the 'TestName' ELPAC-Writing with no ScaleScores and the 'TestName' ELPAC-Written Language would assume those ScaleScores. Does this sound right?
+
+# oh got it yeah- I think it would be best practice to have nulls for scale score for ELPAC-Writing, ELPAC- Reading, ELPAC- Listening, and ELPAC Speaking
 
 abbreviation_decode = {
 'Animo Pat Brown': 'BRW',
