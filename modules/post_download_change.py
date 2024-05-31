@@ -334,7 +334,7 @@ def grab_new_records(file, file_name):
 
     file = clean_up_rotating_file(file)
 
-    merging_cols = ['SSID', 'TestType', 'TestName', 'ScaleScore'] #These should work for all 3 files
+    merging_cols = ['SSID', 'TestType', 'TestName', 'PLScore'] #These should work for all 3 files
     new_records = SQL_query.obtain_new(file, file_name, merging_cols)
 
     new_records['last_update'] = datetime.date.today().strftime('%Y-%m-%d')

@@ -518,9 +518,9 @@ def request_report_process(driver, test_type, Enrolled_or_Tested, actual_test, s
         
 
 
-def download_loop_missing(dir_path, test_type, driver, max_attempts=6):
+def download_loop_missing(dir_path, test_type, driver, max_attempts=10):
     attempt_count = 0
-
+    time.sleep(5)
     while attempt_count < max_attempts:
         files = whats_missing(dir_path)
 
@@ -542,8 +542,8 @@ def download_loop_missing(dir_path, test_type, driver, max_attempts=6):
             attempt_count += 1
 
     if attempt_count == max_attempts:
-        logging.warning(f"Max attempts ({max_attempts}) reached, some files are still missing")
-        print(f"Max attempts ({max_attempts}) reached, some files are still missing")
+        logging.warning(f"Max attempts ({max_attempts}) reached, some files are still missing for {test_type}")
+        print(f"Max attempts ({max_attempts}) reached, some files are still missing for {test_type}")
 
 
 def move_files_over(formatted_month_day):

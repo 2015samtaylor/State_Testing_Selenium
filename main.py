@@ -131,6 +131,7 @@ def send_to_sql(frame, file_name):
 
 # #After new scores table is appended with new records with last_update timestamp, the master table gets a full replace of
 # #todays data files. 
+#When starting from scratch New_Scores tables must be changed to replace, and the master table must have dtypes from which is establisehd on the second run
 
 
 send_to_sql(elpac, 'ELPAC')
