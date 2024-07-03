@@ -1,5 +1,3 @@
-%load_ext autoreload
-%autoreload 2
 from config import username, password
 from modules.login_module import *
 from modules.download_files_module import *
@@ -7,6 +5,10 @@ from modules.unit_testing import TestFileProcessing
 from modules.data_transformation import *
 from modules.post_download_change import *
 from modules.sql_query_module import *
+from modules.creating_subscores_cast import *
+from modules.creating_subscores_cast import *
+from modules.creating_subscores_math import *
+from modules.creating_subscores_ela import *
 
 
 from selenium import webdriver
@@ -88,6 +90,7 @@ elpac_stack = stack_files(elpac_pdrive_dir, 'ELPAC') #Green Dot Schools are pull
 elpac = get_elpac_import(elpac_stack, 'ELPAC')
 sbac = get_sbac_import(sbac_stack, 'SBAC')  #For some reason, raw ELPAC file does not have LocalStudentID or studentnumber present for SBAC ELA & Math overall 
 cast = get_cast_import(sbac_stack, 'CAST')
+cast_subscore = get_cast_subscores(sbac_stack, 'CAST')
 
 # #For Helens Ellevation Pickup, send to same dir as individual files the stack in stacked_files dir
 send_stacked_csv(elpac, 'ELPAC', formatted_month_day_year) 
@@ -127,13 +130,29 @@ def send_to_sql(frame, file_name):
 # # is compared to the master tables. 
 
 # #Whatever is strictly coming in on the merge from the new frame from these 4 columns will be sent to new scores table
-# # ['SSID', 'TestType', 'TestName', 'ScaleScore']
+# # ['SSID', 'TestType', 'TestName', 'PLScore']
 
-# #After new scores table is appended with new records with last_update timestamp, the master table gets a full replace of
-# #todays data files. 
-#When starting from scratch New_Scores tables must be changed to replace, and the master table must have dtypes from which is establisehd on the second run
+#BEGINNING
+#Obtain new function only works once initially because it looks for incoming records of the new file. 
+#Master table is empty therefore, new table recieves all new records but no dtypes. If running again it will then receive nothing and get datatypes dropping records
+#Work on dtypes to be solved at the beginning
+#Workaround send the initial load as replace to both tables, then revert back to new_records as append, but solve dtypes
 
 
 send_to_sql(elpac, 'ELPAC')
 send_to_sql(sbac, 'SBAC')
 send_to_sql(cast, 'CAST')
+
+
+#Notes
+#If files are not downloaded all the way through do not let the send occur. 
+
+#Log out the lengths of the tbales within SQL via a trigger
+
+#The reports are beging requested succesfully, but they are not available for donwload for a really long time. 
+
+#If the reports take a long time to donwload, need to requests wait a while, then download at the eend?
+
+#5/30/24 downloads are incomplete
+
+#Fix logging for when files are incomplete

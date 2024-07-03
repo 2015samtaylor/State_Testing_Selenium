@@ -105,7 +105,7 @@ def get_ela_subscores_read_write(df, test_name):
 
     df = melt_special_ela(raw_df)
 
-    df = mapping(df)
+    df = mapping(df, test_name)
     return(df)
 
 
@@ -120,8 +120,9 @@ def get_ela_subscores_essay(df, test_name):
 
 
     #Bring in CompClaims specific to subscores
-    comp_claims = ['WERDEVEEL', 'WERCOV', 'WERPOR', 'RecordType']
+    comp_claims = ['WERDEVEEL', 'WERCOV', 'WERPOR', 'RecordType', 'Genre']
     sbac_cols.extend(comp_claims)
+
 
     raw_df = df[sbac_cols]
     raw_df = raw_df.drop(columns=['PLScore','RawScore', 'ScaleScore'])
@@ -133,13 +134,15 @@ def get_ela_subscores_essay(df, test_name):
     df['RawScore'] = None
     df['ScaleScore'] = None
 
-    df = mapping(df)
+    test_name = 'essay'
+
+    df = mapping(df, test_name)
 
     return(df)
 
 
 
-def mapping(df):
+def mapping(df, test_name):
     
     essay_mapping = {'WERPOR' : 'SBAC ELA Essay - Organization and Purpose',
                 'WERDEVEEL' : 'SBAC ELA Essay - Development/Evidence and Elaboration',
@@ -155,6 +158,9 @@ def mapping(df):
                 '3.0':'STMT',
                 '4.0':'STEX'}
     
+    genre_mapping = {'EXPL': 'Explanatory Essay',
+                 'ARGU': 'Argumentative Essay'}
+    
 
     try:
         df['TestName'] = df['Levels'].map(levels_mapping)
@@ -168,6 +174,14 @@ def mapping(df):
 
     df['TestSubject'] = df['TestName']
     df['ScaleScore'] = df['RawScore']
+
+    #One off for ELA subscores essay
+    if test_name == 'essay':
+        df['TestSubject'] = df['Genre'].map(genre_mapping)
+        #For the NARR genre that does not have mapping
+        df['TestSubject'] = df['TestSubject'].fillna(df['TestName'])
+    else:
+        pass
 
     df['TestScoreType'] = 'Subscore'
     df['ProficiencyLevelCode'] = df['PLScore'].map(pl_decode)

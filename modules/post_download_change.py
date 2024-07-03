@@ -152,6 +152,13 @@ def get_sbac_import(df, testname):
     # #call sql query to re-organize cols
     sbac_cols = SQL_query.get_cols_only('TestScores', 'SBAC_Import', 90)
     sbac_cols = list(sbac_cols['COLUMN_NAME'])
+
+    #temporary for sams enrolled request. 
+    column_to_remove = 'studentnumber'
+
+    # Create a new list without the specified column
+    sbac_cols = [col for col in sbac_cols if col != column_to_remove]
+
     df = df[sbac_cols]
 
     return(df)
@@ -194,6 +201,13 @@ def get_cast_import(df, testname):
     # #call sql query to re-organize cols
     cast_cols = SQL_query.get_cols_only('TestScores', 'CAS_Import', 90)
     cast_cols = list(cast_cols['COLUMN_NAME'])
+
+    #temporary for sams enrolled request. 
+    column_to_remove = 'studentnumber'
+
+    # Create a new list without the specified column
+    cast_cols = [col for col in cast_cols if col != column_to_remove]
+
     df = df[cast_cols]
 
     return(df)

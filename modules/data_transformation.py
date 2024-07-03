@@ -43,7 +43,7 @@ def filter_on_full_cds_code(df, column):
 
     return(GD)
 
-def stack_files(directory_path, str_matching):
+def stack_files(directory_path, str_matching, filter_schools=None):
     # Get a list of all files in the directory
     file_list = [os.path.join(directory_path, file) for file in os.listdir(directory_path) if os.path.isfile(os.path.join(directory_path, file))]
 
@@ -69,7 +69,10 @@ def stack_files(directory_path, str_matching):
 
     combined_data['CALPADSSchoolCode'] = combined_data['CALPADSSchoolCode'].astype(str).str[7:]
 
-    combined_data = filter_on_full_cds_code(combined_data, 'CALPADSSchoolCode')
+    # Only filter on full CDS code if filter_schools has a value
+    if filter_schools:
+        combined_data = filter_on_full_cds_code(combined_data, 'CALPADSSchoolCode')
+        logging.info('Schools were filtered on full cds code')
 
     return(combined_data)
 
