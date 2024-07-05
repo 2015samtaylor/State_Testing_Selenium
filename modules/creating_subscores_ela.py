@@ -105,7 +105,10 @@ def get_ela_subscores_read_write(df, test_name):
 
     df = melt_special_ela(raw_df)
 
+    test_name = ''
+
     df = mapping(df, test_name)
+
     return(df)
 
 
@@ -153,20 +156,23 @@ def mapping(df, test_name):
                     }
     
 
-    pl_decode = {'1.0':'STNM',
-                '2.0':'STNL',
-                '3.0':'STMT',
-                '4.0':'STEX'}
+    pl_decode = {1.0:'STNM',
+                2.0:'STNL',
+                3.0:'STMT',
+                4.0:'STEX'}
     
     genre_mapping = {'EXPL': 'Explanatory Essay',
-                 'ARGU': 'Argumentative Essay'}
+                 'ARGU': 'Argumentative Essay',
+                 'NARR': 'Narrative',
+                 '': 'Essay'}
     
-
+    #Particular to read & write
     try:
         df['TestName'] = df['Levels'].map(levels_mapping)
     except KeyError:
         pass
 
+    #Particular to essay
     try:
         df['TestName'] = df['CompClaimRaw'].map(essay_mapping)
     except KeyError:
@@ -178,8 +184,6 @@ def mapping(df, test_name):
     #One off for ELA subscores essay
     if test_name == 'essay':
         df['TestSubject'] = df['Genre'].map(genre_mapping)
-        #For the NARR genre that does not have mapping
-        df['TestSubject'] = df['TestSubject'].fillna(df['TestName'])
     else:
         pass
 

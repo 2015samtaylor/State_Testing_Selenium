@@ -10,6 +10,7 @@ columns = [
     'MasterSchoolID',
     'StudentID',
     'SSID',
+    'TestGradeLevel',
     'TestDate',
     'DisplayDate',
     'TestType',
@@ -20,7 +21,8 @@ columns = [
     'TestScoreType',
     'RawScore',
     'ScaleScore',
-    'PLScore'
+    'PLScore',
+    'ProficiencyLevelCode'
 ]
 
 
@@ -42,7 +44,7 @@ def mapping(df):
 
     domain_mapping = {'Domain1Level': 'CAST - Life Sciences',
                 'Domain2Level': 'CAST - Physical Sciences',
-                'Domain3Level': 'CAST - Earth and Life Sciences'}
+                'Domain3Level': 'CAST - Earth and Space Sciences'}
 
     df['TestSubject'] = df['DomainLevel'].map(domain_mapping)
     df['TestName'] = df['DomainLevel'].map(domain_mapping)
@@ -52,15 +54,13 @@ def mapping(df):
     'CAST - Overall': 'Test',
     'CAST - Life Sciences': 'Subscore',
     'CAST - Physical Sciences' : 'Subscore',
-    'CAST - Earth and Life Sciences': 'Subscore'} #Earth and Space Sciences was prior
+    'CAST - Earth and Space Sciences': 'Subscore'} #Earth and Space Sciences was prior
 
     pl_decode = {
-    '1.0':'STNM',
-    '2.0':'STNL',
-    '3.0':'STMT',
-    '4.0':'STEX'}
-
-    df['PLScore'] = df['PLScore'].astype(str)
+    1.0:'STNM',
+    2.0:'STNL',
+    3.0:'STMT',
+    4.0:'STEX'}
 
     df['TestScoreType'] = df['TestName'].map(TestScoreType_Decode)
     df['ProficiencyLevelCode'] = df['PLScore'].map(pl_decode)
@@ -100,15 +100,17 @@ def get_cast_subscores(df, testname):
 
     df = mapping(df)
 
+    #Dropping prior PLScore col, has no use with cast subscores
     df = df.drop(columns=['PLScore'])
 
+    #Melted cols become the new PLScore
     df = df.rename(columns={'PLScoreLast': 'PLScore'})
 
     df = df[columns]
 
+    #Manual insert of None for cast subscores
     df['RawScore'] = None
     df['ScaleScore'] = None
-
     return(df)
 
 

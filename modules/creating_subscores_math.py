@@ -76,10 +76,10 @@ def mapping(df):
 
 
     pl_decode = {
-    '1':'STNM',
-    '2':'STNL',
-    '3':'STMT',
-    '4':'STEX'}
+    1.0:'STNM',
+    2.0:'STNL',
+    3.0:'STMT',
+    4.0:'STEX'}
     
     df['TestName'] = df['Levels'].map(levels_mapping)
     df['TestSubject'] = df['TestName']
