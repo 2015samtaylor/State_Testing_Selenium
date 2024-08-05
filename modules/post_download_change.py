@@ -38,7 +38,7 @@ abbreviation_decode = {
 'Animo James B. Taylor Charter Middle': 'JAM',
 'Animo South Los Angeles Charter':'SLA',
 'Animo Ralph Bunche Charter High':'BUN',
-'Animo Inglewood Charter High':'BUN',
+'Animo Inglewood Charter High':'ING',
 'Animo Legacy Charter Middle':'LGC',
 'Animo Mae Jemison Charter Middle':'MAE',
 'Animo Compton Charter':'CMP',
