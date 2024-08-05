@@ -229,3 +229,18 @@ class SQL_query:
 
             except Exception as e:
                 logging.info(f'Unable to append to table {file_name}_Scores due to \n {e}')
+
+
+
+#  # OBTAINING NEW RECORDS PROCESS
+# # The master tables get a full replace with todays data files, however this does not occur until todays data files
+# # is compared to the master tables. 
+
+# #Whatever is strictly coming in on the merge from the new frame from these 4 columns will be sent to new scores table
+# # ['SSID', 'TestType', 'TestName', 'PLScore']
+
+#BEGINNING
+#Obtain new function only works once initially because it looks for incoming records of the new file. 
+#Master table is empty therefore, new table recieves all new records but no dtypes. If running again it will then receive nothing and get datatypes dropping records
+#Work on dtypes to be solved at the beginning
+#Workaround send the initial load as replace to both tables, then revert back to new_records as append, but solve dtypes
