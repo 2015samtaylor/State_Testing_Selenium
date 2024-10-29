@@ -103,39 +103,43 @@ def replicate_SFTP_files_to_local(sftp, sftp_folder_name, local_folder_name):
 
 
 
+def SFTP_export_files_to_SFTP(specific_files, remote_dir, sftp):
+    """
+    Upload specific files to the remote directory via SFTP.
 
-def SFTP_export_dir_to_SFTP(local_dir, remote_dir, sftp):
+    :param specific_files: List of local file paths to upload.
+    :param remote_dir: Remote directory path on the SFTP server.
+    :param sftp: SFTP connection object.
+    """
+    # Establish a new connection
     conn = sftp._create_new_connection()
     logging.info('\n\nSFTP singular connection established successfully')
 
-    for root, _, files in os.walk(local_dir):
-        for file in files:
-            local_path = os.path.join(root, file)
-            relative_path = os.path.relpath(local_path, local_dir)
-            remote_path = os.path.join(remote_dir, relative_path).replace('\\', '/')
+    for local_path in specific_files:
+        # Ensure the specified file exists
+        if not os.path.exists(local_path):
+            print(f"File not found: {local_path}")
+            logging.error(f"File not found: {local_path}")
+            continue
 
-            # Print paths for debugging
-            print(f"Local path: {local_path}")
-            print(f"Remote path: {remote_path}")
+        # Get the relative path and prepare remote path
+        relative_path = os.path.basename(local_path)
+        remote_path = os.path.join(remote_dir, relative_path).replace('\\', '/')
 
-            # Log paths for debugging
-            logging.info(f"Local path: {local_path}")
-            logging.info(f"Remote path: {remote_path}")
+        # Print and log paths for debugging
+        print(f"Local path: {local_path}")
+        print(f"Remote path: {remote_path}")
+        logging.info(f"Local path: {local_path}")
+        logging.info(f"Remote path: {remote_path}")
 
-            # Check if the file exists
-            if not os.path.exists(local_path):
-                print(f"File not found: {local_path}")
-                logging.error(f"File not found: {local_path}")
-                continue
-
-            # Upload the file
-            try:
-                conn.put(local_path, remote_path)
-                print(f"Uploaded {local_path} to {remote_path}")
-                logging.info(f"Uploaded {local_path} to {remote_path}")
-            except Exception as e:
-                print(f"Error uploading {local_path} to {remote_path}: {str(e)}")
-                logging.error(f"Error uploading {local_path} to {remote_path}: {str(e)}")
+        # Upload the file
+        try:
+            conn.put(local_path, remote_path)
+            print(f"Uploaded {local_path} to {remote_path}")
+            logging.info(f"Uploaded {local_path} to {remote_path}")
+        except Exception as e:
+            print(f"Error uploading {local_path} to {remote_path}: {str(e)}")
+            logging.error(f"Error uploading {local_path} to {remote_path}: {str(e)}")
 
     # Close the connection after the operation
     conn.close()

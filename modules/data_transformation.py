@@ -74,5 +74,7 @@ def stack_files(directory_path, str_matching, filter_schools=None):
         combined_data = filter_on_full_cds_code(combined_data, 'CALPADSSchoolCode')
         logging.info('Schools were filtered on full cds code')
 
+    combined_data = combined_data.drop_duplicates()
+
     return(combined_data)
 

@@ -754,6 +754,59 @@ def empty_directory(directory_path):
 
 
 
+def downsize_sbac_cols(sbac_stack):
+
+    sbac_columns = [
+        "RecordType",
+        "SSID",
+        "GradeAssessed",
+        "FinalTestedSchoolName",
+        "FinalTestedSchoolCode",
+        "LexileorQuantileMeasure",
+        "SmarterCompClaim1Score",
+        "SmarterCompClaim1PL",
+        "SmarterCompClaim2Score",
+        "SmarterCompClaim2PL",
+        "ScaleScore",
+        "AchievementLevels",
+        "Domain1Level",
+        "Domain2Level",
+        "Domain3Level",
+        "Genre",
+        "WERPOR",
+        "WERDEVEEL",
+        "WERCOV"
+    ]
+
+
+    sbac = sbac_stack[sbac_columns]
+    return(sbac)
+
+def downsize_elpac_cols(elpac_stack):
+
+    elpac_columns = [
+    "RecordType",
+    "SSID",
+    "GradeAssessed",
+    "FinalTestedSchoolName",
+    "FinalTestedSchoolCode",
+    "OverallScaleScore",
+    "OralLanguageScaleScore",
+    "WrittenLanguageScaleScore",
+    "OverallPL",
+    "OralLanguagePL",
+    "WrittenLanguagePL",
+    "ListeningPL",
+    "SpeakingPL",
+    "ReadingPL",
+    "WritingPL"
+    ]
+
+    elpac = elpac_stack[elpac_columns]
+    return(elpac)
+
+
+
 
 
 
