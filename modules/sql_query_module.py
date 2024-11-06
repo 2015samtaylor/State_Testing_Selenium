@@ -51,8 +51,7 @@ class SQL_query:
                             pass
                             
 
-
-                        max_lengths_df = max_lengths_df.append({'Column': column, 'Max_Length': max_length}, ignore_index=True)
+                        max_lengths_df = pd.concat([max_lengths_df, pd.DataFrame([{'Column': column, 'Max_Length': max_length}])], ignore_index=True)
                     else:
                         pass
                 return(max_lengths_df)
@@ -81,20 +80,6 @@ class SQL_query:
                     dtypes[column_name] = sql_alchemy_type(length=max_length)
                     print(f'{column_name} column being updated as VARCHAR({max_length})')
 
-            # def declare_varchar_update_lengths(changes, dtypes):
-            #     result_list = []
-            #     for index, row in changes.iterrows():
-            #         column_name = row['Column']
-            #         max_length = int(row['Max_Length'])
-            #         sql_alchemy_type = VARCHAR
-            #         row_dict = {column_name: sql_alchemy_type(length=max_length)}
-
-                    
-            #         result_list.append(row_dict)
-            #         for i in result_list:
-            #             for key, value in i.items():
-            #                 print(f'{key} column being updated as VARCHAR({value})')
-            #                 dtypes[key] = value
 
             # Call the functions sequentially,
             lengths = get_longest_string_lengths(df)
@@ -103,7 +88,7 @@ class SQL_query:
 
     # -----------------------------------------------------------------
     @classmethod
-    def get_dtypes(cls, existing_frame, db , table_name_89):
+    def get_dtypes(cls, db , table_name_89, existing_frame):
 
         out = cls.SQL_query_89('''
         SELECT COLUMN_NAME, DATA_TYPE, CHARACTER_MAXIMUM_LENGTH 
@@ -141,12 +126,8 @@ class SQL_query:
         col_names = list(dtypes.keys())
 
         # Identifies what VARCHAR values are not long enough and fixes on first send only
-        cls.update_varchar_lengths(existing_frame, dtypes)
-
-        #This is present to make the default dtypes of a missing column on the 90 be a VARCHAR(50)
-        #Needs two args passed in 90 dtypes, and 89 table
-        # missing_cols_dict = SQL_query.create_default_dtype_for_missing(dtypes , local_frame, varchar_length)
-        # dtypes.update(missing_cols_dict)
+        if existing_frame is not None:
+            cls.update_varchar_lengths(existing_frame, dtypes)
 
         return(dtypes, col_names)
     
@@ -213,22 +194,6 @@ class SQL_query:
     
 
 
-    def send_new_records_SQL(new_records, file_name, append_or_replace):
-
-        dtypes, table_cols = SQL_query.get_dtypes(new_records, 'DataTeamSandbox', f'{file_name}_Scores')
-
-        #Send csv locally overwriting current, and append new records to existing table
-        if new_records.empty == True:
-            logging.info(f'No new records to insert, {file_name} file is empty')
-        else:
-            new_records.to_csv(f'file_downloads/{file_name}_new_records.csv')
-            logging.info(f'{file_name}_new_records.csv sent to file downloads')
-            try:
-                new_records.to_sql(f'{file_name}_Scores', schema='dbo', con = SQL_query.engine, if_exists = append_or_replace, index = False, dtype=dtypes)
-                logging.info(f'Appending {len(new_records)} records to {file_name}_Scores')
-
-            except Exception as e:
-                logging.info(f'Unable to append to table {file_name}_Scores due to \n {e}')
 
 
 

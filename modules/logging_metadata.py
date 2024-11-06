@@ -39,7 +39,7 @@ class JobLogger:
     
     def send_frame_to_SQL(self):
         df_log = self.get_logs()
-        dtypes, table_cols = SQL_query.get_dtypes('DataTeamSandbox', 'process_log')
+        dtypes, table_cols = SQL_query.get_dtypes('DataTeamSandbox', 'process_log', None)
         try:
             df_log.to_sql(f'process_log', schema='dbo', con = SQL_query.engine, if_exists = 'append', index = False, dtype=dtypes)
             logging.info('Logs sent to process_log table on 89 server')

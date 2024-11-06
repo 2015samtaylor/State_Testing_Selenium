@@ -780,6 +780,9 @@ def downsize_sbac_cols(sbac_stack):
 
 
     sbac = sbac_stack[sbac_columns]
+
+    sbac = sbac.fillna('')
+
     return(sbac)
 
 def downsize_elpac_cols(elpac_stack):
@@ -803,6 +806,9 @@ def downsize_elpac_cols(elpac_stack):
     ]
 
     elpac = elpac_stack[elpac_columns]
+
+    elpac = elpac.fillna('')
+
     return(elpac)
 
 
